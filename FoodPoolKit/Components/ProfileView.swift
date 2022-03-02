@@ -12,7 +12,8 @@ import AutoLayoutHelper
 
 public final class ProfileView: UIView {
     
-    lazy var userImage: UIImageView = .create(
+    //MARK: - Properties
+    private lazy var userImage: UIImageView = .create(
         image: .user,
         contentMode: .scaleAspectFit,
         isUserInteractionEnabled: false,
@@ -21,7 +22,7 @@ public final class ProfileView: UIView {
         isOpaque: true
     )
     
-    lazy var name: UILabelView = .create(
+    private lazy var name: UILabelView = .create(
         lblText: "Name Surname",
         font: .boldXLarge,
         textColor: .mainColor,
@@ -30,7 +31,7 @@ public final class ProfileView: UIView {
         sizeToFit: true
     )
     
-    lazy var mail: UILabelView = .create(
+    private lazy var mail: UILabelView = .create(
         lblText: "example@example.com",
         font: .medium,
         textColor: .secondaryTitle,
@@ -39,7 +40,7 @@ public final class ProfileView: UIView {
         sizeToFit: true
     )
     
-    lazy var phone: UILabelView = .create(
+    private lazy var phone: UILabelView = .create(
         lblText: "Phone",
         font: .medium,
         textColor: .secondaryTitle,
@@ -48,7 +49,7 @@ public final class ProfileView: UIView {
         sizeToFit: true
     )
     
-    lazy var labelStack: UIStackView = .create(
+    private lazy var labelStack: UIStackView = .create(
         subviews: [name, mail, phone],
         axis: .vertical,
         distribution: .equalSpacing,
@@ -56,13 +57,20 @@ public final class ProfileView: UIView {
         spacing: 5
     )
     
+    //MARK: - Initalization
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        backgroundColor = .white
-        
+        configuration()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Configuration
+    private func configuration() {
         userImage.addCornerRadius(radius: userImage.bounds.height / 2)
-        userImage.viewAspect(ratio: 1)
+        userImage.aspect(ratio: 1)
         
         addSubviews(userImage, labelStack)
         
@@ -74,10 +82,7 @@ public final class ProfileView: UIView {
                           trailing: trailingAnchor)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+    //MARK: - Apply Model
     public func apply(image: UIImage? = nil,
                       userName: String,
                       email: String = "",

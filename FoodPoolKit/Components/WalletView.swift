@@ -12,7 +12,8 @@ import AutoLayoutHelper
 
 public final class WalletView: UIView {
     
-    lazy var title: UILabelView = .create(
+    //MARK: - Properties
+    private lazy var title: UILabelView = .create(
         lblText: "Amount:",
         font: .boldMedium,
         textColor: .mainColor,
@@ -20,7 +21,7 @@ public final class WalletView: UIView {
         sizeToFit: true
     )
     
-    lazy var amount: UILabelView = .create(
+    private lazy var amount: UILabelView = .create(
         lblText: "00.00 $",
         font: .medium,
         textColor: .secondaryTitle,
@@ -28,24 +29,32 @@ public final class WalletView: UIView {
         sizeToFit: true
     )
     
-    lazy var addButton: UIButton = .create(
+    private lazy var addButton: UIButton = .create(
         type: .system,
         image: .plusFillAndCircular,
         tintColor: .mainColor,
         sizeToFit: true
     )
     
-    lazy var labelStack: UIStackView = .create(
+    private lazy var labelStack: UIStackView = .create(
         subviews: [title, amount],
         axis: .horizontal,
         distribution: .equalSpacing,
         alignment: .leading
     )
     
+    //MARK: - Initalization
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
-        
+        configuration()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Configuration
+    private func configuration() {
         addSubviews(labelStack, addButton)
         labelStack.anchor(leading: leadingAnchor,
                           padding: .padding(left: 10.0))
@@ -53,13 +62,9 @@ public final class WalletView: UIView {
         addButton.anchor(trailing: trailingAnchor,
                          padding: .padding(right: 10.0))
         addButton.centerYToSuperView()
-        
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+    //MARK: - Apply Model
     public func apply(amount: Double,
                       buttonTarget: Any? = nil,
                       buttonSelector: Selector) {

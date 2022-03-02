@@ -17,8 +17,7 @@ class ProfilePageView: UIViewController {
         style: .plain,
         estimatedRowHeight: 100,
         backgroundColor: .clear,
-        headerView: profileView,
-        addCells: [AddressCell.self, WalletCell.self]
+        headerView: profileView
     )
     
     

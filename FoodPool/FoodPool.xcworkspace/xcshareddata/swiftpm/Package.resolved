@@ -5,8 +5,8 @@
         "package": "AutoLayoutHelper",
         "repositoryURL": "git@github.com:aysenurbakirci/AutoLayoutHelper.git",
         "state": {
-          "branch": "main",
-          "revision": "c1cf0d2c71b0b42be1a75c1bd4144a098c464c39",
+          "branch": null,
+          "revision": "7ef0ca5b4a3b0b02bd387a46a64294f17e8d7996",
           "version": null
         }
       },
@@ -15,7 +15,7 @@
         "repositoryURL": "git@github.com:aysenurbakirci/LayoutKit.git",
         "state": {
           "branch": null,
-          "revision": "7efdca9f937925046188a25e9b40aea582a026fe",
+          "revision": "30412959252056abce11ba67046bcfd7d410c79d",
           "version": null
         }
       }

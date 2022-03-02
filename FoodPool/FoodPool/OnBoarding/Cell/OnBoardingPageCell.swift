@@ -7,28 +7,32 @@
 
 import Foundation
 import UIKit
+import LayoutKit
 import AutoLayoutHelper
 import FoodPoolKit
 
 final class OnBoardingPageCell: UICollectionViewCell {
     
-    lazy var cellView = OnBoardingView()
+    //MARK: - Properties
+    private lazy var view = OnBoardingView(frame: self.frame)
     
+    //MARK: - Initalization
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        cellView.fillSuperView()
+        contentView.addSubview(view)
+        view.fillSuperView()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func apply(image: UIImage? = nil,
+    //MARK: - Apply Model
+    func apply(image: UIImage?,
                title: String,
-               description: String? = nil) {
-        cellView.apply(image: image,
-                       title: title,
-                       subtitle: description)
+               description: String?) {
+        view.apply(image: image,
+                   title: title,
+                   subtitle: description)
     }
 }

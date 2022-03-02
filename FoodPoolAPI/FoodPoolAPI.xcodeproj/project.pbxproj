@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		246D56E827CF6B94003331EE /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246D56E727CF6B94003331EE /* OnBoarding.swift */; };
+		246D56EA27CF6BE5003331EE /* BundleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246D56E927CF6BE5003331EE /* BundleAPI.swift */; };
+		246D56EC27CF6C15003331EE /* FoodPoolAPI.json in Sources */ = {isa = PBXBuildFile; fileRef = 246D56EB27CF6C15003331EE /* FoodPoolAPI.json */; };
+		246D56F227CF7085003331EE /* FoodPoolAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = 246D56EB27CF6C15003331EE /* FoodPoolAPI.json */; };
 		371FA1C927C8ED20009BFAD3 /* FoodPoolAPI.docc in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1C827C8ED20009BFAD3 /* FoodPoolAPI.docc */; };
 		371FA1CA27C8ED20009BFAD3 /* FoodPoolAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 371FA1C727C8ED20009BFAD3 /* FoodPoolAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		246D56E727CF6B94003331EE /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
+		246D56E927CF6BE5003331EE /* BundleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleAPI.swift; sourceTree = "<group>"; };
+		246D56EB27CF6C15003331EE /* FoodPoolAPI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FoodPoolAPI.json; sourceTree = "<group>"; };
 		371FA1C427C8ED20009BFAD3 /* FoodPoolAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoodPoolAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		371FA1C727C8ED20009BFAD3 /* FoodPoolAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodPoolAPI.h; sourceTree = "<group>"; };
 		371FA1C827C8ED20009BFAD3 /* FoodPoolAPI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = FoodPoolAPI.docc; sourceTree = "<group>"; };
@@ -28,6 +35,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		246D56E627CF6B89003331EE /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				246D56E727CF6B94003331EE /* OnBoarding.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		371FA1BA27C8ED20009BFAD3 = {
 			isa = PBXGroup;
 			children = (
@@ -47,6 +62,9 @@
 		371FA1C627C8ED20009BFAD3 /* FoodPoolAPI */ = {
 			isa = PBXGroup;
 			children = (
+				246D56E927CF6BE5003331EE /* BundleAPI.swift */,
+				246D56EB27CF6C15003331EE /* FoodPoolAPI.json */,
+				246D56E627CF6B89003331EE /* DTO */,
 				371FA1C727C8ED20009BFAD3 /* FoodPoolAPI.h */,
 				371FA1C827C8ED20009BFAD3 /* FoodPoolAPI.docc */,
 			);
@@ -122,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				246D56F227CF7085003331EE /* FoodPoolAPI.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				246D56EC27CF6C15003331EE /* FoodPoolAPI.json in Sources */,
+				246D56EA27CF6BE5003331EE /* BundleAPI.swift in Sources */,
+				246D56E827CF6B94003331EE /* OnBoarding.swift in Sources */,
 				371FA1C927C8ED20009BFAD3 /* FoodPoolAPI.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

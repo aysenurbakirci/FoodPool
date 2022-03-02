@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		245A130027CCEDAE00CFEEDD /* LayoutKit in Frameworks */ = {isa = PBXBuildFile; productRef = 245A12FF27CCEDAE00CFEEDD /* LayoutKit */; };
+		246D56DA27CF5BD2003331EE /* AutoLayoutHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 246D56D927CF5BD2003331EE /* AutoLayoutHelper */; };
+		246D56DC27CF603C003331EE /* OnBoardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246D56DB27CF603C003331EE /* OnBoardingPageView.swift */; };
+		246D56DE27CF66A0003331EE /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246D56DD27CF66A0003331EE /* OnBoardingViewModel.swift */; };
+		246D56EE27CF6CA7003331EE /* FoodPoolAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 246D56ED27CF6CA7003331EE /* FoodPoolAPI.framework */; };
+		246D56EF27CF6CA7003331EE /* FoodPoolAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 246D56ED27CF6CA7003331EE /* FoodPoolAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		246D56F427CF7486003331EE /* OnBoardingPageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246D56F327CF7486003331EE /* OnBoardingPageBuilder.swift */; };
 		371FA1A427C8EC4E009BFAD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1A327C8EC4E009BFAD3 /* AppDelegate.swift */; };
 		371FA1A627C8EC4E009BFAD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1A527C8EC4E009BFAD3 /* SceneDelegate.swift */; };
-		371FA1A827C8EC4E009BFAD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1A727C8EC4E009BFAD3 /* ViewController.swift */; };
 		371FA1AB27C8EC4E009BFAD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371FA1A927C8EC4E009BFAD3 /* Main.storyboard */; };
 		371FA1AD27C8EC4F009BFAD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371FA1AC27C8EC4F009BFAD3 /* Assets.xcassets */; };
 		371FA1B027C8EC4F009BFAD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371FA1AE27C8EC4F009BFAD3 /* LaunchScreen.storyboard */; };
@@ -20,10 +26,7 @@
 		371FA20F27C8FE7B009BFAD3 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA20E27C8FE7B009BFAD3 /* AddressCell.swift */; };
 		37954B9827CCBDAE0042ECC4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954B9727CCBDAE0042ECC4 /* ProfileViewController.swift */; };
 		37954B9B27CCBF390042ECC4 /* OnBoardingPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954B9A27CCBF390042ECC4 /* OnBoardingPageCell.swift */; };
-		37954B9F27CCC2BB0042ECC4 /* OnBoardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954B9E27CCC2BB0042ECC4 /* OnBoardingPageView.swift */; };
-		37954BA827CCC70E0042ECC4 /* AutoLayoutHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 37954BA727CCC70E0042ECC4 /* AutoLayoutHelper */; };
 		37954BAA27CCC7920042ECC4 /* OnBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954BA927CCC7920042ECC4 /* OnBoardingPageViewController.swift */; };
-		37954BB227CCC9A60042ECC4 /* LayoutKit in Frameworks */ = {isa = PBXBuildFile; productRef = 37954BB127CCC9A60042ECC4 /* LayoutKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +37,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				371FA1F927C8FC56009BFAD3 /* FoodPoolKit.framework in Embed Frameworks */,
+				246D56EF27CF6CA7003331EE /* FoodPoolAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,10 +45,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		246D56DB27CF603C003331EE /* OnBoardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageView.swift; sourceTree = "<group>"; };
+		246D56DD27CF66A0003331EE /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
+		246D56ED27CF6CA7003331EE /* FoodPoolAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FoodPoolAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		246D56F327CF7486003331EE /* OnBoardingPageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageBuilder.swift; sourceTree = "<group>"; };
 		371FA1A027C8EC4E009BFAD3 /* FoodPool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		371FA1A327C8EC4E009BFAD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		371FA1A527C8EC4E009BFAD3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		371FA1A727C8EC4E009BFAD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		371FA1AA27C8EC4E009BFAD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		371FA1AC27C8EC4F009BFAD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		371FA1AF27C8EC4F009BFAD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +62,6 @@
 		371FA20E27C8FE7B009BFAD3 /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		37954B9727CCBDAE0042ECC4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		37954B9A27CCBF390042ECC4 /* OnBoardingPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageCell.swift; sourceTree = "<group>"; };
-		37954B9E27CCC2BB0042ECC4 /* OnBoardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageView.swift; sourceTree = "<group>"; };
 		37954BA927CCC7920042ECC4 /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,15 +70,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37954BB227CCC9A60042ECC4 /* LayoutKit in Frameworks */,
+				245A130027CCEDAE00CFEEDD /* LayoutKit in Frameworks */,
+				246D56EE27CF6CA7003331EE /* FoodPoolAPI.framework in Frameworks */,
+				246D56DA27CF5BD2003331EE /* AutoLayoutHelper in Frameworks */,
 				371FA1F827C8FC56009BFAD3 /* FoodPoolKit.framework in Frameworks */,
-				37954BA827CCC70E0042ECC4 /* AutoLayoutHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		246D56DF27CF66AB003331EE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				37954B9A27CCBF390042ECC4 /* OnBoardingPageCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		371FA19727C8EC4E009BFAD3 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +110,6 @@
 			children = (
 				37954B9927CCBF280042ECC4 /* OnBoarding */,
 				371FA1B927C8EC76009BFAD3 /* Profile */,
-				371FA1B827C8EC70009BFAD3 /* Basket */,
-				371FA1B727C8EC5B009BFAD3 /* Main */,
 				371FA1A327C8EC4E009BFAD3 /* AppDelegate.swift */,
 				371FA1A527C8EC4E009BFAD3 /* SceneDelegate.swift */,
 				371FA1A927C8EC4E009BFAD3 /* Main.storyboard */,
@@ -105,21 +118,6 @@
 				371FA1B127C8EC4F009BFAD3 /* Info.plist */,
 			);
 			path = FoodPool;
-			sourceTree = "<group>";
-		};
-		371FA1B727C8EC5B009BFAD3 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				371FA1A727C8EC4E009BFAD3 /* ViewController.swift */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		371FA1B827C8EC70009BFAD3 /* Basket */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Basket;
 			sourceTree = "<group>";
 		};
 		371FA1B927C8EC76009BFAD3 /* Profile */ = {
@@ -136,6 +134,7 @@
 		371FA1D027C8EDB4009BFAD3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				246D56ED27CF6CA7003331EE /* FoodPoolAPI.framework */,
 				371FA1F727C8FC56009BFAD3 /* FoodPoolKit.framework */,
 			);
 			name = Frameworks;
@@ -144,9 +143,11 @@
 		37954B9927CCBF280042ECC4 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				37954B9A27CCBF390042ECC4 /* OnBoardingPageCell.swift */,
-				37954B9E27CCC2BB0042ECC4 /* OnBoardingPageView.swift */,
+				246D56DF27CF66AB003331EE /* Cell */,
+				246D56DB27CF603C003331EE /* OnBoardingPageView.swift */,
+				246D56DD27CF66A0003331EE /* OnBoardingViewModel.swift */,
 				37954BA927CCC7920042ECC4 /* OnBoardingPageViewController.swift */,
+				246D56F327CF7486003331EE /* OnBoardingPageBuilder.swift */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -169,8 +170,8 @@
 			);
 			name = FoodPool;
 			packageProductDependencies = (
-				37954BA727CCC70E0042ECC4 /* AutoLayoutHelper */,
-				37954BB127CCC9A60042ECC4 /* LayoutKit */,
+				245A12FF27CCEDAE00CFEEDD /* LayoutKit */,
+				246D56D927CF5BD2003331EE /* AutoLayoutHelper */,
 			);
 			productName = FoodPool;
 			productReference = 371FA1A027C8EC4E009BFAD3 /* FoodPool.app */;
@@ -201,8 +202,8 @@
 			);
 			mainGroup = 371FA19727C8EC4E009BFAD3;
 			packageReferences = (
-				37954BA627CCC70E0042ECC4 /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */,
-				37954BB027CCC9A60042ECC4 /* XCRemoteSwiftPackageReference "LayoutKit" */,
+				245A12FE27CCEDAE00CFEEDD /* XCRemoteSwiftPackageReference "LayoutKit" */,
+				246D56D827CF5BD2003331EE /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */,
 			);
 			productRefGroup = 371FA1A127C8EC4E009BFAD3 /* Products */;
 			projectDirPath = "";
@@ -232,13 +233,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				371FA1D427C8F04B009BFAD3 /* ProfilePageView.swift in Sources */,
-				371FA1A827C8EC4E009BFAD3 /* ViewController.swift in Sources */,
 				37954B9B27CCBF390042ECC4 /* OnBoardingPageCell.swift in Sources */,
-				37954B9F27CCC2BB0042ECC4 /* OnBoardingPageView.swift in Sources */,
 				371FA20D27C8FE71009BFAD3 /* WalletCell.swift in Sources */,
+				246D56DC27CF603C003331EE /* OnBoardingPageView.swift in Sources */,
 				371FA1A427C8EC4E009BFAD3 /* AppDelegate.swift in Sources */,
 				37954B9827CCBDAE0042ECC4 /* ProfileViewController.swift in Sources */,
 				371FA20F27C8FE7B009BFAD3 /* AddressCell.swift in Sources */,
+				246D56DE27CF66A0003331EE /* OnBoardingViewModel.swift in Sources */,
+				246D56F427CF7486003331EE /* OnBoardingPageBuilder.swift in Sources */,
 				371FA1A627C8EC4E009BFAD3 /* SceneDelegate.swift in Sources */,
 				37954BAA27CCC7920042ECC4 /* OnBoardingPageViewController.swift in Sources */,
 			);
@@ -462,34 +464,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		37954BA627CCC70E0042ECC4 /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:aysenurbakirci/AutoLayoutHelper.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		37954BB027CCC9A60042ECC4 /* XCRemoteSwiftPackageReference "LayoutKit" */ = {
+		245A12FE27CCEDAE00CFEEDD /* XCRemoteSwiftPackageReference "LayoutKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:aysenurbakirci/LayoutKit.git";
 			requirement = {
 				kind = revision;
-				revision = 7efdca9f937925046188a25e9b40aea582a026fe;
+				revision = 30412959252056abce11ba67046bcfd7d410c79d;
+			};
+		};
+		246D56D827CF5BD2003331EE /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:aysenurbakirci/AutoLayoutHelper.git";
+			requirement = {
+				kind = revision;
+				revision = 7ef0ca5b4a3b0b02bd387a46a64294f17e8d7996;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		37954BA727CCC70E0042ECC4 /* AutoLayoutHelper */ = {
+		245A12FF27CCEDAE00CFEEDD /* LayoutKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 37954BA627CCC70E0042ECC4 /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */;
-			productName = AutoLayoutHelper;
-		};
-		37954BB127CCC9A60042ECC4 /* LayoutKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 37954BB027CCC9A60042ECC4 /* XCRemoteSwiftPackageReference "LayoutKit" */;
+			package = 245A12FE27CCEDAE00CFEEDD /* XCRemoteSwiftPackageReference "LayoutKit" */;
 			productName = LayoutKit;
+		};
+		246D56D927CF5BD2003331EE /* AutoLayoutHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 246D56D827CF5BD2003331EE /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */;
+			productName = AutoLayoutHelper;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

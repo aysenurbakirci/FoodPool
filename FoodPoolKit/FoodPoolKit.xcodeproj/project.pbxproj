@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		245A12FD27CCED9E00CFEEDD /* LayoutKit in Frameworks */ = {isa = PBXBuildFile; productRef = 245A12FC27CCED9E00CFEEDD /* LayoutKit */; };
+		246D56D727CF5BC0003331EE /* AutoLayoutHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 246D56D627CF5BC0003331EE /* AutoLayoutHelper */; };
 		371FA1E427C8F504009BFAD3 /* FoodPoolKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1E327C8F504009BFAD3 /* FoodPoolKit.docc */; };
 		371FA1E527C8F504009BFAD3 /* FoodPoolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 371FA1E227C8F504009BFAD3 /* FoodPoolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		371FA1F227C8F519009BFAD3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1F127C8F519009BFAD3 /* ProfileView.swift */; };
 		371FA1F427C8F523009BFAD3 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1F327C8F522009BFAD3 /* WalletView.swift */; };
 		371FA1F627C8F531009BFAD3 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1F527C8F531009BFAD3 /* AddressView.swift */; };
-		371FA20027C8FCB3009BFAD3 /* AutoLayoutHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 371FA1FF27C8FCB3009BFAD3 /* AutoLayoutHelper */; };
 		371FA20427C8FCF1009BFAD3 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA20327C8FCF1009BFAD3 /* UIColor.swift */; };
 		371FA20627C8FCF8009BFAD3 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA20527C8FCF8009BFAD3 /* UIFont.swift */; };
 		371FA20827C8FD05009BFAD3 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA20727C8FD05009BFAD3 /* UIImage.swift */; };
 		37954B9D27CCBF5E0042ECC4 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954B9C27CCBF5E0042ECC4 /* OnBoardingView.swift */; };
-		37954BAF27CCC9970042ECC4 /* LayoutKit in Frameworks */ = {isa = PBXBuildFile; productRef = 37954BAE27CCC9970042ECC4 /* LayoutKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				371FA20027C8FCB3009BFAD3 /* AutoLayoutHelper in Frameworks */,
-				37954BAF27CCC9970042ECC4 /* LayoutKit in Frameworks */,
+				245A12FD27CCED9E00CFEEDD /* LayoutKit in Frameworks */,
+				246D56D727CF5BC0003331EE /* AutoLayoutHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,8 +123,8 @@
 			);
 			name = FoodPoolKit;
 			packageProductDependencies = (
-				371FA1FF27C8FCB3009BFAD3 /* AutoLayoutHelper */,
-				37954BAE27CCC9970042ECC4 /* LayoutKit */,
+				245A12FC27CCED9E00CFEEDD /* LayoutKit */,
+				246D56D627CF5BC0003331EE /* AutoLayoutHelper */,
 			);
 			productName = FoodPoolKit;
 			productReference = 371FA1DF27C8F504009BFAD3 /* FoodPoolKit.framework */;
@@ -154,8 +154,8 @@
 			);
 			mainGroup = 371FA1D527C8F504009BFAD3;
 			packageReferences = (
-				371FA1FE27C8FCB3009BFAD3 /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */,
-				37954BAD27CCC9970042ECC4 /* XCRemoteSwiftPackageReference "LayoutKit" */,
+				245A12FB27CCED9E00CFEEDD /* XCRemoteSwiftPackageReference "LayoutKit" */,
+				246D56D527CF5BC0003331EE /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */,
 			);
 			productRefGroup = 371FA1E027C8F504009BFAD3 /* Products */;
 			projectDirPath = "";
@@ -397,34 +397,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		371FA1FE27C8FCB3009BFAD3 /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:aysenurbakirci/AutoLayoutHelper.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-		37954BAD27CCC9970042ECC4 /* XCRemoteSwiftPackageReference "LayoutKit" */ = {
+		245A12FB27CCED9E00CFEEDD /* XCRemoteSwiftPackageReference "LayoutKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:aysenurbakirci/LayoutKit.git";
 			requirement = {
 				kind = revision;
-				revision = 7efdca9f937925046188a25e9b40aea582a026fe;
+				revision = 30412959252056abce11ba67046bcfd7d410c79d;
+			};
+		};
+		246D56D527CF5BC0003331EE /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:aysenurbakirci/AutoLayoutHelper.git";
+			requirement = {
+				kind = revision;
+				revision = 7ef0ca5b4a3b0b02bd387a46a64294f17e8d7996;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		371FA1FF27C8FCB3009BFAD3 /* AutoLayoutHelper */ = {
+		245A12FC27CCED9E00CFEEDD /* LayoutKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 371FA1FE27C8FCB3009BFAD3 /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */;
-			productName = AutoLayoutHelper;
-		};
-		37954BAE27CCC9970042ECC4 /* LayoutKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 37954BAD27CCC9970042ECC4 /* XCRemoteSwiftPackageReference "LayoutKit" */;
+			package = 245A12FB27CCED9E00CFEEDD /* XCRemoteSwiftPackageReference "LayoutKit" */;
 			productName = LayoutKit;
+		};
+		246D56D627CF5BC0003331EE /* AutoLayoutHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 246D56D527CF5BC0003331EE /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */;
+			productName = AutoLayoutHelper;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -12,11 +12,14 @@ import UIKit
 
 public final class OnBoardingView: UIView {
     
+    //MARK: - Properties
+    lazy var imageContainer: UIView = .create()
+    
     lazy var image: UIImageView = .create(
-        image: UIImage(systemName: "photo")!,
+        image: .plus,
         contentMode: .scaleAspectFit,
         backgroundColor: .clear,
-        tintColor: .gray,
+        tintColor: .white,
         isOpaque: true
     )
     
@@ -43,27 +46,45 @@ public final class OnBoardingView: UIView {
         axis: .vertical,
         distribution: .equalSpacing,
         alignment: .center,
-        spacing: 2
+        spacing: 4
     )
-
+    
+    //MARK: - Initalization
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        addSubviews(image, labelStack)
-        image.anchor(top: topAnchor,
-                     leading: leadingAnchor,
-                     trailing: trailingAnchor)
-        image.viewAspect(ratio: 1)
-        labelStack.anchor(top: image.bottomAnchor,
-                          leading: leadingAnchor,
-                          trailing: trailingAnchor,
-                          padding: .equalPadding(10.0))
+        configuration()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Configuration
+    private func configuration() {
+        addSubviews(imageContainer, labelStack)
+        imageContainer.addSubview(image)
+        
+        imageContainer.backgroundColor = .secondaryColor
+        
+        imageContainer.anchor(top: topAnchor,
+                              leading: leadingAnchor,
+                              trailing: trailingAnchor)
+        imageContainer.heightAnchor.constraint(equalTo: heightAnchor,
+                                               multiplier: 0.5).isActive = true
+
+        image.anchor(top: imageContainer.topAnchor,
+                     bottom: imageContainer.bottomAnchor,
+                     padding: .padding(top: 20.0))
+        image.centerXToSuperView()
+        image.aspect(ratio: 1)
+        
+        labelStack.anchor(top: imageContainer.bottomAnchor,
+                          leading: safeAreaLeftAnchor,
+                          trailing: safeAreaRightAnchor,
+                          padding: .equalPadding(20.0))
+    }
+    
+    //MARK: - Apply Model
     public func apply(image: UIImage?, title: String, subtitle: String?) {
         if let image = image {
             self.image.image = image
