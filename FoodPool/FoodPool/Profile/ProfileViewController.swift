@@ -66,12 +66,15 @@ extension ProfileViewController: UITableViewDataSource {
         switch section {
         case 0:
             let cell: ProfileCell = tableView.dequeue(for: indexPath)
+            cell.selectionStyle = .none
             return cell
         case 1:
             let cell: WalletCell = tableView.dequeue(for: indexPath)
+            cell.selectionStyle = .none
             return cell
         case 2:
             let cell: AddressCell = tableView.dequeue(for: indexPath)
+            cell.selectionStyle = .none
             return cell
         default:
             let cell: AddressCell = tableView.dequeue(for: indexPath)
