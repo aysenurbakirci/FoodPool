@@ -22,7 +22,7 @@ public final class AddressView: UIView {
     )
     
     private lazy var address: UILabelView = .create(
-        lblText: "Address",
+        lblText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
         font: .small,
         textColor: .mainColor,
         numberOfLines: 0,
@@ -58,13 +58,17 @@ public final class AddressView: UIView {
     //MARK: - Configuration
     private func configuration() {
         addSubviews(labelStack, editButton)
-        labelStack.anchor(leading: leadingAnchor,
-                          padding: .padding(left: 10.0))
-        labelStack.centerYToSuperView()
         
         editButton.anchor(trailing: trailingAnchor,
                           padding: .padding(right: 10.0))
         editButton.centerAnchor(centerY: labelStack.centerYAnchor)
+        
+        labelStack.anchor(top: topAnchor,
+                          leading: leadingAnchor,
+                          bottom: bottomAnchor,
+                          trailing: editButton.leadingAnchor,
+                          padding: .padding(left: 10.0, right: 10.0))
+        labelStack.centerYToSuperView()
     }
     
     //MARK: - Apply Model

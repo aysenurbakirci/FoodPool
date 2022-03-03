@@ -19,7 +19,7 @@
 		371FA1AB27C8EC4E009BFAD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371FA1A927C8EC4E009BFAD3 /* Main.storyboard */; };
 		371FA1AD27C8EC4F009BFAD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371FA1AC27C8EC4F009BFAD3 /* Assets.xcassets */; };
 		371FA1B027C8EC4F009BFAD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371FA1AE27C8EC4F009BFAD3 /* LaunchScreen.storyboard */; };
-		371FA1D427C8F04B009BFAD3 /* ProfilePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1D327C8F04B009BFAD3 /* ProfilePageView.swift */; };
+		371FA1D427C8F04B009BFAD3 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1D327C8F04B009BFAD3 /* ProfileCell.swift */; };
 		371FA1F827C8FC56009BFAD3 /* FoodPoolKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371FA1F727C8FC56009BFAD3 /* FoodPoolKit.framework */; };
 		371FA1F927C8FC56009BFAD3 /* FoodPoolKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 371FA1F727C8FC56009BFAD3 /* FoodPoolKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		371FA20D27C8FE71009BFAD3 /* WalletCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA20C27C8FE71009BFAD3 /* WalletCell.swift */; };
@@ -56,7 +56,7 @@
 		371FA1AC27C8EC4F009BFAD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		371FA1AF27C8EC4F009BFAD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		371FA1B127C8EC4F009BFAD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		371FA1D327C8F04B009BFAD3 /* ProfilePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageView.swift; sourceTree = "<group>"; };
+		371FA1D327C8F04B009BFAD3 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		371FA1F727C8FC56009BFAD3 /* FoodPoolKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FoodPoolKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		371FA20C27C8FE71009BFAD3 /* WalletCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletCell.swift; sourceTree = "<group>"; };
 		371FA20E27C8FE7B009BFAD3 /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
@@ -84,6 +84,16 @@
 			isa = PBXGroup;
 			children = (
 				37954B9A27CCBF390042ECC4 /* OnBoardingPageCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		246D56F527D0DE7C003331EE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				371FA1D327C8F04B009BFAD3 /* ProfileCell.swift */,
+				371FA20E27C8FE7B009BFAD3 /* AddressCell.swift */,
+				371FA20C27C8FE71009BFAD3 /* WalletCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -123,9 +133,7 @@
 		371FA1B927C8EC76009BFAD3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				371FA1D327C8F04B009BFAD3 /* ProfilePageView.swift */,
-				371FA20C27C8FE71009BFAD3 /* WalletCell.swift */,
-				371FA20E27C8FE7B009BFAD3 /* AddressCell.swift */,
+				246D56F527D0DE7C003331EE /* Cell */,
 				37954B9727CCBDAE0042ECC4 /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -232,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				371FA1D427C8F04B009BFAD3 /* ProfilePageView.swift in Sources */,
+				371FA1D427C8F04B009BFAD3 /* ProfileCell.swift in Sources */,
 				37954B9B27CCBF390042ECC4 /* OnBoardingPageCell.swift in Sources */,
 				371FA20D27C8FE71009BFAD3 /* WalletCell.swift in Sources */,
 				246D56DC27CF603C003331EE /* OnBoardingPageView.swift in Sources */,

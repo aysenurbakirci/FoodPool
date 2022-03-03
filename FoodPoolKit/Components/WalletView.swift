@@ -56,12 +56,16 @@ public final class WalletView: UIView {
     //MARK: - Configuration
     private func configuration() {
         addSubviews(labelStack, addButton)
-        labelStack.anchor(leading: leadingAnchor,
-                          padding: .padding(left: 10.0))
-        labelStack.centerYToSuperView()
+        
         addButton.anchor(trailing: trailingAnchor,
                          padding: .padding(right: 10.0))
         addButton.centerYToSuperView()
+        
+        labelStack.anchor(top: topAnchor,
+                          leading: leadingAnchor,
+                          bottom: bottomAnchor,
+                          trailing: addButton.leadingAnchor,
+                          padding: .padding(left: 10.0, right: 10.0))
     }
     
     //MARK: - Apply Model

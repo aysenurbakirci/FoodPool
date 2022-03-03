@@ -17,8 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        let controller = OnBardingPageBuilder.build()
-        window.rootViewController = controller
+        window.rootViewController = ProfileViewController()
         self.window = window
         window.makeKeyAndVisible()
     }

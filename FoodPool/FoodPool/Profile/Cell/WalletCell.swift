@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import FoodPoolKit
+import AutoLayoutHelper
 
 final class WalletCell: UITableViewCell {
     
@@ -16,6 +17,7 @@ final class WalletCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(walletView)
+        walletView.fillSuperView(with: 10.0)
     }
     
     required init?(coder: NSCoder) {

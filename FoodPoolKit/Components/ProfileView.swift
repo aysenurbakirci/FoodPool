@@ -41,8 +41,8 @@ public final class ProfileView: UIView {
     )
     
     private lazy var phone: UILabelView = .create(
-        lblText: "Phone",
-        font: .medium,
+        lblText: "5385674545",
+        font: .small,
         textColor: .secondaryTitle,
         numberOfLines: 0,
         textAlignment: .center,
@@ -74,12 +74,16 @@ public final class ProfileView: UIView {
         
         addSubviews(userImage, labelStack)
         
-        userImage.anchor(top: topAnchor,
-                         leading: leadingAnchor,
-                         trailing: trailingAnchor)
+        userImage.anchor(top: topAnchor)
+        userImage.sizeAnchor(width: widthAnchor,
+                             multiplerWidth: 0.5)
+        userImage.centerXToSuperView()
+        
         labelStack.anchor(top: userImage.bottomAnchor,
                           leading: leadingAnchor,
-                          trailing: trailingAnchor)
+                          bottom: bottomAnchor,
+                          trailing: trailingAnchor,
+                          padding: .padding(bottom: 10.0))
     }
     
     //MARK: - Apply Model
