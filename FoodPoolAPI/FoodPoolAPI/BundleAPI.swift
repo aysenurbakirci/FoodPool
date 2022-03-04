@@ -24,7 +24,6 @@ public final class BundleAPI: BundleAPIProtocol {
         }
         
         guard let decodedData = try? JSONDecoder().decode(T.self, from: data) else {
-            print(T.self)
             fatalError("Decode error")
         }
         return decodedData

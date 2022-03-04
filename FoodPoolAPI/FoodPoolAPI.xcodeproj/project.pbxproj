@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24456A5227D23EF8006CC621 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24456A5127D23EF8006CC621 /* User.swift */; };
 		246D56E827CF6B94003331EE /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246D56E727CF6B94003331EE /* OnBoarding.swift */; };
 		246D56EA27CF6BE5003331EE /* BundleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246D56E927CF6BE5003331EE /* BundleAPI.swift */; };
 		246D56EC27CF6C15003331EE /* FoodPoolAPI.json in Sources */ = {isa = PBXBuildFile; fileRef = 246D56EB27CF6C15003331EE /* FoodPoolAPI.json */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24456A5127D23EF8006CC621 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		246D56E727CF6B94003331EE /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
 		246D56E927CF6BE5003331EE /* BundleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleAPI.swift; sourceTree = "<group>"; };
 		246D56EB27CF6C15003331EE /* FoodPoolAPI.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FoodPoolAPI.json; sourceTree = "<group>"; };
@@ -39,6 +41,7 @@
 			isa = PBXGroup;
 			children = (
 				246D56E727CF6B94003331EE /* OnBoarding.swift */,
+				24456A5127D23EF8006CC621 /* User.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				246D56EC27CF6C15003331EE /* FoodPoolAPI.json in Sources */,
 				246D56EA27CF6BE5003331EE /* BundleAPI.swift in Sources */,
 				246D56E827CF6B94003331EE /* OnBoarding.swift in Sources */,
+				24456A5227D23EF8006CC621 /* User.swift in Sources */,
 				371FA1C927C8ED20009BFAD3 /* FoodPoolAPI.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

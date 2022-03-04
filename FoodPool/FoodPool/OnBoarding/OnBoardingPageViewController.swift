@@ -1,5 +1,5 @@
 //
-//  OnBoardingViewController.swift
+//  OnBoardingPageViewController.swift
 //  FoodPool
 //
 //  Created by Ayşenur Bakırcı on 28.02.2022.
@@ -15,7 +15,7 @@ import FoodPoolAPI
 final class OnBoardingPageViewController: UIViewController {
     
     lazy var onBoardingView = OnBoardingPageView()
-    var viewModel: OnBoardingViewModelProtocol!
+    var viewModel: OnBoardingPageViewModelProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()

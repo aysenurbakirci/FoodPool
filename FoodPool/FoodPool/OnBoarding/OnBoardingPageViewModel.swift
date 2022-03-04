@@ -1,5 +1,5 @@
 //
-//  OnBoardingViewModel.swift
+//  OnBoardingPageViewModel.swift
 //  FoodPool
 //
 //  Created by Ayşe Nur Bakırcı on 2.03.2022.
@@ -8,13 +8,13 @@
 import Foundation
 import FoodPoolAPI
 
-protocol OnBoardingViewModelProtocol {
+protocol OnBoardingPageViewModelProtocol {
     func dataCount() -> Int
     func getModel(to index: Int) -> OnBoarding
     func loadData()
 }
 
-final class OnBoardingViewModel: OnBoardingViewModelProtocol {
+final class OnBoardingPageViewModel: OnBoardingPageViewModelProtocol {
     
     private var onBoardingList: [OnBoarding] = []
     private var api: BundleAPIProtocol!

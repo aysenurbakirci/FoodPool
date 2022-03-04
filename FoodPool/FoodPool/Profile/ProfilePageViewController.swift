@@ -10,26 +10,23 @@ import UIKit
 import AutoLayoutHelper
 import LayoutKit
 
-final class ProfileViewController: UIViewController {
+final class ProfilePageViewController: UIViewController {
     
-    lazy var tableView = UITableView()
+    lazy var profileView = ProfilePageView()
+    var viewModel: ProfilePageViewModelProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(tableView)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.fillSuperView()
-        tableView.register(AddressCell.self, forCellReuseIdentifier: AddressCell.reuseIdentifier)
-        tableView.register(WalletCell.self, forCellReuseIdentifier: WalletCell.reuseIdentifier)
-        tableView.register(ProfileCell.self, forCellReuseIdentifier: ProfileCell.reuseIdentifier)
+        view = profileView
+        profileView.source = self
+        
+        viewModel.loadData()
     }
 }
 
-extension ProfileViewController: UITableViewDelegate {}
+extension ProfilePageViewController: UITableViewDelegate {}
 
-extension ProfileViewController: UITableViewDataSource {
+extension ProfilePageViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3

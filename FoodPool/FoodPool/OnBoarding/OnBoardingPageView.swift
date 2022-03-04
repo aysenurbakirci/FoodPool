@@ -1,5 +1,5 @@
 //
-//  OnBoardingView.swift
+//  OnBoardingPageView.swift
 //  FoodPool
 //
 //  Created by Ayşe Nur Bakırcı on 2.03.2022.
@@ -57,6 +57,7 @@ final class OnBoardingPageView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configuration()
+        registerCells()
     }
     
     required init?(coder: NSCoder) {
@@ -64,9 +65,6 @@ final class OnBoardingPageView: UIView {
     }
     
     private func configuration() {
-        collection.register(OnBoardingPageCell.self,
-                            forCellWithReuseIdentifier: OnBoardingPageCell.reuseIdentifier)
-        
         addSubview(collection)
         collection.fillSuperView()
         addSubview(pageControl)
@@ -75,6 +73,11 @@ final class OnBoardingPageView: UIView {
                            trailing: trailingAnchor)
         pageControl.sizeAnchor(width: frame.size.width,
                                height: 50.0)
+    }
+    
+    private func registerCells() {
+        collection.register(OnBoardingPageCell.self,
+                            forCellWithReuseIdentifier: OnBoardingPageCell.reuseIdentifier)
     }
     
     public func invalidateLayout() {
