@@ -39,6 +39,8 @@ final class ProfilePageView: UIView {
                            forCellReuseIdentifier: WalletCell.reuseIdentifier)
         tableView.register(ProfileCell.self,
                            forCellReuseIdentifier: ProfileCell.reuseIdentifier)
+        tableView.register(ButtonCell.self,
+                           forCellReuseIdentifier: ButtonCell.reuseIdentifier)
     }
     
     required init?(coder: NSCoder) {

@@ -9,7 +9,7 @@ import Foundation
 import FoodPoolAPI
 
 protocol OnBoardingPageViewModelProtocol {
-    func dataCount() -> Int
+    func numberOfItemsInSection() -> Int
     func getModel(to index: Int) -> OnBoarding
     func loadData()
 }
@@ -28,7 +28,7 @@ final class OnBoardingPageViewModel: OnBoardingPageViewModelProtocol {
         onBoardingList = data.onBoarding
     }
     
-    func dataCount() -> Int {
+    func numberOfItemsInSection() -> Int {
         return onBoardingList.count
     }
     

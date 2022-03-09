@@ -24,6 +24,7 @@ class ProfileCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
+    func apply(userName: String, email: String, phone: String) {
+        profileView.apply(userName: userName, email: email, phone: phone)
+    }
 }

@@ -13,7 +13,7 @@ import AutoLayoutHelper
 public final class AddressView: UIView {
     
     //MARK: - Properties
-    private lazy var title: UILabelView = .create(
+    private lazy var title: UILabel = .create(
         lblText: "Title",
         font: .boldLarge,
         textColor: .secondaryTitle,
@@ -21,7 +21,7 @@ public final class AddressView: UIView {
         sizeToFit: true
     )
     
-    private lazy var address: UILabelView = .create(
+    private lazy var address: UILabel = .create(
         lblText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
         font: .small,
         textColor: .mainColor,
@@ -73,13 +73,16 @@ public final class AddressView: UIView {
     
     //MARK: - Apply Model
     public func apply(addressTitle: String,
-                      address: String,
-                      buttonTarget: Any? = nil,
-                      buttonSelector: Selector) {
+                      address: String) {
         self.title.text = addressTitle
         self.address.text = address
+
+    }
+    
+    public func addTarget(target: Any? = nil,
+                          selector: Selector) {
         self.editButton.addTarget(target,
-                                 action: buttonSelector,
+                                 action: selector,
                                  for: .touchUpInside)
     }
 }

@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		245A12FD27CCED9E00CFEEDD /* LayoutKit in Frameworks */ = {isa = PBXBuildFile; productRef = 245A12FC27CCED9E00CFEEDD /* LayoutKit */; };
 		246D56D727CF5BC0003331EE /* AutoLayoutHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 246D56D627CF5BC0003331EE /* AutoLayoutHelper */; };
+		2498C79B27D76F830014D9FD /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2498C79A27D76F830014D9FD /* MealView.swift */; };
+		2498C79D27D76FC70014D9FD /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2498C79C27D76FC70014D9FD /* StepperView.swift */; };
+		2498C7B027D7E1290014D9FD /* LayoutKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2498C7AF27D7E1290014D9FD /* LayoutKit */; };
+		24A3AFA427D5028000F3AFDE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3AFA327D5028000F3AFDE /* Button.swift */; };
+		24A3AFA627D5029100F3AFDE /* ButtonAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3AFA527D5029100F3AFDE /* ButtonAppearance.swift */; };
+		24A3AFA827D5029C00F3AFDE /* ButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3AFA727D5029C00F3AFDE /* ButtonType.swift */; };
+		24A3AFBD27D6110800F3AFDE /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3AFBC27D6110800F3AFDE /* RestaurantView.swift */; };
+		24A3AFBF27D61E9E00F3AFDE /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3AFBE27D61E9E00F3AFDE /* CategoryView.swift */; };
+		24B0546127D87F8400F672B6 /* TabBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0546027D87F8400F672B6 /* TabBarAppearance.swift */; };
 		371FA1E427C8F504009BFAD3 /* FoodPoolKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1E327C8F504009BFAD3 /* FoodPoolKit.docc */; };
 		371FA1E527C8F504009BFAD3 /* FoodPoolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 371FA1E227C8F504009BFAD3 /* FoodPoolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		371FA1F227C8F519009BFAD3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1F127C8F519009BFAD3 /* ProfileView.swift */; };
@@ -21,6 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2498C79A27D76F830014D9FD /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
+		2498C79C27D76FC70014D9FD /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
+		24A3AFA327D5028000F3AFDE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		24A3AFA527D5029100F3AFDE /* ButtonAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAppearance.swift; sourceTree = "<group>"; };
+		24A3AFA727D5029C00F3AFDE /* ButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
+		24A3AFBC27D6110800F3AFDE /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
+		24A3AFBE27D61E9E00F3AFDE /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		24B0546027D87F8400F672B6 /* TabBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAppearance.swift; sourceTree = "<group>"; };
 		371FA1DF27C8F504009BFAD3 /* FoodPoolKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoodPoolKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		371FA1E227C8F504009BFAD3 /* FoodPoolKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodPoolKit.h; sourceTree = "<group>"; };
 		371FA1E327C8F504009BFAD3 /* FoodPoolKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = FoodPoolKit.docc; sourceTree = "<group>"; };
@@ -38,14 +54,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				245A12FD27CCED9E00CFEEDD /* LayoutKit in Frameworks */,
 				246D56D727CF5BC0003331EE /* AutoLayoutHelper in Frameworks */,
+				2498C7B027D7E1290014D9FD /* LayoutKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24A3AFA227D5004C00F3AFDE /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				24A3AFA327D5028000F3AFDE /* Button.swift */,
+				24A3AFA527D5029100F3AFDE /* ButtonAppearance.swift */,
+				24A3AFA727D5029C00F3AFDE /* ButtonType.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		371FA1D527C8F504009BFAD3 = {
 			isa = PBXGroup;
 			children = (
@@ -76,10 +102,16 @@
 		371FA20127C8FCD4009BFAD3 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				24A3AFA227D5004C00F3AFDE /* Button */,
+				24A3AFBC27D6110800F3AFDE /* RestaurantView.swift */,
 				371FA1F527C8F531009BFAD3 /* AddressView.swift */,
 				371FA1F327C8F522009BFAD3 /* WalletView.swift */,
 				371FA1F127C8F519009BFAD3 /* ProfileView.swift */,
 				37954B9C27CCBF5E0042ECC4 /* OnBoardingView.swift */,
+				24A3AFBE27D61E9E00F3AFDE /* CategoryView.swift */,
+				2498C79A27D76F830014D9FD /* MealView.swift */,
+				2498C79C27D76FC70014D9FD /* StepperView.swift */,
+				24B0546027D87F8400F672B6 /* TabBarAppearance.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -123,8 +155,8 @@
 			);
 			name = FoodPoolKit;
 			packageProductDependencies = (
-				245A12FC27CCED9E00CFEEDD /* LayoutKit */,
 				246D56D627CF5BC0003331EE /* AutoLayoutHelper */,
+				2498C7AF27D7E1290014D9FD /* LayoutKit */,
 			);
 			productName = FoodPoolKit;
 			productReference = 371FA1DF27C8F504009BFAD3 /* FoodPoolKit.framework */;
@@ -154,8 +186,8 @@
 			);
 			mainGroup = 371FA1D527C8F504009BFAD3;
 			packageReferences = (
-				245A12FB27CCED9E00CFEEDD /* XCRemoteSwiftPackageReference "LayoutKit" */,
 				246D56D527CF5BC0003331EE /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */,
+				2498C7AE27D7E1290014D9FD /* XCRemoteSwiftPackageReference "LayoutKit" */,
 			);
 			productRefGroup = 371FA1E027C8F504009BFAD3 /* Products */;
 			projectDirPath = "";
@@ -183,12 +215,20 @@
 			files = (
 				371FA20827C8FD05009BFAD3 /* UIImage.swift in Sources */,
 				371FA1F227C8F519009BFAD3 /* ProfileView.swift in Sources */,
+				24B0546127D87F8400F672B6 /* TabBarAppearance.swift in Sources */,
+				24A3AFA827D5029C00F3AFDE /* ButtonType.swift in Sources */,
 				371FA1F627C8F531009BFAD3 /* AddressView.swift in Sources */,
 				371FA20627C8FCF8009BFAD3 /* UIFont.swift in Sources */,
+				24A3AFBF27D61E9E00F3AFDE /* CategoryView.swift in Sources */,
 				371FA1E427C8F504009BFAD3 /* FoodPoolKit.docc in Sources */,
 				37954B9D27CCBF5E0042ECC4 /* OnBoardingView.swift in Sources */,
 				371FA1F427C8F523009BFAD3 /* WalletView.swift in Sources */,
+				2498C79D27D76FC70014D9FD /* StepperView.swift in Sources */,
+				24A3AFA427D5028000F3AFDE /* Button.swift in Sources */,
 				371FA20427C8FCF1009BFAD3 /* UIColor.swift in Sources */,
+				24A3AFA627D5029100F3AFDE /* ButtonAppearance.swift in Sources */,
+				24A3AFBD27D6110800F3AFDE /* RestaurantView.swift in Sources */,
+				2498C79B27D76F830014D9FD /* MealView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,14 +437,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		245A12FB27CCED9E00CFEEDD /* XCRemoteSwiftPackageReference "LayoutKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:aysenurbakirci/LayoutKit.git";
-			requirement = {
-				kind = revision;
-				revision = 30412959252056abce11ba67046bcfd7d410c79d;
-			};
-		};
 		246D56D527CF5BC0003331EE /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:aysenurbakirci/AutoLayoutHelper.git";
@@ -413,18 +445,26 @@
 				revision = 7ef0ca5b4a3b0b02bd387a46a64294f17e8d7996;
 			};
 		};
+		2498C7AE27D7E1290014D9FD /* XCRemoteSwiftPackageReference "LayoutKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:aysenurbakirci/LayoutKit.git";
+			requirement = {
+				kind = revision;
+				revision = d7c5489fdc6d08a2cf8bdcd8de728136369d573b;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		245A12FC27CCED9E00CFEEDD /* LayoutKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 245A12FB27CCED9E00CFEEDD /* XCRemoteSwiftPackageReference "LayoutKit" */;
-			productName = LayoutKit;
-		};
 		246D56D627CF5BC0003331EE /* AutoLayoutHelper */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 246D56D527CF5BC0003331EE /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */;
 			productName = AutoLayoutHelper;
+		};
+		2498C7AF27D7E1290014D9FD /* LayoutKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2498C7AE27D7E1290014D9FD /* XCRemoteSwiftPackageReference "LayoutKit" */;
+			productName = LayoutKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

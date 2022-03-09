@@ -8,13 +8,14 @@
 import Foundation
 import FoodPoolAPI
 
-enum ProfileSection {
+enum ProfilePageSection {
     case profile(User)
     case wallet(Float)
     case address([Address])
+    case button
 }
 
-extension ProfileSection {
+extension ProfilePageSection {
     
     var numberRowsInSection: Int {
         switch self {
@@ -24,6 +25,8 @@ extension ProfileSection {
             return 1
         case .address(let addressArray):
             return addressArray.count
+        case .button:
+            return 1
         }
     }
     
@@ -35,6 +38,8 @@ extension ProfileSection {
             return "Wallet"
         case .address(_):
             return "Addresses"
+        case .button:
+            return nil
         }
     }
 }

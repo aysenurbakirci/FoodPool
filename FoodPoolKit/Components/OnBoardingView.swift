@@ -23,7 +23,7 @@ public final class OnBoardingView: UIView {
         isOpaque: true
     )
     
-    lazy var title: UILabelView = .create(
+    lazy var title: UILabel = .create(
         lblText: "Title",
         font: .boldLarge,
         textColor: .title,
@@ -32,7 +32,7 @@ public final class OnBoardingView: UIView {
         sizeToFit: true
     )
     
-    lazy var desc: UILabelView = .create(
+    lazy var desc: UILabel = .create(
         lblText: "Description",
         font: .xSmall,
         textColor: .secondaryTitle,

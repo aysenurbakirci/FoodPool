@@ -23,4 +23,12 @@ final class AddressCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func apply(title: String, address: String) {
+        addressView.apply(addressTitle: title, address: address)
+    }
+    
+    func addButtonTarget(editButtonTarget: Any?, editButtonSelector: Selector) {
+        addressView.addTarget(target: editButtonTarget, selector: editButtonSelector)
+    }
 }

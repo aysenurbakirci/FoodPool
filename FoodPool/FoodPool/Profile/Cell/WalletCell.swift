@@ -24,4 +24,12 @@ final class WalletCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func apply(amount: Double) {
+        walletView.apply(amount: amount)
+    }
+    
+    func addButtonTarget(addButtonTarget: Any?, addButtonSelector: Selector) {
+        walletView.addTarget(target: addButtonTarget, selector: addButtonSelector)
+    }
+    
 }

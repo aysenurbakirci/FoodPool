@@ -13,7 +13,7 @@ import AutoLayoutHelper
 public final class WalletView: UIView {
     
     //MARK: - Properties
-    private lazy var title: UILabelView = .create(
+    private lazy var title: UILabel = .create(
         lblText: "Amount:",
         font: .boldMedium,
         textColor: .mainColor,
@@ -21,7 +21,7 @@ public final class WalletView: UIView {
         sizeToFit: true
     )
     
-    private lazy var amount: UILabelView = .create(
+    private lazy var amount: UILabel = .create(
         lblText: "00.00 $",
         font: .medium,
         textColor: .secondaryTitle,
@@ -69,12 +69,16 @@ public final class WalletView: UIView {
     }
     
     //MARK: - Apply Model
-    public func apply(amount: Double,
-                      buttonTarget: Any? = nil,
-                      buttonSelector: Selector) {
+    public func apply(amount: Double) {
         self.amount.text = "\(amount)"
+
+    }
+    
+    //MARK: - Add Target
+    public func addTarget(target: Any? = nil,
+                          selector: Selector) {
         self.addButton.addTarget(target,
-                                 action: buttonSelector,
+                                 action: selector,
                                  for: .touchUpInside)
     }
 }

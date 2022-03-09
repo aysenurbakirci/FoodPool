@@ -23,7 +23,7 @@ final class OnBoardingPageViewController: UIViewController {
         onBoardingView.source = self
         view = onBoardingView
         viewModel.loadData()
-        onBoardingView.numberOfPages = viewModel.dataCount()
+        onBoardingView.numberOfPages = viewModel.numberOfItemsInSection()
     }
 }
 
@@ -32,7 +32,7 @@ extension OnBoardingPageViewController: UICollectionViewDelegate {}
 extension OnBoardingPageViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return viewModel.dataCount()
+        return viewModel.numberOfItemsInSection()
     }
     
     func collectionView(_ collectionView: UICollectionView,

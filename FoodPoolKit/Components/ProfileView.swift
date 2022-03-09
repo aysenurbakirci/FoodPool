@@ -22,7 +22,7 @@ public final class ProfileView: UIView {
         isOpaque: true
     )
     
-    private lazy var name: UILabelView = .create(
+    private lazy var name: UILabel = .create(
         lblText: "Name Surname",
         font: .boldXLarge,
         textColor: .mainColor,
@@ -31,7 +31,7 @@ public final class ProfileView: UIView {
         sizeToFit: true
     )
     
-    private lazy var mail: UILabelView = .create(
+    private lazy var mail: UILabel = .create(
         lblText: "example@example.com",
         font: .medium,
         textColor: .secondaryTitle,
@@ -40,7 +40,7 @@ public final class ProfileView: UIView {
         sizeToFit: true
     )
     
-    private lazy var phone: UILabelView = .create(
+    private lazy var phone: UILabel = .create(
         lblText: "5385674545",
         font: .small,
         textColor: .secondaryTitle,

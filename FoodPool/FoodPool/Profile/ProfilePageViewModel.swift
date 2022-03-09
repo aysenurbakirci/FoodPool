@@ -10,11 +10,15 @@ import FoodPoolAPI
 
 protocol ProfilePageViewModelProtocol {
     func loadData()
+    func numberOfSections() -> Int
+    func numberOfRowsInSection(for section: Int) -> Int
+    func titleForHeaderInSection(for section: Int) -> String?
+    func modelForSection(at index: IndexPath) -> ProfilePageSection
 }
 
 final class ProfilePageViewModel: ProfilePageViewModelProtocol {
     
-    var profile: [ProfileSection] = []
+    private var profile: [ProfilePageSection] = []
     private var api: BundleAPIProtocol!
     
     init(api: BundleAPIProtocol) {
@@ -28,8 +32,25 @@ final class ProfilePageViewModel: ProfilePageViewModelProtocol {
             if user.id == "1" {
                 profile = [.profile(user),
                            .wallet(user.amount),
-                           .address(user.addresses)]
+                           .address(user.addresses),
+                            .button]
             }
         }
+    }
+    
+    func numberOfSections() -> Int {
+        return profile.count
+    }
+    
+    func numberOfRowsInSection(for section: Int) -> Int {
+        return profile[section].numberRowsInSection
+    }
+    
+    func titleForHeaderInSection(for section: Int) -> String? {
+        return profile[section].titleInSection
+    }
+    
+    func modelForSection(at index: IndexPath) -> ProfilePageSection {
+        return profile[index.section]
     }
 }
