@@ -1,8 +1,8 @@
 //
-//  MainView.swift
+//  OrderPageView.swift
 //  FoodPool
 //
-//  Created by Ayşe Nur Bakırcı on 7.03.2022.
+//  Created by Ayşenur Bakırcı on 9.03.2022.
 //
 
 import Foundation
@@ -10,7 +10,7 @@ import UIKit
 import AutoLayoutHelper
 import LayoutKit
 
-final class MainPageView: UIView {
+final class OrderPageView: UIView {
     
     private lazy var tableView = UITableView()
     
@@ -34,11 +34,8 @@ final class MainPageView: UIView {
     }
     
     private func registerCells() {
-        tableView.separatorStyle = .none
-        tableView.register(CuisineCell.self,
-                           forCellReuseIdentifier: CuisineCell.reuseIdentifier)
-        tableView.register(RestaurantCell.self,
-                           forCellReuseIdentifier: RestaurantCell.reuseIdentifier)
+        tableView.register(OrderCell.self,
+                           forCellReuseIdentifier: OrderCell.reuseIdentifier)
     }
     
     required init?(coder: NSCoder) {

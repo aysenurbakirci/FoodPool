@@ -16,8 +16,12 @@ class ProfileCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         contentView.addSubview(profileView)
         profileView.fillSuperView()
+        selectionStyle = .none
+        separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+        directionalLayoutMargins = .zero
     }
     
     required init?(coder: NSCoder) {

@@ -29,7 +29,7 @@ public final class Button: UIView {
         verticalAlignment: buttonType.appearance.verticalAlignment
     )
     
-    public init(type: ButtonType = .primary, title: String = "", image: UIImage? = nil) {
+    public init(type: ButtonType, title: String = "", image: UIImage? = nil) {
         super.init(frame: .zero)
         
         self.buttonType = type

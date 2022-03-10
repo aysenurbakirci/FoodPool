@@ -10,7 +10,7 @@ import UIKit
 
 final class DetailPageViewController: UIViewController {
     
-    lazy var detailView = DetailPageView()
+    private lazy var detailView = DetailPageView()
     var viewModel: DetailPageViewModelProtocol!
     
     override func viewDidLoad() {

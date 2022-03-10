@@ -17,7 +17,7 @@ public struct User: Decodable {
     public var surname: String
     public var email: String
     public var phone: String
-    public var amount: Float
+    public var amount: Double
     public var addresses: [Address]
 }
 

@@ -15,14 +15,14 @@ public final class StepperView: UIView {
     private lazy var incrementButton: UIButton = .create(
         type: .system,
         image: .plusFillAndCircular,
-        tintColor: .mainColor,
+        tintColor: .secondaryColor,
         sizeToFit: true
     )
     
     private lazy var decrementButton: UIButton = .create(
         type: .system,
         image: .minusFillAndCircular,
-        tintColor: .mainColor,
+        tintColor: .secondaryColor,
         sizeToFit: true
     )
     
@@ -42,7 +42,12 @@ public final class StepperView: UIView {
         spacing: 5.0
     )
     
-    public lazy var stepperValue: Int = 0
+    public lazy var stepperValue: Int = 0 {
+        didSet {
+            stepperLabel.text = String(stepperValue)
+        }
+    }
+    
     public var stepperTarget: Any?
     
     public override init(frame: CGRect) {

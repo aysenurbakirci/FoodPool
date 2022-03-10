@@ -1,16 +1,17 @@
 //
-//  MainView.swift
+//  BasketPageView.swift
 //  FoodPool
 //
-//  Created by Ayşe Nur Bakırcı on 7.03.2022.
+//  Created by Ayşenur Bakırcı on 9.03.2022.
 //
 
 import Foundation
 import UIKit
 import AutoLayoutHelper
 import LayoutKit
+import FoodPoolKit
 
-final class MainPageView: UIView {
+final class BasketPageView: UIView {
     
     private lazy var tableView = UITableView()
     
@@ -34,11 +35,11 @@ final class MainPageView: UIView {
     }
     
     private func registerCells() {
-        tableView.separatorStyle = .none
-        tableView.register(CuisineCell.self,
-                           forCellReuseIdentifier: CuisineCell.reuseIdentifier)
+        tableView.register(BasketCell.self,
+                           forCellReuseIdentifier: BasketCell.reuseIdentifier)
         tableView.register(RestaurantCell.self,
                            forCellReuseIdentifier: RestaurantCell.reuseIdentifier)
+        tableView.register(FooterView.self, forHeaderFooterViewReuseIdentifier: FooterView.reuseIdentifier)
     }
     
     required init?(coder: NSCoder) {

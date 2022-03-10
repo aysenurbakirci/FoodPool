@@ -13,7 +13,7 @@ import FoodPoolKit
 
 final class MainPageViewController: UIViewController {
     
-    lazy var mainView = MainPageView()
+    private lazy var mainView = MainPageView()
     var viewModel: MainPageViewModelProtocol!
     
     override func viewDidLoad() {
@@ -22,12 +22,6 @@ final class MainPageViewController: UIViewController {
         mainView.source = self
         viewModel.loadData()
         navigationItem.title = "FoodPool"
-    }
-    
-    func titleViewInNavigation() -> UIView {
-        let view = UIView()
-        
-        return view
     }
 }
 

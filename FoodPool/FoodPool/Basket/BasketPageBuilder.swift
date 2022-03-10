@@ -10,7 +10,9 @@ import UIKit
 
 final class BasketPageBuilder {
     static func build() -> UIViewController {
+        let vm = BasketPageViewModel()
         let vc = BasketPageViewController()
+        vc.viewModel = vm
         return vc
     }
 }

@@ -21,6 +21,10 @@ final class ButtonCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(button)
         button.fillSuperView()
+        
+        selectionStyle = .none
+        separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+        directionalLayoutMargins = .zero
     }
     
     required init?(coder: NSCoder) {

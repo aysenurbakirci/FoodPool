@@ -12,7 +12,7 @@ import LayoutKit
 
 final class DetailPageView: UIView {
     
-    lazy var tableView = UITableView()
+    private lazy var tableView = UITableView()
     
     var source: (UITableViewDataSource & UITableViewDelegate)? = nil {
         didSet {
@@ -27,14 +27,14 @@ final class DetailPageView: UIView {
         registerCells()
     }
     
-    func configuration() {
+    private func configuration() {
         addSubview(tableView)
         tableView.fillSuperView()
         tableView.backgroundColor = .background
         tableView.separatorStyle = .none
     }
     
-    func registerCells() {
+    private func registerCells() {
         tableView.register(RestaurantCell.self,
                            forCellReuseIdentifier: RestaurantCell.reuseIdentifier)
         tableView.register(MealCell.self,

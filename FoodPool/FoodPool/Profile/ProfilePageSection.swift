@@ -10,7 +10,7 @@ import FoodPoolAPI
 
 enum ProfilePageSection {
     case profile(User)
-    case wallet(Float)
+    case wallet(Double)
     case address([Address])
     case button
 }

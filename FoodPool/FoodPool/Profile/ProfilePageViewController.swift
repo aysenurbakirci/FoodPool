@@ -46,29 +46,21 @@ extension ProfilePageViewController: UITableViewDataSource {
         case .profile(let user):
             let cell: ProfileCell = tableView.dequeue(for: indexPath)
             cell.apply(userName: "\(user.name) \(user.surname)", email: user.email, phone: user.phone)
-            cell.selectionStyle = .none
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
-            cell.directionalLayoutMargins = .zero
             return cell
         case .wallet(let amount):
             let cell: WalletCell = tableView.dequeue(for: indexPath)
             cell.apply(amount: Double(amount))
             cell.addButtonTarget(addButtonTarget: self, addButtonSelector: #selector(add))
-            cell.selectionStyle = .none
             return cell
         case .address(let addressList):
             let cell: AddressCell = tableView.dequeue(for: indexPath)
             let address = addressList[indexPath.row]
             cell.apply(title: address.title, address: address.address)
             cell.addButtonTarget(editButtonTarget: self, editButtonSelector: #selector(edit))
-            cell.selectionStyle = .none
             return cell
         case .button:
             let cell: ButtonCell = tableView.dequeue(for: indexPath)
             cell.addButtonTarget(target: self, selector: #selector(add))
-            cell.selectionStyle = .none
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
-            cell.directionalLayoutMargins = .zero
             return cell
         }
     }

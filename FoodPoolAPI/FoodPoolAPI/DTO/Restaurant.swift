@@ -25,5 +25,5 @@ public struct Restaurant: Decodable {
 public struct MenuModel: Decodable {
     public var imageName: String
     public var name: String
-    public var price: Float
+    public var price: Double
 }

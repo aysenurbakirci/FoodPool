@@ -19,4 +19,6 @@ public extension UIImage {
     static let home = UIImage(systemName: "homekit")!
     static let order = UIImage(systemName: "archivebox")!
     static let basket = UIImage(systemName: "cart")!
+    static let rightArrow = UIImage(systemName: "arrow.right.circle.fill")!
+    static let leftArrow = UIImage(systemName: "arrow.left.circle.fill")!
 }

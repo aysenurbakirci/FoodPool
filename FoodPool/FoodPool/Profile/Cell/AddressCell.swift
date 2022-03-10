@@ -16,8 +16,10 @@ final class AddressCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         contentView.addSubview(addressView)
         addressView.fillSuperView(with: 10.0)
+        selectionStyle = .none
     }
     
     required init?(coder: NSCoder) {
