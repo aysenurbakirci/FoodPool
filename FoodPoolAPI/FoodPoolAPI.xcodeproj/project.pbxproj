@@ -14,9 +14,14 @@
 		246D56F227CF7085003331EE /* FoodPoolAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = 246D56EB27CF6C15003331EE /* FoodPoolAPI.json */; };
 		2498C79327D74E6F0014D9FD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2498C79227D74E6F0014D9FD /* Category.swift */; };
 		24A3AFAF27D602B300F3AFDE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3AFAE27D602B300F3AFDE /* Restaurant.swift */; };
+		370E553C27DB8C4F0041606B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 370E553B27DB8C4F0041606B /* RxCocoa */; };
+		370E553E27DB8C4F0041606B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 370E553D27DB8C4F0041606B /* RxSwift */; };
 		371FA1C927C8ED20009BFAD3 /* FoodPoolAPI.docc in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1C827C8ED20009BFAD3 /* FoodPoolAPI.docc */; };
 		371FA1CA27C8ED20009BFAD3 /* FoodPoolAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 371FA1C727C8ED20009BFAD3 /* FoodPoolAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		372DF1D327D918A30032741B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DF1D227D918A30032741B /* Order.swift */; };
+		372DF1EB27DB66840032741B /* FoodPoolAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DF1EA27DB66840032741B /* FoodPoolAPI.swift */; };
+		372DF1ED27DB6C060032741B /* FoodPoolService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DF1EC27DB6C060032741B /* FoodPoolService.swift */; };
+		372DF1FA27DB81150032741B /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DF1F927DB81150032741B /* URLSessionExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,9 @@
 		371FA1C727C8ED20009BFAD3 /* FoodPoolAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodPoolAPI.h; sourceTree = "<group>"; };
 		371FA1C827C8ED20009BFAD3 /* FoodPoolAPI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = FoodPoolAPI.docc; sourceTree = "<group>"; };
 		372DF1D227D918A30032741B /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		372DF1EA27DB66840032741B /* FoodPoolAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPoolAPI.swift; sourceTree = "<group>"; };
+		372DF1EC27DB6C060032741B /* FoodPoolService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPoolService.swift; sourceTree = "<group>"; };
+		372DF1F927DB81150032741B /* URLSessionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370E553E27DB8C4F0041606B /* RxSwift in Frameworks */,
+				370E553C27DB8C4F0041606B /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,10 +85,13 @@
 			isa = PBXGroup;
 			children = (
 				246D56E927CF6BE5003331EE /* BundleAPI.swift */,
+				372DF1EA27DB66840032741B /* FoodPoolAPI.swift */,
+				372DF1EC27DB6C060032741B /* FoodPoolService.swift */,
 				246D56EB27CF6C15003331EE /* FoodPoolAPI.json */,
 				246D56E627CF6B89003331EE /* DTO */,
 				371FA1C727C8ED20009BFAD3 /* FoodPoolAPI.h */,
 				371FA1C827C8ED20009BFAD3 /* FoodPoolAPI.docc */,
+				372DF1F927DB81150032741B /* URLSessionExtension.swift */,
 			);
 			path = FoodPoolAPI;
 			sourceTree = "<group>";
@@ -111,6 +124,10 @@
 			dependencies = (
 			);
 			name = FoodPoolAPI;
+			packageProductDependencies = (
+				370E553B27DB8C4F0041606B /* RxCocoa */,
+				370E553D27DB8C4F0041606B /* RxSwift */,
+			);
 			productName = FoodPoolAPI;
 			productReference = 371FA1C427C8ED20009BFAD3 /* FoodPoolAPI.framework */;
 			productType = "com.apple.product-type.framework";
@@ -138,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 371FA1BA27C8ED20009BFAD3;
+			packageReferences = (
+				370E553A27DB8C4F0041606B /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 371FA1C527C8ED20009BFAD3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -168,9 +188,12 @@
 				372DF1D327D918A30032741B /* Order.swift in Sources */,
 				24A3AFAF27D602B300F3AFDE /* Restaurant.swift in Sources */,
 				246D56E827CF6B94003331EE /* OnBoarding.swift in Sources */,
+				372DF1ED27DB6C060032741B /* FoodPoolService.swift in Sources */,
 				24456A5227D23EF8006CC621 /* User.swift in Sources */,
 				371FA1C927C8ED20009BFAD3 /* FoodPoolAPI.docc in Sources */,
+				372DF1EB27DB66840032741B /* FoodPoolAPI.swift in Sources */,
 				2498C79327D74E6F0014D9FD /* Category.swift in Sources */,
+				372DF1FA27DB81150032741B /* URLSessionExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +400,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		370E553A27DB8C4F0041606B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		370E553B27DB8C4F0041606B /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 370E553A27DB8C4F0041606B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		370E553D27DB8C4F0041606B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 370E553A27DB8C4F0041606B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 371FA1BB27C8ED20009BFAD3 /* Project object */;
 }

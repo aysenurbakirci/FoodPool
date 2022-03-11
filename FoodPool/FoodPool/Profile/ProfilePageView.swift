@@ -12,7 +12,7 @@ import LayoutKit
 
 final class ProfilePageView: UIView {
     
-    lazy var tableView = UITableView()
+    private lazy var tableView = UITableView()
     
     var source: (UITableViewDataSource & UITableViewDelegate)? = nil {
         didSet {
@@ -27,12 +27,12 @@ final class ProfilePageView: UIView {
         registerCells()
     }
     
-    func configuration() {
+    private func configuration() {
         addSubview(tableView)
         tableView.fillSuperView()
     }
     
-    func registerCells() {
+    private func registerCells() {
         tableView.register(AddressCell.self,
                            forCellReuseIdentifier: AddressCell.reuseIdentifier)
         tableView.register(WalletCell.self,
@@ -45,5 +45,9 @@ final class ProfilePageView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func reloadTableView() {
+        tableView.reloadData()
     }
 }

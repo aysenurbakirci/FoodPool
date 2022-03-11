@@ -7,8 +7,10 @@
 
 import Foundation
 import FoodPoolAPI
+import RxSwift
 
 protocol ProfilePageViewModelProtocol {
+    var delegate: ProfilePageViewModelDelegate? { get set }
     func loadData()
     func numberOfSections() -> Int
     func numberOfRowsInSection(for section: Int) -> Int
@@ -16,26 +18,35 @@ protocol ProfilePageViewModelProtocol {
     func modelForSection(at index: IndexPath) -> ProfilePageSection
 }
 
+protocol ProfilePageViewModelDelegate:  AnyObject {
+    func reloadTableView()
+}
+
 final class ProfilePageViewModel: ProfilePageViewModelProtocol {
+    
+    var delegate: ProfilePageViewModelDelegate?
     
     private var profile: [ProfilePageSection] = []
     private var api: BundleAPIProtocol!
+    private var bag = DisposeBag()
     
     init(api: BundleAPIProtocol) {
         self.api = api
     }
     
     func loadData() {
-        let data = api.getData(with: UserModel.self)
+        let data = FoodPoolService.getUser(id: 1)
         
-        data.user.forEach { user in
-            if user.id == "1" {
-                profile = [.profile(user),
-                           .wallet(user.amount),
-                           .address(user.addresses),
+        data
+            .subscribe(onNext: { [weak self] model in
+            guard let self = self else { return }
+            self.profile = [.profile(model.first!),
+                            .wallet(model.first!.amount),
+                            .address(model.first!.addresses),
                             .button]
-            }
-        }
+            print(self.profile)
+            self.delegate?.reloadTableView()
+        }).disposed(by: bag)
     }
     
     func numberOfSections() -> Int {

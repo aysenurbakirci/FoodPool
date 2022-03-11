@@ -19,7 +19,7 @@ final class ProfilePageViewController: UIViewController {
         super.viewDidLoad()
         view = profileView
         profileView.source = self
-        
+        viewModel.delegate = self
         viewModel.loadData()
     }
 }
@@ -73,5 +73,13 @@ extension ProfilePageViewController {
     
     @objc func edit() {
         print("Clicked edit button")
+    }
+}
+
+extension ProfilePageViewController: ProfilePageViewModelDelegate {
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.profileView.reloadTableView()
+        }
     }
 }

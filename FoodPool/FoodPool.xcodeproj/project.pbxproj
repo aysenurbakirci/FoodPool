@@ -39,6 +39,8 @@
 		24B0545F27D87BDA00F672B6 /* BasketPageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0545E27D87BDA00F672B6 /* BasketPageBuilder.swift */; };
 		24B0546627D89AEA00F672B6 /* OrderPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0546527D89AEA00F672B6 /* OrderPageViewController.swift */; };
 		24B0546827D89AF400F672B6 /* OrderPageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0546727D89AF400F672B6 /* OrderPageBuilder.swift */; };
+		370E554127DB9C3F0041606B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 370E554027DB9C3F0041606B /* RxCocoa */; };
+		370E554327DB9C3F0041606B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 370E554227DB9C3F0041606B /* RxSwift */; };
 		371FA1A427C8EC4E009BFAD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1A327C8EC4E009BFAD3 /* AppDelegate.swift */; };
 		371FA1A627C8EC4E009BFAD3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1A527C8EC4E009BFAD3 /* SceneDelegate.swift */; };
 		371FA1AD27C8EC4F009BFAD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371FA1AC27C8EC4F009BFAD3 /* Assets.xcassets */; };
@@ -142,8 +144,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370E554327DB9C3F0041606B /* RxSwift in Frameworks */,
 				246D56EE27CF6CA7003331EE /* FoodPoolAPI.framework in Frameworks */,
 				246D56DA27CF5BD2003331EE /* AutoLayoutHelper in Frameworks */,
+				370E554127DB9C3F0041606B /* RxCocoa in Frameworks */,
 				371FA1F827C8FC56009BFAD3 /* FoodPoolKit.framework in Frameworks */,
 				2498C7B327D7E13B0014D9FD /* LayoutKit in Frameworks */,
 			);
@@ -163,8 +167,8 @@
 		246D56F527D0DE7C003331EE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				371FA1D327C8F04B009BFAD3 /* ProfileCell.swift */,
 				371FA20E27C8FE7B009BFAD3 /* AddressCell.swift */,
+				371FA1D327C8F04B009BFAD3 /* ProfileCell.swift */,
 				371FA20C27C8FE71009BFAD3 /* WalletCell.swift */,
 				24A3AFA927D5F91F00F3AFDE /* ButtonCell.swift */,
 			);
@@ -400,6 +404,8 @@
 			packageProductDependencies = (
 				246D56D927CF5BD2003331EE /* AutoLayoutHelper */,
 				2498C7B227D7E13B0014D9FD /* LayoutKit */,
+				370E554027DB9C3F0041606B /* RxCocoa */,
+				370E554227DB9C3F0041606B /* RxSwift */,
 			);
 			productName = FoodPool;
 			productReference = 371FA1A027C8EC4E009BFAD3 /* FoodPool.app */;
@@ -432,6 +438,7 @@
 			packageReferences = (
 				246D56D827CF5BD2003331EE /* XCRemoteSwiftPackageReference "AutoLayoutHelper" */,
 				2498C7B127D7E13B0014D9FD /* XCRemoteSwiftPackageReference "LayoutKit" */,
+				370E553F27DB9C3F0041606B /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 371FA1A127C8EC4E009BFAD3 /* Products */;
 			projectDirPath = "";
@@ -734,6 +741,14 @@
 				revision = d7c5489fdc6d08a2cf8bdcd8de728136369d573b;
 			};
 		};
+		370E553F27DB9C3F0041606B /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -746,6 +761,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2498C7B127D7E13B0014D9FD /* XCRemoteSwiftPackageReference "LayoutKit" */;
 			productName = LayoutKit;
+		};
+		370E554027DB9C3F0041606B /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 370E553F27DB9C3F0041606B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		370E554227DB9C3F0041606B /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 370E553F27DB9C3F0041606B /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
