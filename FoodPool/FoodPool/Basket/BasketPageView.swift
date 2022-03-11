@@ -29,7 +29,7 @@ final class BasketPageView: UIView {
     }
     
     private func configuration() {
-        addSubview(tableView)
+        addSubviews(tableView)
         tableView.fillSuperView()
         tableView.backgroundColor = .background
     }
@@ -37,9 +37,10 @@ final class BasketPageView: UIView {
     private func registerCells() {
         tableView.register(BasketCell.self,
                            forCellReuseIdentifier: BasketCell.reuseIdentifier)
-        tableView.register(RestaurantCell.self,
-                           forCellReuseIdentifier: RestaurantCell.reuseIdentifier)
-        tableView.register(FooterView.self, forHeaderFooterViewReuseIdentifier: FooterView.reuseIdentifier)
+        tableView.register(HeaderView.self,
+                           forHeaderFooterViewReuseIdentifier: HeaderView.reuseIdentifier)
+        tableView.register(FooterView.self,
+                           forHeaderFooterViewReuseIdentifier: FooterView.reuseIdentifier)
     }
     
     required init?(coder: NSCoder) {

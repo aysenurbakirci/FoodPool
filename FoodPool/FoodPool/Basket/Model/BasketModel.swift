@@ -8,7 +8,13 @@
 import Foundation
 
 struct BasketModel {
-    var count: Double
+    var restaurantName: String
+    var restaurantImage: String
+    var mealList: [BasketMealModel]
+}
+
+struct BasketMealModel {
+    var count: Int
     var mealName: String
     var price: Double
 }
