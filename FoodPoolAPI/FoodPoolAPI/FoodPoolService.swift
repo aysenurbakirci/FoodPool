@@ -48,8 +48,13 @@ public extension FoodPoolService {
         return call(api: api)
     }
     
-    class func getOrders(userID: Int) -> Observable<[Order]> {
-        let api = FoodPoolSearchedData.order(userID: userID)
+    class func getCurrentOrders(userID: Int) -> Observable<[Order]> {
+        let api = FoodPoolSearchedData.currentOrder(userID: userID)
+        return call(api: api)
+    }
+    
+    class func getDeliveredOrders(userID: Int) -> Observable<[Order]> {
+        let api = FoodPoolSearchedData.deliveredOrder(userID: userID)
         return call(api: api)
     }
     

@@ -43,15 +43,17 @@ public enum FoodPoolData: FoodPoolAPI {
 }
 
 public enum FoodPoolSearchedData: FoodPoolAPI {
-    case user(id: Int), restaurant(id: Int), order(userID: Int)
+    case user(id: Int), restaurant(id: Int), currentOrder(userID: Int), deliveredOrder(userID: Int)
     public var path: String {
         switch self {
         case .user(_):
             return "/user"
         case .restaurant(_):
             return "/restaurant"
-        case .order(_):
-            return "/orders"
+        case .currentOrder(_):
+            return "/currentOrders"
+        case .deliveredOrder(_):
+            return "/deliveredOrders"
         }
     }
     
@@ -61,8 +63,10 @@ public enum FoodPoolSearchedData: FoodPoolAPI {
             return ["id":"\(id)"]
         case .restaurant(let id):
             return ["id":"\(id)"]
-        case .order(let id):
-            return ["userID":"\(id)"]
+        case .currentOrder(userID: let userID):
+            return ["userID":"\(userID)"]
+        case .deliveredOrder(userID: let userID):
+            return ["userID":"\(userID)"]
         }
     }
 }

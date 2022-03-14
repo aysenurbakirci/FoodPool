@@ -29,7 +29,7 @@ final class TabBarController: UITabBarController {
     //MARK: - ViewDidAppear
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        openOnboardingScreen()
+//        openOnboardingScreen()
     }
 }
 

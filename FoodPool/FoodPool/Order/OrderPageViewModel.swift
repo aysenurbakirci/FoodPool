@@ -9,6 +9,10 @@ import Foundation
 import FoodPoolAPI
 import RxSwift
 
+protocol OrderPageViewModelDelegate {
+    func reloadTableView()
+}
+
 protocol OrderPageViewModelProtocol {
     func loadData()
     func numberOfSections() -> Int
@@ -18,10 +22,6 @@ protocol OrderPageViewModelProtocol {
     var delegate: OrderPageViewModelDelegate? { get set }
 }
 
-protocol OrderPageViewModelDelegate {
-    func reloadTabelView()
-}
-
 final class OrderPageViewModel: OrderPageViewModelProtocol {
     
     var delegate: OrderPageViewModelDelegate?
@@ -29,27 +29,17 @@ final class OrderPageViewModel: OrderPageViewModelProtocol {
     private var bag = DisposeBag()
     
     func loadData() {
+        let currentOrder = FoodPoolService.getCurrentOrders(userID: 1)
+        let deliveredOrder = FoodPoolService.getDeliveredOrders(userID: 1)
         
-        let orders = FoodPoolService.getOrders(userID: 1)
-        
-        orders.subscribe(onNext: { [weak self] orderList in
-            guard let self = self else { return }
-            
-            var deliveredOrders: [Order] = []
-            var currentOrders: [Order] = []
-            
-            for order in orderList {
-                if order.state == "delivered" {
-                    deliveredOrders.append(order)
-                } else {
-                    currentOrders.append(order)
-                }
-            }
-            self.orderList = [.current(currentOrders),
-                        .previous(deliveredOrders)]
-            self.delegate?.reloadTabelView()
-            
-        }).disposed(by: bag)
+        Observable.zip(currentOrder, deliveredOrder)
+            .subscribe(onNext: { [weak self] currentOrder, deliveredOrder in
+                guard let self = self else { return }
+                self.orderList = [.current(currentOrder), .previous(deliveredOrder)]
+                print(currentOrder)
+                print(deliveredOrder)
+                self.delegate?.reloadTableView()
+            }).disposed(by: bag)
     }
     
     func numberOfSections() -> Int {

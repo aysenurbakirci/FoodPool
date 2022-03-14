@@ -17,9 +17,9 @@ final class OrderPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = orderView
-        orderView.source = self
         navigationItem.title = "Orders"
-        
+        orderView.source = self
+        viewModel.delegate = self
         viewModel.loadData()
     }
 }
@@ -61,7 +61,7 @@ extension OrderPageViewController: UITableViewDataSource {
 }
 
 extension OrderPageViewController: OrderPageViewModelDelegate {
-    func reloadTabelView() {
+    func reloadTableView() {
         DispatchQueue.main.async {
             self.orderView.reloadTableView()
         }
