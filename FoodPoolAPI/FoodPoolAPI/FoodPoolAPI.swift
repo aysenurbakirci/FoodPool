@@ -33,7 +33,7 @@ public enum FoodPoolData: FoodPoolAPI {
         case .restaurant:
             return "/restaurant"
         case .cuisine:
-            return "/cuisisne"
+            return "/cuisine"
         }
     }
     

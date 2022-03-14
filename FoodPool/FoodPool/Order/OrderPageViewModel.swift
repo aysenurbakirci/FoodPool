@@ -7,6 +7,7 @@
 
 import Foundation
 import FoodPoolAPI
+import RxSwift
 
 protocol OrderPageViewModelProtocol {
     func loadData()
@@ -14,33 +15,41 @@ protocol OrderPageViewModelProtocol {
     func numberOfRowsInSection(for section: Int) -> Int
     func modelForSection(at index: IndexPath) -> OrderPageSection
     func titleForHeaderInSection(for section: Int) -> String
+    var delegate: OrderPageViewModelDelegate? { get set }
+}
+
+protocol OrderPageViewModelDelegate {
+    func reloadTabelView()
 }
 
 final class OrderPageViewModel: OrderPageViewModelProtocol {
     
+    var delegate: OrderPageViewModelDelegate?
     private var orderList: [OrderPageSection] = []
-    private var api: BundleAPIProtocol!
-    
-    init(api: BundleAPIProtocol) {
-        self.api = api
-    }
+    private var bag = DisposeBag()
     
     func loadData() {
-        var deliveredOrders: [Order] = []
-        var currentOrders: [Order] = []
         
-        let orders = api.getData(with: OrderModel.self)
+        let orders = FoodPoolService.getOrders(userID: 1)
         
-        for order in orders.orders {
-            if order.state == "delivered" {
-                deliveredOrders.append(order)
-            } else {
-                currentOrders.append(order)
+        orders.subscribe(onNext: { [weak self] orderList in
+            guard let self = self else { return }
+            
+            var deliveredOrders: [Order] = []
+            var currentOrders: [Order] = []
+            
+            for order in orderList {
+                if order.state == "delivered" {
+                    deliveredOrders.append(order)
+                } else {
+                    currentOrders.append(order)
+                }
             }
-        }
-        
-        orderList = [.current(currentOrders),
-                    .previous(deliveredOrders)]
+            self.orderList = [.current(currentOrders),
+                        .previous(deliveredOrders)]
+            self.delegate?.reloadTabelView()
+            
+        }).disposed(by: bag)
     }
     
     func numberOfSections() -> Int {

@@ -12,8 +12,7 @@ import FoodPoolAPI
 final class OrderPageBuilder {
     static func build() -> UIViewController {
         let vc = OrderPageViewController()
-        let api = BundleAPI()
-        let vm = OrderPageViewModel(api: api)
+        let vm = OrderPageViewModel()
         vc.viewModel = vm
         return vc
     }

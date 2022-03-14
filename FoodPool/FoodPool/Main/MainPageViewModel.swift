@@ -7,6 +7,11 @@
 
 import Foundation
 import FoodPoolAPI
+import RxSwift
+
+protocol MainPageViewModelDelegate {
+    func reloadTableView()
+}
 
 protocol MainPageViewModelProtocol {
     func loadData()
@@ -15,23 +20,27 @@ protocol MainPageViewModelProtocol {
     func modelForSection(at index: IndexPath) -> MainPageSection
     func restaurantModelInSection(at index: IndexPath) -> Restaurant?
     func titleForHeaderInSection(for section: Int) -> String
+    var delegate: MainPageViewModelDelegate? { get set }
 }
 
 final class MainPageViewModel: MainPageViewModelProtocol {
     
+    var delegate: MainPageViewModelDelegate?
     private var mainPage: [MainPageSection] = []
-    private var api: BundleAPIProtocol!
-    
-    init(api: BundleAPIProtocol) {
-        self.api = api
-    }
+    private var bag = DisposeBag()
     
     func loadData() {
-        let restaurants = api.getData(with: RestaurantModel.self)
-        let categories = api.getData(with: CategoryModel.self)
+        let restaurants = FoodPoolService.getRestaurans()
+        let categories = FoodPoolService.getCategories()
         
-        mainPage = [.category(categories.cuisine),
-                    .restaurant(restaurants.restaurant)]
+        Observable.zip(restaurants, categories)
+            .subscribe(onNext: { [weak self] restaurants, categories in
+                guard let self = self else { return }
+                self.mainPage = [.category(categories),
+                            .restaurant(restaurants)]
+                print(restaurants)
+                self.delegate?.reloadTableView()
+            }).disposed(by: bag)
     }
     
     func numberOfSections() -> Int {

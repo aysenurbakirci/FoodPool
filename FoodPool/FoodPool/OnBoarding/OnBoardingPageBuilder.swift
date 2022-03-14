@@ -11,8 +11,7 @@ import FoodPoolAPI
 
 public class OnBardingPageBuilder {
     public static func build() -> UIViewController {
-        let api = BundleAPI()
-        let vm = OnBoardingPageViewModel(api: api)
+        let vm = OnBoardingPageViewModel()
         let vc = OnBoardingPageViewController()
         vc.viewModel = vm
         return vc

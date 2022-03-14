@@ -10,7 +10,7 @@ import RxSwift
 
 public class FoodPoolService {
 
-    public class func call<T: Decodable>(api: FoodPoolAPI) -> Observable<T> {
+    private class func call<T: Decodable>(api: FoodPoolAPI) -> Observable<T> {
         var urlString: String = api.schema
         urlString += api.host
         urlString += api.path
@@ -18,7 +18,6 @@ public class FoodPoolService {
         for (name, value) in api.queryItems {
             urlString += "?\(name)="
             urlString += value
-    
         }
         
         let url = URL(string: urlString)!
@@ -29,7 +28,7 @@ public class FoodPoolService {
 
 public extension FoodPoolService {
     
-    class func getOnBoarding() -> Observable<[Restaurant]> {
+    class func getOnBoarding() -> Observable<[OnBoarding]> {
         let api = FoodPoolData.onBoarding
         return call(api: api)
     }

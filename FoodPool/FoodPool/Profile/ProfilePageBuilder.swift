@@ -11,8 +11,7 @@ import FoodPoolAPI
 
 public class ProfilePageBuilder {
     public static func build() -> UIViewController {
-        let api = BundleAPI()
-        let vm = ProfilePageViewModel(api: api)
+        let vm = ProfilePageViewModel()
         let vc = ProfilePageViewController()
         vc.viewModel = vm
         return vc

@@ -7,6 +7,7 @@
 
 import Foundation
 import FoodPoolAPI
+import RxSwift
 
 protocol OnBoardingPageViewModelProtocol {
     func numberOfItemsInSection() -> Int
@@ -17,15 +18,15 @@ protocol OnBoardingPageViewModelProtocol {
 final class OnBoardingPageViewModel: OnBoardingPageViewModelProtocol {
     
     private var onBoardingList: [OnBoarding] = []
-    private var api: BundleAPIProtocol!
-    
-    init(api: BundleAPIProtocol) {
-        self.api = api
-    }
-    
+    private var bag = DisposeBag()
+
     func loadData() {
-        let data = api.getData(with: OnBoardingModel.self)
-        onBoardingList = data.onBoarding
+        let data = FoodPoolService.getOnBoarding()
+        
+        data.subscribe(onNext: { [weak self] onBoarding in
+            guard let self = self else { return }
+            self.onBoardingList = onBoarding
+        }).disposed(by: bag)
     }
     
     func numberOfItemsInSection() -> Int {

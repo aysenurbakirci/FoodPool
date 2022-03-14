@@ -20,6 +20,7 @@ final class MainPageViewController: UIViewController {
         super.viewDidLoad()
         view = mainView
         mainView.source = self
+        viewModel.delegate = self
         viewModel.loadData()
         navigationItem.title = "FoodPool"
     }
@@ -61,5 +62,13 @@ extension MainPageViewController: UITableViewDataSource {
         guard let selectedRestaurant = viewModel.restaurantModelInSection(at: indexPath) else { return }
         let nextPage = DetailPageBuilder.build(model: selectedRestaurant)
         navigationController?.pushViewController(nextPage, animated: true)
+    }
+}
+
+extension MainPageViewController: MainPageViewModelDelegate {
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.mainView.reloadTableView()
+        }
     }
 }

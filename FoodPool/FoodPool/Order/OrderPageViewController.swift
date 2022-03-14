@@ -59,3 +59,11 @@ extension OrderPageViewController: UITableViewDataSource {
         navigationController?.pushViewController(newPage, animated: true)
     }
 }
+
+extension OrderPageViewController: OrderPageViewModelDelegate {
+    func reloadTabelView() {
+        DispatchQueue.main.async {
+            self.orderView.reloadTableView()
+        }
+    }
+}

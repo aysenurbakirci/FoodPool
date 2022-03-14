@@ -27,12 +27,7 @@ final class ProfilePageViewModel: ProfilePageViewModelProtocol {
     var delegate: ProfilePageViewModelDelegate?
     
     private var profile: [ProfilePageSection] = []
-    private var api: BundleAPIProtocol!
     private var bag = DisposeBag()
-    
-    init(api: BundleAPIProtocol) {
-        self.api = api
-    }
     
     func loadData() {
         let data = FoodPoolService.getUser(id: 1)
