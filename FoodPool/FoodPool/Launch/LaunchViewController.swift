@@ -21,6 +21,7 @@ class LaunchViewController: UIViewController {
     )
     
     let activityIndicator: UIActivityIndicatorView = .create(
+        style: .large,
         hidesWhenStopped: true,
         backgroundColor: .systemBackground
     )
@@ -36,7 +37,6 @@ class LaunchViewController: UIViewController {
         
         activityIndicator.fillSuperView()
         activityIndicator.startAnimating()
-        activityIndicator.style = .large
 
         loadData()
     }
