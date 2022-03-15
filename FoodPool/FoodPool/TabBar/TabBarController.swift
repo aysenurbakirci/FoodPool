@@ -62,7 +62,7 @@ private extension TabBarController {
     
     //MARK: - Open OnBoarding
     func openOnboardingScreen() {
-        let onBoarding = OnBardingPageBuilder.build()
+        let onBoarding = OnBardingPageBuilder.build(data: [])
         present(onBoarding, animated: true, completion: nil)
     }
 }

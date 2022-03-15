@@ -22,7 +22,6 @@ final class OnBoardingPageViewController: UIViewController {
 
         onBoardingView.source = self
         view = onBoardingView
-        viewModel.loadData()
         onBoardingView.numberOfPages = viewModel.numberOfItemsInSection()
     }
 }

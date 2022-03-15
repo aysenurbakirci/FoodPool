@@ -10,8 +10,8 @@ import UIKit
 import FoodPoolAPI
 
 public class OnBardingPageBuilder {
-    public static func build() -> UIViewController {
-        let vm = OnBoardingPageViewModel()
+    public static func build(data: [OnBoarding]) -> UIViewController {
+        let vm = OnBoardingPageViewModel(onBoardingData: data)
         let vc = OnBoardingPageViewController()
         vc.viewModel = vm
         return vc

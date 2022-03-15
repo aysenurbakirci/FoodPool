@@ -14,7 +14,7 @@ import LayoutKit
 class OrderDetailPageView: UIView {
     
     lazy var orderState: UILabel = .create(
-        lblText: "ORDER STATUS",
+        lblText: "STATUS",
         font: .boldMedium,
         textColor: .secondaryTitle,
         sizeToFit: true

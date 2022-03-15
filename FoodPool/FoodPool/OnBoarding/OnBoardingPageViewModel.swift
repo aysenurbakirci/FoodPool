@@ -12,7 +12,6 @@ import RxSwift
 protocol OnBoardingPageViewModelProtocol {
     func numberOfItemsInSection() -> Int
     func getModel(to index: Int) -> OnBoarding
-    func loadData()
 }
 
 final class OnBoardingPageViewModel: OnBoardingPageViewModelProtocol {
@@ -20,13 +19,8 @@ final class OnBoardingPageViewModel: OnBoardingPageViewModelProtocol {
     private var onBoardingList: [OnBoarding] = []
     private var bag = DisposeBag()
 
-    func loadData() {
-        let data = FoodPoolService.getOnBoarding()
-        
-        data.subscribe(onNext: { [weak self] onBoarding in
-            guard let self = self else { return }
-            self.onBoardingList = onBoarding
-        }).disposed(by: bag)
+    init(onBoardingData: [OnBoarding]) {
+        self.onBoardingList = onBoardingData
     }
     
     func numberOfItemsInSection() -> Int {

@@ -61,6 +61,7 @@
 		372DF1E927DA2B8C0032741B /* BasketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DF1E827DA2B8C0032741B /* BasketModel.swift */; };
 		3753D85E27E08C6F00BA74A3 /* OrderDetailPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D85D27E08C6F00BA74A3 /* OrderDetailPageViewModel.swift */; };
 		3753D86027E0932300BA74A3 /* OrderStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D85F27E0932300BA74A3 /* OrderStates.swift */; };
+		3753D86227E0B54800BA74A3 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D86127E0B54800BA74A3 /* LaunchViewController.swift */; };
 		37954B9827CCBDAE0042ECC4 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954B9727CCBDAE0042ECC4 /* ProfilePageViewController.swift */; };
 		37954B9B27CCBF390042ECC4 /* OnBoardingPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954B9A27CCBF390042ECC4 /* OnBoardingPageCell.swift */; };
 		37954BAA27CCC7920042ECC4 /* OnBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954BA927CCC7920042ECC4 /* OnBoardingPageViewController.swift */; };
@@ -136,6 +137,7 @@
 		372DF1E827DA2B8C0032741B /* BasketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketModel.swift; sourceTree = "<group>"; };
 		3753D85D27E08C6F00BA74A3 /* OrderDetailPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailPageViewModel.swift; sourceTree = "<group>"; };
 		3753D85F27E0932300BA74A3 /* OrderStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStates.swift; sourceTree = "<group>"; };
+		3753D86127E0B54800BA74A3 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		37954B9727CCBDAE0042ECC4 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		37954B9A27CCBF390042ECC4 /* OnBoardingPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageCell.swift; sourceTree = "<group>"; };
 		37954BA927CCC7920042ECC4 /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				371FA1AE27C8EC4F009BFAD3 /* LaunchScreen.storyboard */,
+				3753D86127E0B54800BA74A3 /* LaunchViewController.swift */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				24456A5A27D26AE4006CC621 /* ProfilePageBuilder.swift in Sources */,
 				37A1F5D727D8A678004EA3F5 /* BasketPageView.swift in Sources */,
 				2498C79127D74CCB0014D9FD /* MainPageViewModel.swift in Sources */,
+				3753D86227E0B54800BA74A3 /* LaunchViewController.swift in Sources */,
 				372DF1DE27DA19D80032741B /* OrderDetailPageViewController.swift in Sources */,
 				2498C78227D638810014D9FD /* MainPageSection.swift in Sources */,
 				2498C79727D753E70014D9FD /* MainPageBuilder.swift in Sources */,
