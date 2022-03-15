@@ -7,10 +7,13 @@
 
 import Foundation
 import UIKit
+import FoodPoolAPI
 
 final class OrderDetailPageBuilder {
-    static func build() -> UIViewController {
+    static func build(selectedOrder: Order) -> UIViewController {
+        let vm = OrderDetailPageViewModel(order: selectedOrder)
         let vc = OrderDetailPageViewController()
+        vc.viewModel = vm
         return vc
     }
 }

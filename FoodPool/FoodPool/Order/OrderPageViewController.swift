@@ -55,8 +55,18 @@ extension OrderPageViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let newPage = OrderDetailPageBuilder.build()
-        navigationController?.pushViewController(newPage, animated: true)
+        let model = viewModel.modelForSection(at: indexPath)
+        
+        switch model {
+        case .current(let currentOrders):
+            let order = currentOrders[indexPath.row]
+            let page = OrderDetailPageBuilder.build(selectedOrder: order)
+            navigationController?.pushViewController(page, animated: true)
+        case .previous(let previousOrders):
+            let order = previousOrders[indexPath.row]
+            let page = OrderDetailPageBuilder.build(selectedOrder: order)
+            navigationController?.pushViewController(page, animated: true)
+        }
     }
 }
 

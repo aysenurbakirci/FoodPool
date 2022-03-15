@@ -7,21 +7,38 @@
 
 import Foundation
 import UIKit
+import FoodPoolKit
 
 class OrderDetailPageViewController: UIViewController {
     
-    let shapeLayer = CAShapeLayer()
-    let trackLayer = CAShapeLayer()
-    let lineWidth: CGFloat = 10.0
-    let color: UIColor = .black
-    let duration: TimeInterval = 2
-    let endValue = 0.7
-
+    var viewModel: OrderDetailPageViewModelProtocol!
+    var orderView = OrderDetailPageView()
+    
+    private let shapeLayer = CAShapeLayer()
+    private let trackLayer = CAShapeLayer()
+    private let lineWidth: CGFloat = 16.0
+    private let color: UIColor = .mainColor
+    private let duration: TimeInterval = 2
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .background
+        layerConfig()
+        view.addSubview(orderView)
+        orderView.centerToSuperView()
+        orderView.apply(stateTitle: viewModel.orderState.title,
+                        stateIcon: viewModel.orderState.icon)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animationConfig()
+    }
+    
+    private func layerConfig() {
         let center = view.center
-        let circularPath = UIBezierPath(arcCenter: center, radius: 100, startAngle: .pi / -2, endAngle: .pi * 2, clockwise: true)
+        let circularPath = UIBezierPath(arcCenter: center, radius: 160, startAngle: .pi / -2, endAngle: .pi * 2, clockwise: true)
         
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = color.withAlphaComponent(0.2).cgColor
@@ -37,17 +54,14 @@ class OrderDetailPageViewController: UIViewController {
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeEnd = 0
         view.layer.addSublayer(shapeLayer)
-
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    private func animationConfig() {
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        basicAnimation.toValue = endValue
+        basicAnimation.toValue = viewModel.orderState.rawValue
         basicAnimation.duration = duration
         basicAnimation.fillMode = .forwards
         basicAnimation.isRemovedOnCompletion = false
         shapeLayer.add(basicAnimation, forKey: "basicAnimation")
     }
-    
 }

@@ -59,6 +59,8 @@
 		372DF1DE27DA19D80032741B /* OrderDetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DF1DD27DA19D70032741B /* OrderDetailPageViewController.swift */; };
 		372DF1E027DA19FB0032741B /* OrderDetailPageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DF1DF27DA19FB0032741B /* OrderDetailPageBuilder.swift */; };
 		372DF1E927DA2B8C0032741B /* BasketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DF1E827DA2B8C0032741B /* BasketModel.swift */; };
+		3753D85E27E08C6F00BA74A3 /* OrderDetailPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D85D27E08C6F00BA74A3 /* OrderDetailPageViewModel.swift */; };
+		3753D86027E0932300BA74A3 /* OrderStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D85F27E0932300BA74A3 /* OrderStates.swift */; };
 		37954B9827CCBDAE0042ECC4 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954B9727CCBDAE0042ECC4 /* ProfilePageViewController.swift */; };
 		37954B9B27CCBF390042ECC4 /* OnBoardingPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954B9A27CCBF390042ECC4 /* OnBoardingPageCell.swift */; };
 		37954BAA27CCC7920042ECC4 /* OnBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954BA927CCC7920042ECC4 /* OnBoardingPageViewController.swift */; };
@@ -132,6 +134,8 @@
 		372DF1DD27DA19D70032741B /* OrderDetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailPageViewController.swift; sourceTree = "<group>"; };
 		372DF1DF27DA19FB0032741B /* OrderDetailPageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailPageBuilder.swift; sourceTree = "<group>"; };
 		372DF1E827DA2B8C0032741B /* BasketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketModel.swift; sourceTree = "<group>"; };
+		3753D85D27E08C6F00BA74A3 /* OrderDetailPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailPageViewModel.swift; sourceTree = "<group>"; };
+		3753D85F27E0932300BA74A3 /* OrderStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStates.swift; sourceTree = "<group>"; };
 		37954B9727CCBDAE0042ECC4 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		37954B9A27CCBF390042ECC4 /* OnBoardingPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageCell.swift; sourceTree = "<group>"; };
 		37954BA927CCC7920042ECC4 /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
@@ -342,9 +346,11 @@
 		372DF1DC27DA19BE0032741B /* OrderDetail */ = {
 			isa = PBXGroup;
 			children = (
+				3753D85F27E0932300BA74A3 /* OrderStates.swift */,
 				372DF1DD27DA19D70032741B /* OrderDetailPageViewController.swift */,
 				372DF1DF27DA19FB0032741B /* OrderDetailPageBuilder.swift */,
 				247149A327DFC37B006AA2AE /* OrderDetailPageView.swift */,
+				3753D85D27E08C6F00BA74A3 /* OrderDetailPageViewModel.swift */,
 			);
 			path = OrderDetail;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				372DF1D527D91A140032741B /* OrderPageViewModel.swift in Sources */,
 				2498C79F27D7743B0014D9FD /* DetailPageSection.swift in Sources */,
 				24B0545F27D87BDA00F672B6 /* BasketPageBuilder.swift in Sources */,
+				3753D85E27E08C6F00BA74A3 /* OrderDetailPageViewModel.swift in Sources */,
 				246D56DC27CF603C003331EE /* OnBoardingPageView.swift in Sources */,
 				371FA1A427C8EC4E009BFAD3 /* AppDelegate.swift in Sources */,
 				2498C7A127D7745B0014D9FD /* DetailPageViewModel.swift in Sources */,
@@ -512,6 +519,7 @@
 				2498C79727D753E70014D9FD /* MainPageBuilder.swift in Sources */,
 				371FA1A627C8EC4E009BFAD3 /* SceneDelegate.swift in Sources */,
 				24B0545D27D87BCE00F672B6 /* BasketPageViewController.swift in Sources */,
+				3753D86027E0932300BA74A3 /* OrderStates.swift in Sources */,
 				24A3AFC527D6289500F3AFDE /* MainPageView.swift in Sources */,
 				37A1F5E327D8C392004EA3F5 /* OrderPageView.swift in Sources */,
 				24B0546627D89AEA00F672B6 /* OrderPageViewController.swift in Sources */,

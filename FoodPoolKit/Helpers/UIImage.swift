@@ -21,4 +21,9 @@ public extension UIImage {
     static let basket = UIImage(systemName: "cart")!
     static let rightArrow = UIImage(systemName: "arrow.right.circle.fill")!
     static let leftArrow = UIImage(systemName: "arrow.left.circle.fill")!
+    static let waitingOrder = UIImage(systemName: "clock.fill")!
+    static let preparingOrder = UIImage(systemName: "lanyardcard.fill")!
+    static let readyOrder = UIImage(systemName: "bag.fill")!
+    static let onTheWayOrder = UIImage(systemName: "paperplane.fill")!
+    static let deliveredOrder = UIImage(systemName: "signpost.right.fill")!
 }
