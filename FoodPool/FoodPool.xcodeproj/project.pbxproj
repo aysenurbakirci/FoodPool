@@ -62,6 +62,9 @@
 		3753D85E27E08C6F00BA74A3 /* OrderDetailPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D85D27E08C6F00BA74A3 /* OrderDetailPageViewModel.swift */; };
 		3753D86027E0932300BA74A3 /* OrderStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D85F27E0932300BA74A3 /* OrderStates.swift */; };
 		3753D86227E0B54800BA74A3 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D86127E0B54800BA74A3 /* LaunchViewController.swift */; };
+		3753D86527E0DAE700BA74A3 /* ViewDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D86427E0DAE700BA74A3 /* ViewDisplayer.swift */; };
+		3753D86727E0E99400BA74A3 /* LoadingDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D86627E0E99400BA74A3 /* LoadingDisplayer.swift */; };
+		3753D86B27E0E9AB00BA74A3 /* ErrorDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D86A27E0E9AB00BA74A3 /* ErrorDisplayer.swift */; };
 		37954B9827CCBDAE0042ECC4 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954B9727CCBDAE0042ECC4 /* ProfilePageViewController.swift */; };
 		37954B9B27CCBF390042ECC4 /* OnBoardingPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954B9A27CCBF390042ECC4 /* OnBoardingPageCell.swift */; };
 		37954BAA27CCC7920042ECC4 /* OnBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954BA927CCC7920042ECC4 /* OnBoardingPageViewController.swift */; };
@@ -138,6 +141,9 @@
 		3753D85D27E08C6F00BA74A3 /* OrderDetailPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailPageViewModel.swift; sourceTree = "<group>"; };
 		3753D85F27E0932300BA74A3 /* OrderStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStates.swift; sourceTree = "<group>"; };
 		3753D86127E0B54800BA74A3 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		3753D86427E0DAE700BA74A3 /* ViewDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDisplayer.swift; sourceTree = "<group>"; };
+		3753D86627E0E99400BA74A3 /* LoadingDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDisplayer.swift; sourceTree = "<group>"; };
+		3753D86A27E0E9AB00BA74A3 /* ErrorDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDisplayer.swift; sourceTree = "<group>"; };
 		37954B9727CCBDAE0042ECC4 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		37954B9A27CCBF390042ECC4 /* OnBoardingPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageCell.swift; sourceTree = "<group>"; };
 		37954BA927CCC7920042ECC4 /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
@@ -299,6 +305,7 @@
 		371FA1A227C8EC4E009BFAD3 /* FoodPool */ = {
 			isa = PBXGroup;
 			children = (
+				3753D86327E0DADB00BA74A3 /* Helper */,
 				372DF1DC27DA19BE0032741B /* OrderDetail */,
 				372DF1DA27D929B70032741B /* Launch */,
 				2498C7AA27D7DBC10014D9FD /* App */,
@@ -364,6 +371,16 @@
 				372DF1E827DA2B8C0032741B /* BasketModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3753D86327E0DADB00BA74A3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3753D86427E0DAE700BA74A3 /* ViewDisplayer.swift */,
+				3753D86627E0E99400BA74A3 /* LoadingDisplayer.swift */,
+				3753D86A27E0E9AB00BA74A3 /* ErrorDisplayer.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		37954B9927CCBF280042ECC4 /* OnBoarding */ = {
@@ -490,9 +507,11 @@
 				3753D85E27E08C6F00BA74A3 /* OrderDetailPageViewModel.swift in Sources */,
 				246D56DC27CF603C003331EE /* OnBoardingPageView.swift in Sources */,
 				371FA1A427C8EC4E009BFAD3 /* AppDelegate.swift in Sources */,
+				3753D86727E0E99400BA74A3 /* LoadingDisplayer.swift in Sources */,
 				2498C7A127D7745B0014D9FD /* DetailPageViewModel.swift in Sources */,
 				2498C7A327D775740014D9FD /* DetailPageBuilder.swift in Sources */,
 				2498C78827D63CFC0014D9FD /* DetailPageViewController.swift in Sources */,
+				3753D86527E0DAE700BA74A3 /* ViewDisplayer.swift in Sources */,
 				24A3AFC927D6304300F3AFDE /* CuisineViewCell.swift in Sources */,
 				24456A5427D24D1F006CC621 /* ProfilePageView.swift in Sources */,
 				37954B9827CCBDAE0042ECC4 /* ProfilePageViewController.swift in Sources */,
@@ -521,6 +540,7 @@
 				372DF1DE27DA19D80032741B /* OrderDetailPageViewController.swift in Sources */,
 				2498C78227D638810014D9FD /* MainPageSection.swift in Sources */,
 				2498C79727D753E70014D9FD /* MainPageBuilder.swift in Sources */,
+				3753D86B27E0E9AB00BA74A3 /* ErrorDisplayer.swift in Sources */,
 				371FA1A627C8EC4E009BFAD3 /* SceneDelegate.swift in Sources */,
 				24B0545D27D87BCE00F672B6 /* BasketPageViewController.swift in Sources */,
 				3753D86027E0932300BA74A3 /* OrderStates.swift in Sources */,

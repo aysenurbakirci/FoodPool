@@ -9,11 +9,13 @@ import Foundation
 import UIKit
 import AutoLayoutHelper
 import LayoutKit
+import RxSwift
 
-final class ProfilePageViewController: UIViewController {
+final class ProfilePageViewController: UIViewController, ActivityDisplayer {
     
+    var bag: DisposeBag = DisposeBag()
     lazy var profileView = ProfilePageView()
-    var viewModel: ProfilePageViewModelProtocol!
+    var viewModel = ProfilePageViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
