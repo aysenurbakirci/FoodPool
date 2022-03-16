@@ -15,64 +15,27 @@ final class FooterView: UITableViewHeaderFooterView {
     
     //MARK: - Properties
     static let reuseIdentifier = "FooterView"
-    
-    //MARK: - UI Properties
-    lazy var total: UILabel = .create(
-        lblText: "Total",
-        font: .boldLarge,
-        backgroundColor: .clear,
-        textColor: .secondaryTitle,
-        numberOfLines: 1,
-        textAlignment: .left,
-        sizeToFit: true
-    )
-    
-    lazy var totalPrice: UILabel = .create(
-        lblText: "00.00",
-        font: .large,
-        backgroundColor: .clear,
-        textColor: .mainColor,
-        numberOfLines: 1,
-        textAlignment: .right,
-        sizeToFit: true
-    )
-    
-    lazy var labelStack: UIStackView = .create(
-        subviews: [total, totalPrice],
-        axis: .horizontal,
-        distribution: .equalSpacing,
-        alignment: .fill,
-        spacing: 2
-    )
-    
-    lazy var button: Button = .init(
-        type: .primary,
-        title: "Continue"
-    )
+    lazy var totalView = TotalView()
 
     //MARK: - Initalization
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         contentView.backgroundColor = .white
-        configuration()
+        contentView.addSubview(totalView)
+        totalView.fillSuperView()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - View Configuration
-    private func configuration() {
-        contentView.addSubviews(labelStack, button)
-        
-        labelStack.anchor(top: contentView.topAnchor,
-                          leading: contentView.leadingAnchor,
-                          trailing: contentView.trailingAnchor,
-                          padding: .equalPadding(10.0))
-        
-        button.anchor(top: labelStack.bottomAnchor,
-                      leading: contentView.leadingAnchor,
-                      bottom: contentView.bottomAnchor,
-                      trailing: contentView.trailingAnchor)
+    //MARK: - Apply View
+    func apply(amount: Double) {
+        totalView.apply(amount: amount)
+    }
+    
+    //MARK: - Add Target To View
+    func addTarget(_ target: Any?, selector: Selector) {
+        totalView.addTarget(target, selector: selector)
     }
 }

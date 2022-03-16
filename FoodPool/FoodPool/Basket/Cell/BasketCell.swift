@@ -12,7 +12,7 @@ import FoodPoolKit
 final class BasketCell: UITableViewCell {
     
     //MARK: - Properties
-    lazy var basketView = BasketView()
+    private lazy var basketView = BasketView()
     
     //MARK: - Initalization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

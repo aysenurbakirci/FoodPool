@@ -75,4 +75,21 @@ final class ProfilePageViewModel: ProfilePageViewModelProtocol, ActivityHandler 
     func modelForSection(at index: IndexPath) -> ProfilePageSection {
         return profile[index.section]
     }
+    
+    func removeAddress(at index: IndexPath) {
+        
+        let sectionModel = profile[index.section]
+
+        switch sectionModel {
+        case .profile(_):
+            break
+        case .wallet(_):
+            break
+        case .address(let addressList):
+            var list = addressList
+            list.remove(at: index.row)
+        case .button:
+            break
+        }
+    }
 }

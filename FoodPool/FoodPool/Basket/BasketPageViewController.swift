@@ -51,6 +51,8 @@ extension BasketPageViewController: UITableViewDataSource {
         guard let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: FooterView.reuseIdentifier) as? FooterView else {
             return UIView()
         }
+        view.apply(amount: 28.5)
+        view.addTarget(self, selector: #selector(handleTap))
         return view
     }
     
@@ -71,5 +73,11 @@ extension BasketPageViewController: UITableViewDataSource {
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }
         }
+    }
+}
+
+extension BasketPageViewController {
+    @objc func handleTap() {
+        print("click")
     }
 }

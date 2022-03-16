@@ -17,9 +17,9 @@ final class HeaderView: UITableViewHeaderFooterView {
     static let reuseIdentifier = "HeaderView"
     
     //MARK: - UI Properties
-    lazy var restaurantImage: UIImageView = .create(image: .photo)
+    private lazy var restaurantImage: UIImageView = .create(image: .photo)
     
-    lazy var title: UILabel = .create(
+    private lazy var title: UILabel = .create(
         lblText: "Restaurant Name",
         font: .boldLarge,
         textColor: .title,
