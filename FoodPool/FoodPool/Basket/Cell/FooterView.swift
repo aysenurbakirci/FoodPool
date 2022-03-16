@@ -45,15 +45,9 @@ final class FooterView: UITableViewHeaderFooterView {
         spacing: 2
     )
     
-    lazy var button: UIButton = .create(
-        type: .system,
-        title: "Continue",
-        titleColor: .white,
-        font: .medium,
-        backgroundColor: .mainColor,
-        sizeToFit: true,
-        horizontalAlignment: .center,
-        verticalAlignment: .center
+    lazy var button: Button = .init(
+        type: .primary,
+        title: "Continue"
     )
 
     //MARK: - Initalization
@@ -79,7 +73,6 @@ final class FooterView: UITableViewHeaderFooterView {
         button.anchor(top: labelStack.bottomAnchor,
                       leading: contentView.leadingAnchor,
                       bottom: contentView.bottomAnchor,
-                      trailing: contentView.trailingAnchor,
-                      padding: .equalPadding(10.0))
+                      trailing: contentView.trailingAnchor)
     }
 }

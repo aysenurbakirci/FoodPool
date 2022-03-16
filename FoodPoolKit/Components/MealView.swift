@@ -19,7 +19,10 @@ public final class MealView: UIView {
         isOpaque: true
     )
     
-    lazy var stepper = StepperView()
+    lazy var button: Button = .init(
+        type: .icon,
+        image: .plusFillAndCircular
+    )
     
     lazy var contentView: UIView = .create()
     
@@ -49,8 +52,6 @@ public final class MealView: UIView {
         spacing: 4
     )
     
-    public lazy var stepperValue: Int = stepper.stepperValue
-    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         configuration()
@@ -72,7 +73,7 @@ public final class MealView: UIView {
         contentView.addCornerRadius(radius: 20.0)
         contentView.backgroundColor = .white
         
-        contentView.addSubviews(image, labelStack, stepper)
+        contentView.addSubviews(image, labelStack, button)
         
         image.anchor(top: contentView.topAnchor,
                      leading: contentView.leadingAnchor,
@@ -85,7 +86,7 @@ public final class MealView: UIView {
                           bottom: contentView.bottomAnchor,
                           padding: .equalPadding(15.0))
         
-        stepper.anchor(top: image.bottomAnchor,
+        button.anchor(top: image.bottomAnchor,
                        bottom: contentView.bottomAnchor,
                        trailing: contentView.trailingAnchor,
                        padding: .equalPadding(15.0))
@@ -99,7 +100,7 @@ public final class MealView: UIView {
         self.price.text = price
     }
     
-    public func addTarget(_ target: Any?) {
-        stepper.stepperTarget = target
+    public func addTarget(target: Any?, selector: Selector) {
+        button.addTarget(target: target, selector: selector)
     }
 }

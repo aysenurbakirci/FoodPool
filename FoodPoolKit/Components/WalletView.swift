@@ -29,11 +29,9 @@ public final class WalletView: UIView {
         sizeToFit: true
     )
     
-    private lazy var addButton: UIButton = .create(
-        type: .system,
-        image: .plusFillAndCircular,
-        tintColor: .mainColor,
-        sizeToFit: true
+    private lazy var addButton: Button = .init(
+        type: .icon,
+        image: .plusFillAndCircular
     )
     
     private lazy var labelStack: UIStackView = .create(
@@ -77,8 +75,6 @@ public final class WalletView: UIView {
     //MARK: - Add Target
     public func addTarget(target: Any? = nil,
                           selector: Selector) {
-        self.addButton.addTarget(target,
-                                 action: selector,
-                                 for: .touchUpInside)
+        addButton.addTarget(target: target, selector: selector)
     }
 }

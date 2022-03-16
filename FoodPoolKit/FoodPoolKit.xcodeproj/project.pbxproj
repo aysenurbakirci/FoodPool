@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		246D56D727CF5BC0003331EE /* AutoLayoutHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 246D56D627CF5BC0003331EE /* AutoLayoutHelper */; };
 		2498C79B27D76F830014D9FD /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2498C79A27D76F830014D9FD /* MealView.swift */; };
-		2498C79D27D76FC70014D9FD /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2498C79C27D76FC70014D9FD /* StepperView.swift */; };
 		2498C7B027D7E1290014D9FD /* LayoutKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2498C7AF27D7E1290014D9FD /* LayoutKit */; };
 		24A3AFA427D5028000F3AFDE /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3AFA327D5028000F3AFDE /* Button.swift */; };
 		24A3AFA627D5029100F3AFDE /* ButtonAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3AFA527D5029100F3AFDE /* ButtonAppearance.swift */; };
@@ -32,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		2498C79A27D76F830014D9FD /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
-		2498C79C27D76FC70014D9FD /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
 		24A3AFA327D5028000F3AFDE /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		24A3AFA527D5029100F3AFDE /* ButtonAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAppearance.swift; sourceTree = "<group>"; };
 		24A3AFA727D5029C00F3AFDE /* ButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonType.swift; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 				37954B9C27CCBF5E0042ECC4 /* OnBoardingView.swift */,
 				24A3AFBE27D61E9E00F3AFDE /* CategoryView.swift */,
 				2498C79A27D76F830014D9FD /* MealView.swift */,
-				2498C79C27D76FC70014D9FD /* StepperView.swift */,
 				24B0546027D87F8400F672B6 /* TabBarAppearance.swift */,
 				37A1F5DB27D8A8B1004EA3F5 /* BasketView.swift */,
 				37A1F5E427D8C5C8004EA3F5 /* OrderView.swift */,
@@ -230,7 +227,6 @@
 				371FA1E427C8F504009BFAD3 /* FoodPoolKit.docc in Sources */,
 				37954B9D27CCBF5E0042ECC4 /* OnBoardingView.swift in Sources */,
 				371FA1F427C8F523009BFAD3 /* WalletView.swift in Sources */,
-				2498C79D27D76FC70014D9FD /* StepperView.swift in Sources */,
 				24A3AFA427D5028000F3AFDE /* Button.swift in Sources */,
 				371FA20427C8FCF1009BFAD3 /* UIColor.swift in Sources */,
 				24A3AFA627D5029100F3AFDE /* ButtonAppearance.swift in Sources */,

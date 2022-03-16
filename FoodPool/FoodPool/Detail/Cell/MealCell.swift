@@ -13,7 +13,6 @@ final class MealCell: UITableViewCell {
     
     //MARK: - Properties
     lazy var mealView = MealView()
-    lazy var stepperValue: Int = mealView.stepperValue
     
     //MARK: - Initalization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -34,8 +33,8 @@ final class MealCell: UITableViewCell {
     }
     
     //MARK: - Add Target To Cell
-    func addTarget(_ target: Any?) {
-        mealView.addTarget(target)
+    func addTarget(_ target: Any?, selector: Selector) {
+        mealView.addTarget(target: target, selector: selector)
     }
     
 }

@@ -41,11 +41,12 @@ public final class Button: UIView {
                          width: buttonType.appearance.borderWidth)
         
         addSubview(button)
-        button.anchor(leading: leadingAnchor,
+        button.anchor(top: topAnchor,
+                      leading: leadingAnchor,
+                      bottom: bottomAnchor,
                       trailing: trailingAnchor,
                       padding: .equalPadding(10.0))
-        button.sizeAnchor(height: 35.0)
-        button.centerYToSuperView()
+        button.sizeAnchor(height: 30.0)
     }
     
     required init?(coder: NSCoder) {

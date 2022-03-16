@@ -22,7 +22,7 @@ final class ButtonCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(button)
-        button.fillSuperView()
+        button.fillSuperView(with: 10.0)
         
         selectionStyle = .none
         separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)

@@ -53,7 +53,7 @@ extension DetailPageViewController: UITableViewDataSource {
             cell.apply(imageName: model.imageName,
                        title: model.name,
                        price: String(model.price))
-            cell.addTarget(self)
+            cell.addTarget(self, selector: #selector(handleTap))
             return cell
         case .drinkList(let drinkList):
             let cell: MealCell = tableView.dequeue(for: indexPath)
@@ -61,9 +61,14 @@ extension DetailPageViewController: UITableViewDataSource {
             cell.apply(imageName: model.imageName,
                        title: model.name,
                        price: String(model.price))
-            cell.addTarget(self)
+            cell.addTarget(self, selector: #selector(handleTap))
             return cell
         }
+    }
+}
 
+extension DetailPageViewController {
+    @objc func handleTap() {
+        print("Clicked")
     }
 }

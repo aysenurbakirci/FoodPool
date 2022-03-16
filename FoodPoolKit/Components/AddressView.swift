@@ -30,11 +30,9 @@ public final class AddressView: UIView {
         sizeToFit: true
     )
     
-    private lazy var editButton: UIButton = .create(
-        type: .system,
-        image: .editFillAndCircular,
-        tintColor: .mainColor,
-        sizeToFit: true
+    private lazy var editButton: Button = .init(
+        type: .icon,
+        image: .editFillAndCircular
     )
     
     private lazy var labelStack: UIStackView = .create(
@@ -81,8 +79,6 @@ public final class AddressView: UIView {
     
     public func addTarget(target: Any? = nil,
                           selector: Selector) {
-        self.editButton.addTarget(target,
-                                 action: selector,
-                                 for: .touchUpInside)
+        editButton.addTarget(target: target, selector: selector)
     }
 }
