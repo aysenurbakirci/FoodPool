@@ -7,10 +7,6 @@
 
 import Foundation
 
-public struct OrderModel: Decodable {
-    public var orders: [Order]
-}
-
 public struct Order: Decodable {
     public var id: Int
     public var userID: String

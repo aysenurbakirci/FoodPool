@@ -13,6 +13,7 @@ import FoodPoolAPI
 
 final class CuisineView: UIView {
     
+    //MARK: - Properties
     static let cellHeightRatio: CGFloat = 1.1
     static let cellWidthRatio: CGFloat = 0.3
     static let cellWidth = (UIScreen.main.bounds.size.width) * cellWidthRatio
@@ -20,14 +21,15 @@ final class CuisineView: UIView {
     
     var cuisineList: [Cuisine] = []
     
-    lazy var layout: UICollectionViewFlowLayout = .create(
+    //MARK: - UI Properties
+    private lazy var layout: UICollectionViewFlowLayout = .create(
         itemSize: CGSize(width: CuisineView.cellWidth, height: CuisineView.cellHeight),
         scrollDirection: .horizontal,
         interItemSpacing: 2.0,
         lineSpacing: 6.0
     )
     
-    lazy var collection: UICollectionView = .createCollection(
+    private lazy var collection: UICollectionView = .createCollection(
         layout: layout,
         backgroundColor: .white,
         showHorizontalIndicator: false,
@@ -35,6 +37,7 @@ final class CuisineView: UIView {
         isPaging: true
     )
     
+    //MARK: - Initalization
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(collection)
@@ -52,6 +55,7 @@ final class CuisineView: UIView {
     }
 }
 
+//MARK: - CollectionView Methods
 extension CuisineView: UICollectionViewDelegate {}
 
 extension CuisineView: UICollectionViewDataSource {

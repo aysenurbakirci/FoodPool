@@ -7,10 +7,6 @@
 
 import Foundation
 
-public struct UserModel: Decodable {
-    public var user: [User]
-}
-
 public struct User: Decodable {
     public var id: String
     public var name: String

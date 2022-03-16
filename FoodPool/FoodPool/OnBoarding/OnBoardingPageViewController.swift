@@ -14,9 +14,11 @@ import FoodPoolAPI
 
 final class OnBoardingPageViewController: UIViewController {
     
+    //MARK: - Properties
     lazy var onBoardingView = OnBoardingPageView()
     var viewModel: OnBoardingPageViewModelProtocol!
     
+    //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,9 +28,11 @@ final class OnBoardingPageViewController: UIViewController {
     }
 }
 
+//MARK: - CollectionView Methods
 extension OnBoardingPageViewController: UICollectionViewDelegate {}
 
 extension OnBoardingPageViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         return viewModel.numberOfItemsInSection()
@@ -57,6 +61,7 @@ extension OnBoardingPageViewController {
 }
 
 extension OnBoardingPageViewController {
+    
     override func viewWillTransition(to size: CGSize,
                                      with coordinator: UIViewControllerTransitionCoordinator) {
         

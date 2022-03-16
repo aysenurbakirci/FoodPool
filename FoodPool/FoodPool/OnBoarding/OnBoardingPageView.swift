@@ -32,6 +32,7 @@ final class OnBoardingPageView: UIView {
         }
     }
     
+    //MARK: - UI Properties
     private lazy var layout: UICollectionViewFlowLayout = .create(
         itemSize: frame.size,
         scrollDirection: .horizontal
@@ -54,6 +55,7 @@ final class OnBoardingPageView: UIView {
         hidesForSinglePage: true
     )
     
+    //MARK: - Initalization
     override init(frame: CGRect) {
         super.init(frame: frame)
         configuration()
@@ -64,6 +66,7 @@ final class OnBoardingPageView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - View Configuration
     private func configuration() {
         addSubview(collection)
         collection.fillSuperView()
@@ -80,6 +83,7 @@ final class OnBoardingPageView: UIView {
                             forCellWithReuseIdentifier: OnBoardingPageCell.reuseIdentifier)
     }
     
+    //MARK: - Helper Methods
     public func invalidateLayout() {
         layout.invalidateLayout()
     }

@@ -12,6 +12,7 @@ import LayoutKit
 
 final class DetailPageView: UIView {
     
+    //MARK: - Properties
     private lazy var tableView = UITableView()
     
     var source: (UITableViewDataSource & UITableViewDelegate)? = nil {
@@ -21,12 +22,18 @@ final class DetailPageView: UIView {
         }
     }
     
+    //MARK: - Initalization
     override init(frame: CGRect) {
         super.init(frame: frame)
         configuration()
         registerCells()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - View Configuration
     private func configuration() {
         addSubview(tableView)
         tableView.fillSuperView()
@@ -39,9 +46,5 @@ final class DetailPageView: UIView {
                            forCellReuseIdentifier: RestaurantCell.reuseIdentifier)
         tableView.register(MealCell.self,
                            forCellReuseIdentifier: MealCell.reuseIdentifier)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

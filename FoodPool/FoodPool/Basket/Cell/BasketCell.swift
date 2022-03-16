@@ -11,8 +11,10 @@ import FoodPoolKit
 
 final class BasketCell: UITableViewCell {
     
+    //MARK: - Properties
     lazy var basketView = BasketView()
     
+    //MARK: - Initalization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(basketView)
@@ -24,10 +26,12 @@ final class BasketCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Apply Cell
     func apply(title: String, price: Double, count: Double) {
         basketView.apply(title: title, price: price, count: count)
     }
     
+    //MARK: - Add Target To Cell
     func addTarget(_ target: Any?) {
         basketView.addTarget(target)
     }

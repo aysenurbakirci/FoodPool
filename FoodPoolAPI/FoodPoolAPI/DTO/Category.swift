@@ -7,10 +7,6 @@
 
 import Foundation
 
-public struct CategoryModel: Decodable {
-    public var cuisine: [Cuisine]
-}
-
 public struct Cuisine: Decodable {
     public var cuisine: String
     public var image: String

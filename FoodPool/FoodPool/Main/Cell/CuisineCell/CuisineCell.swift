@@ -12,8 +12,10 @@ import FoodPoolAPI
 
 final class CuisineCell: UITableViewCell {
     
-    lazy var cuisineView = CuisineView()
+    //MARK: - Properties
+    private lazy var cuisineView = CuisineView()
     
+    //MARK: - Initalization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(cuisineView)
@@ -25,6 +27,7 @@ final class CuisineCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Apply Cell
     func apply(cuisineList: [Cuisine]) {
         cuisineView.cuisineList = cuisineList
     }

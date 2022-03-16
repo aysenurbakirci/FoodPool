@@ -11,6 +11,7 @@ import FoodPoolKit
 
 class OrderDetailPageViewController: UIViewController {
     
+    //MARK: - Properties
     var viewModel: OrderDetailPageViewModelProtocol!
     var orderView = OrderDetailPageView()
     
@@ -20,7 +21,7 @@ class OrderDetailPageViewController: UIViewController {
     private let color: UIColor = .mainColor
     private let duration: TimeInterval = 2
     
-    
+    //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .background
@@ -31,11 +32,13 @@ class OrderDetailPageViewController: UIViewController {
                         stateIcon: viewModel.orderState.icon)
     }
     
+    //MARK: - ViewDidApper
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         animationConfig()
     }
     
+    //MARK: - View Configuration
     private func layerConfig() {
         let center = view.center
         let circularPath = UIBezierPath(arcCenter: center, radius: 160, startAngle: .pi / -2, endAngle: .pi * 2, clockwise: true)
@@ -56,6 +59,7 @@ class OrderDetailPageViewController: UIViewController {
         view.layer.addSublayer(shapeLayer)
     }
     
+    //MARK: - Animation Configuration
     private func animationConfig() {
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         basicAnimation.toValue = viewModel.orderState.rawValue

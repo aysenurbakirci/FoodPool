@@ -8,6 +8,7 @@
 import Foundation
 import FoodPoolAPI
 
+//MARK: - Protocol
 protocol DetailPageViewModelProtocol {
     func numberOfSections() -> Int
     func numberOfRowsInSection(for section: Int) -> Int
@@ -17,14 +18,17 @@ protocol DetailPageViewModelProtocol {
 
 final class DetailPageViewModel: DetailPageViewModelProtocol {
     
+    //MARK: - Properties
     private let restaurantModel: [DetailPageSection]!
     
+    //MARK: - Initalization
     init(model: Restaurant) {
         self.restaurantModel = [.restaurant(model),
                                 .mealList(model.mealList),
                                 .drinkList(model.drinkList)]
     }
     
+    //MARK: - Helper Methods
     func numberOfSections() -> Int {
         return restaurantModel.count
     }

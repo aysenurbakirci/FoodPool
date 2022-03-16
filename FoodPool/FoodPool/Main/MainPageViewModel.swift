@@ -10,10 +10,12 @@ import FoodPoolAPI
 import RxSwift
 import RxCocoa
 
+//MARK: - Delegate
 protocol MainPageViewModelDelegate {
     func reloadTableView()
 }
 
+//MARK: - Protocol
 protocol MainPageViewModelProtocol {
     func loadData()
     func numberOfSections() -> Int
@@ -26,13 +28,16 @@ protocol MainPageViewModelProtocol {
 
 final class MainPageViewModel: MainPageViewModelProtocol, ActivityHandler {
     
+    //MARK: - Activity Handler Properties
     var isLoading = BehaviorRelay<Bool>(value: false)
     var onError = BehaviorRelay<Error?>(value: nil)
     
+    //MARK: - Properties
     var delegate: MainPageViewModelDelegate?
     private var mainPage: [MainPageSection] = []
     private var bag = DisposeBag()
     
+    //MARK: - Load Data
     func loadData() {
         isLoading.accept(true)
         
@@ -57,6 +62,7 @@ final class MainPageViewModel: MainPageViewModelProtocol, ActivityHandler {
             .disposed(by: bag)
     }
     
+    //MARK: - Helper Methods
     func numberOfSections() -> Int {
         return mainPage.count
     }

@@ -7,14 +7,18 @@
 
 import Foundation
 
-struct BasketModel {
-    var restaurantName: String
-    var restaurantImage: String
-    var mealList: [BasketMealModel]
-}
-
 struct BasketMealModel {
     var count: Int
     var mealName: String
     var price: Double
+}
+
+struct RestaurantModel {
+    var restaurantName: String
+    var restaurantImage: String
+}
+
+struct BasketModel {
+    var restaurant: RestaurantModel
+    var mealList: [BasketMealModel]
 }

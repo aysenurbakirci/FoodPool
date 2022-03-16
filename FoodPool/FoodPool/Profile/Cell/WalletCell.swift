@@ -12,8 +12,10 @@ import AutoLayoutHelper
 
 final class WalletCell: UITableViewCell {
     
+    //MARK: - Properties
     let walletView = WalletView()
     
+    //MARK: - Initalization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -26,10 +28,12 @@ final class WalletCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Apply Cell
     func apply(amount: Double) {
         walletView.apply(amount: amount)
     }
     
+    //MARK: - Add Target To Cell
     func addButtonTarget(addButtonTarget: Any?, addButtonSelector: Selector) {
         walletView.addTarget(target: addButtonTarget, selector: addButtonSelector)
     }

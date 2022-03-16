@@ -12,10 +12,12 @@ import RxSwift
 
 final class OrderPageViewController: UIViewController, ActivityDisplayer {
     
+    //MARK: - Properties
     private lazy var orderView = OrderPageView()
-    var viewModel = OrderPageViewModel()
     var bag = DisposeBag()
+    var viewModel = OrderPageViewModel()
     
+    //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view = orderView
@@ -28,6 +30,7 @@ final class OrderPageViewController: UIViewController, ActivityDisplayer {
     }
 }
 
+//MARK: - TableView Methods
 extension OrderPageViewController: UITableViewDelegate {}
 
 extension OrderPageViewController: UITableViewDataSource {
@@ -47,14 +50,17 @@ extension OrderPageViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = viewModel.modelForSection(at: indexPath)
         let cell: OrderCell = tableView.dequeue(for: indexPath)
+        
         switch model {
         case .current(let currentOrders):
             let model = currentOrders[indexPath.row]
             cell.apply(title: model.restaurantName, meals: model.mealList, total: model.price)
+            
         case .previous(let previousOrders):
             let model = previousOrders[indexPath.row]
             cell.apply(title: model.restaurantName, meals: model.mealList, total: model.price)
         }
+        
         return cell
     }
     
@@ -66,6 +72,7 @@ extension OrderPageViewController: UITableViewDataSource {
             let order = currentOrders[indexPath.row]
             let page = OrderDetailPageBuilder.build(selectedOrder: order)
             navigationController?.pushViewController(page, animated: true)
+            
         case .previous(let previousOrders):
             let order = previousOrders[indexPath.row]
             let page = OrderDetailPageBuilder.build(selectedOrder: order)
@@ -74,10 +81,9 @@ extension OrderPageViewController: UITableViewDataSource {
     }
 }
 
+//MARK: - Reload Page
 extension OrderPageViewController: OrderPageViewModelDelegate {
     func reloadTableView() {
-        DispatchQueue.main.async {
-            self.orderView.reloadTableView()
-        }
+        orderView.reloadTableView()
     }
 }

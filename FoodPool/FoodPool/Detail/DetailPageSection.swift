@@ -8,13 +8,16 @@
 import Foundation
 import FoodPoolAPI
 
+//MARK: - Page Sections
 enum DetailPageSection {
     case restaurant(Restaurant)
     case mealList([MenuModel])
     case drinkList([MenuModel])
 }
 
+//MARK: - Section Helper Properties
 extension DetailPageSection {
+    
     var numberRowsInSection: Int {
         switch self {
         case .restaurant(_):

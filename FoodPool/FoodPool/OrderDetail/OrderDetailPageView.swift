@@ -13,6 +13,7 @@ import LayoutKit
 
 class OrderDetailPageView: UIView {
     
+    //MARK: - UI Properties
     lazy var orderState: UILabel = .create(
         lblText: "STATUS",
         font: .boldMedium,
@@ -43,6 +44,7 @@ class OrderDetailPageView: UIView {
         spacing: 6.0
     )
     
+    //MARK: - Initalization
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(stateStack)
@@ -54,6 +56,7 @@ class OrderDetailPageView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Apply View
     func apply(stateTitle: String, stateIcon: UIImage) {
         self.orderState.text = stateTitle
         self.stateImage.image = stateIcon

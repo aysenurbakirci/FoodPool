@@ -8,11 +8,13 @@
 import Foundation
 import FoodPoolAPI
 
+//MARK: - Page Sections
 enum OrderPageSection {
     case current([Order])
     case previous([Order])
 }
 
+//MARK: - Section Helper Properties
 extension OrderPageSection {
     
     var numberRowsInSection: Int {

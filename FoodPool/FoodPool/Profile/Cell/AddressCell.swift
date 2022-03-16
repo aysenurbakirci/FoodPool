@@ -12,8 +12,10 @@ import AutoLayoutHelper
 
 final class AddressCell: UITableViewCell {
     
+    //MARK: - Properties
     let addressView = AddressView()
     
+    //MARK: - Initalization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -26,10 +28,12 @@ final class AddressCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Apply Cell
     func apply(title: String, address: String) {
         addressView.apply(addressTitle: title, address: address)
     }
     
+    //MARK: - Add Target To Cell
     func addButtonTarget(editButtonTarget: Any?, editButtonSelector: Selector) {
         addressView.addTarget(target: editButtonTarget, selector: editButtonSelector)
     }

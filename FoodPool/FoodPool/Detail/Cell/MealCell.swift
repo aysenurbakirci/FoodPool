@@ -11,9 +11,11 @@ import FoodPoolKit
 
 final class MealCell: UITableViewCell {
     
+    //MARK: - Properties
     lazy var mealView = MealView()
     lazy var stepperValue: Int = mealView.stepperValue
     
+    //MARK: - Initalization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(mealView)
@@ -25,11 +27,13 @@ final class MealCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Apply Cell
     func apply(imageName: String, title: String, price: String) {
         let image = UIImage(named: imageName)
         mealView.apply(image: image, title: title, price: price)
     }
     
+    //MARK: - Add Target To Cell
     func addTarget(_ target: Any?) {
         mealView.addTarget(target)
     }

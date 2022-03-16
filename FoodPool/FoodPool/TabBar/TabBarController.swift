@@ -17,6 +17,7 @@ final class TabBarController: UITabBarController {
     let basketPage = BasketPageBuilder.build()
     let profilePage = ProfilePageBuilder.build()
     let orderPage = OrderPageBuilder.build()
+    var onBoardingPage: UIViewController? = nil
 
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
@@ -29,7 +30,10 @@ final class TabBarController: UITabBarController {
     //MARK: - ViewDidAppear
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-//        openOnboardingScreen()
+        guard let onBoardingPage = onBoardingPage else {
+            return
+        }
+        present(onBoardingPage, animated: true, completion: nil)
     }
 }
 
@@ -58,11 +62,5 @@ private extension TabBarController {
         orderNavigation.tabBarItem = UITabBarItem(title: "Order",
                                                   image: .order,
                                                   tag: 3)
-    }
-    
-    //MARK: - Open OnBoarding
-    func openOnboardingScreen() {
-        let onBoarding = OnBardingPageBuilder.build(data: [])
-        present(onBoarding, animated: true, completion: nil)
     }
 }

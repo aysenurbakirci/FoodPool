@@ -13,8 +13,10 @@ import FoodPoolKit
 
 final class HeaderView: UITableViewHeaderFooterView {
     
+    //MARK: - Properties
     static let reuseIdentifier = "HeaderView"
     
+    //MARK: - UI Properties
     lazy var restaurantImage: UIImageView = .create(image: .photo)
     
     lazy var title: UILabel = .create(
@@ -26,6 +28,7 @@ final class HeaderView: UITableViewHeaderFooterView {
         sizeToFit: true
     )
     
+    //MARK: - Initalization
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         
@@ -50,5 +53,12 @@ final class HeaderView: UITableViewHeaderFooterView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - Apply Model
+    func apply(imageName: String, restaurant: String) {
+        let image = UIImage(named: imageName)
+        self.restaurantImage.image = image
+        self.title.text = restaurant
     }
 }

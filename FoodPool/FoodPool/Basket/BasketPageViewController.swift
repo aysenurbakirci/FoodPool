@@ -11,9 +11,11 @@ import FoodPoolKit
 
 final class BasketPageViewController: UIViewController {
     
+    //MARK: - Properties
     lazy var basketView = BasketPageView()
     var viewModel: BasketPageViewModelProtocol!
     
+    //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view = basketView
@@ -22,43 +24,51 @@ final class BasketPageViewController: UIViewController {
     }
 }
 
+//MARK: - TableView Methods
 extension BasketPageViewController: UITableViewDelegate {}
 
 extension BasketPageViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return viewModel.numberOfSections()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.numberOfRowsInSection(in: section)
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderView.reuseIdentifier) as? HeaderView else {
             return nil
         }
+        let model = viewModel.headerModel(in: section)
+        view.apply(imageName: model.restaurantImage, restaurant: model.restaurantName)
         return view
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        guard section == 2 else { return UIView() }
+        guard section == (viewModel.numberOfSections() - 1) else { return UIView() }
         guard let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: FooterView.reuseIdentifier) as? FooterView else {
             return UIView()
         }
         return view
-
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: BasketCell = tableView.dequeue(for: indexPath)
+        let model = viewModel.mealListInSection(at: indexPath)
+        cell.apply(title: model.mealName, price: model.price, count: Double(model.count))
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-//            viewModel.deleteItem(at: indexPath)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            viewModel.deleteItem(at: indexPath)
+            if viewModel.deleteSection {
+                tableView.deleteSections(IndexSet(integer: indexPath.section), with: .fade)
+            } else {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
         }
     }
 }

@@ -10,6 +10,7 @@ import FoodPoolAPI
 import RxSwift
 import RxCocoa
 
+//MARK: - Protocol
 protocol ProfilePageViewModelProtocol {
     var delegate: ProfilePageViewModelDelegate? { get set }
     func loadData()
@@ -19,21 +20,23 @@ protocol ProfilePageViewModelProtocol {
     func modelForSection(at index: IndexPath) -> ProfilePageSection
 }
 
+//MARK: - Delegate
 protocol ProfilePageViewModelDelegate:  AnyObject {
     func reloadTableView()
 }
 
 final class ProfilePageViewModel: ProfilePageViewModelProtocol, ActivityHandler {
     
+    //MARK: - Activity Handler Properties
     var isLoading = BehaviorRelay<Bool>(value: false)
     var onError = BehaviorRelay<Error?>(value: nil)
     
+    //MARK: - Properties
     var delegate: ProfilePageViewModelDelegate?
     private var profile: [ProfilePageSection] = []
     private var bag = DisposeBag()
     
-    init() {}
-    
+    //MARK: - Load Data
     func loadData() {
         isLoading.accept(true)
         
@@ -56,6 +59,7 @@ final class ProfilePageViewModel: ProfilePageViewModelProtocol, ActivityHandler 
             .disposed(by: bag)
     }
     
+    //MARK: - Helper Methods
     func numberOfSections() -> Int {
         return profile.count
     }

@@ -13,10 +13,12 @@ import RxSwift
 
 final class ProfilePageViewController: UIViewController, ActivityDisplayer {
     
+    //MARK: - Properties
     lazy var profileView = ProfilePageView()
     var viewModel = ProfilePageViewModel()
     var bag = DisposeBag()
     
+    //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view = profileView
@@ -28,6 +30,7 @@ final class ProfilePageViewController: UIViewController, ActivityDisplayer {
     }
 }
 
+//MARK: - TableView Methods
 extension ProfilePageViewController: UITableViewDelegate {}
 
 extension ProfilePageViewController: UITableViewDataSource {
@@ -70,6 +73,7 @@ extension ProfilePageViewController: UITableViewDataSource {
     }
 }
 
+//MARK: - Button Methods
 extension ProfilePageViewController {
     @objc func add() {
         print("Clicked add button")
@@ -80,10 +84,9 @@ extension ProfilePageViewController {
     }
 }
 
+//MARK: - Reload Page
 extension ProfilePageViewController: ProfilePageViewModelDelegate {
     func reloadTableView() {
-        DispatchQueue.main.async {
-            self.profileView.reloadTableView()
-        }
+        profileView.reloadTableView()
     }
 }

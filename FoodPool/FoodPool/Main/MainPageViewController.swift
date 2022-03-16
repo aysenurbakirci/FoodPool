@@ -14,10 +14,12 @@ import RxSwift
 
 final class MainPageViewController: UIViewController, ActivityDisplayer {    
     
+    //MARK: - Properties
     private lazy var mainView = MainPageView()
     var viewModel = MainPageViewModel()
     var bag = DisposeBag()
     
+    //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view = mainView
@@ -30,6 +32,7 @@ final class MainPageViewController: UIViewController, ActivityDisplayer {
     }
 }
 
+//MARK: - TableView Methods
 extension MainPageViewController: UITableViewDelegate {}
 
 extension MainPageViewController: UITableViewDataSource {
@@ -69,10 +72,9 @@ extension MainPageViewController: UITableViewDataSource {
     }
 }
 
+//MARK: - Reload Page
 extension MainPageViewController: MainPageViewModelDelegate {
     func reloadTableView() {
-        DispatchQueue.main.async {
-            self.mainView.reloadTableView()
-        }
+        mainView.reloadTableView()
     }
 }

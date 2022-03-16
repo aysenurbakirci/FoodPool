@@ -13,8 +13,10 @@ import LayoutKit
 
 final class OrderCell: UITableViewCell {
     
+    //MARK: - Properties
     private lazy var orderView = OrderView()
     
+    //MARK: - Initalization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(orderView)
@@ -25,12 +27,12 @@ final class OrderCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Apply Cell
     func apply(title: String, meals: [String], total: Double) {
         var string = ""
         for meal in meals {
             string += "\(meal),"
         }
-        
         orderView.apply(title: title, meals: string, total:"\(total) $")
     }
 }

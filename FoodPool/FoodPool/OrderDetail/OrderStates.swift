@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import FoodPoolKit
 
+//MARK: - Order States
 enum OrderState {
     case waiting
     case preparing
@@ -17,7 +18,9 @@ enum OrderState {
     case delivered
 }
 
+//MARK: - Order State Helper Properties
 extension OrderState {
+    
     var rawValue: Double {
         switch self {
         case .waiting:

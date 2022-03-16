@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import FoodPoolAPI
 
+//MARK: - Page Builder
 public class ProfilePageBuilder {
     public static func build() -> UIViewController {
         let vc = ProfilePageViewController()

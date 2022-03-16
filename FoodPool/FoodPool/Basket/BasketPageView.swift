@@ -13,6 +13,7 @@ import FoodPoolKit
 
 final class BasketPageView: UIView {
     
+    //MARK: - Properties
     private lazy var tableView = UITableView()
     
     var source: (UITableViewDataSource & UITableViewDelegate)? = nil {
@@ -22,12 +23,18 @@ final class BasketPageView: UIView {
         }
     }
     
+    //MARK: - Initalization
     override init(frame: CGRect) {
         super.init(frame: frame)
         configuration()
         registerCells()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - View Configuration
     private func configuration() {
         addSubviews(tableView)
         tableView.fillSuperView()
@@ -41,9 +48,5 @@ final class BasketPageView: UIView {
                            forHeaderFooterViewReuseIdentifier: HeaderView.reuseIdentifier)
         tableView.register(FooterView.self,
                            forHeaderFooterViewReuseIdentifier: FooterView.reuseIdentifier)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

@@ -10,10 +10,12 @@ import FoodPoolAPI
 import RxSwift
 import RxCocoa
 
+//MARK: - Delegate
 protocol OrderPageViewModelDelegate {
     func reloadTableView()
 }
 
+//MARK: - Protocol
 protocol OrderPageViewModelProtocol {
     func loadData()
     func numberOfSections() -> Int
@@ -25,13 +27,16 @@ protocol OrderPageViewModelProtocol {
 
 final class OrderPageViewModel: OrderPageViewModelProtocol, ActivityHandler {
     
+    //MARK: - ActivityHandler Properties
     var isLoading = BehaviorRelay<Bool>(value: false)
     var onError = BehaviorRelay<Error?>(value: nil)
-    
-    var delegate: OrderPageViewModelDelegate?
-    private var orderList: [OrderPageSection] = []
     private var bag = DisposeBag()
     
+    //MARK: - Properties
+    var delegate: OrderPageViewModelDelegate?
+    private var orderList: [OrderPageSection] = []
+    
+    //MARK: - Load Method
     func loadData() {
         isLoading.accept(true)
         
@@ -55,6 +60,7 @@ final class OrderPageViewModel: OrderPageViewModelProtocol, ActivityHandler {
             .disposed(by: bag)
     }
     
+    //MARK: - Helper Methods
     func numberOfSections() -> Int {
         return orderList.count
     }

@@ -11,12 +11,14 @@ import FoodPoolKit
 
 final class ButtonCell: UITableViewCell {
     
+    //MARK: - UI Properties
     lazy var button: Button = .init(
         type: .primary,
         title: "Add New Address",
         image: .plus
     )
     
+    //MARK: - Initalization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(button)
@@ -31,6 +33,7 @@ final class ButtonCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Add Target To Cell
     func addButtonTarget(target: Any?, selector: Selector) {
         button.addTarget(target: target, selector: selector)
     }

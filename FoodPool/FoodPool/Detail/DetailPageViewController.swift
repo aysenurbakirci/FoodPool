@@ -10,9 +10,11 @@ import UIKit
 
 final class DetailPageViewController: UIViewController {
     
+    //MARK: - Properties
     private lazy var detailView = DetailPageView()
     var viewModel: DetailPageViewModelProtocol!
     
+    //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = detailView
@@ -20,6 +22,7 @@ final class DetailPageViewController: UIViewController {
     }
 }
 
+//MARK: - TableView Methods
 extension DetailPageViewController: UITableViewDelegate {}
 
 extension DetailPageViewController: UITableViewDataSource {

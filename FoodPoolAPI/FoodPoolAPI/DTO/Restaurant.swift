@@ -7,10 +7,6 @@
 
 import Foundation
 
-public struct RestaurantModel: Decodable {
-    public var restaurant: [Restaurant]
-}
-
 public struct Restaurant: Decodable {
     public var id: String
     public var name: String

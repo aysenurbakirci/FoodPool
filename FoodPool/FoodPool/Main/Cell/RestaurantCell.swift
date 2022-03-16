@@ -11,9 +11,10 @@ import FoodPoolKit
 
 final class RestaurantCell: UITableViewCell {
     
-    lazy var restaurantView = RestaurantView()
-
+    //MARK: - Properties
+    private lazy var restaurantView = RestaurantView()
     
+    //MARK: - Initalization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(restaurantView)
@@ -25,6 +26,7 @@ final class RestaurantCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Apply Cell
     func apply(imageName: String, title: String, description: String, isOpen: Bool? = nil) {
         let image = UIImage(named: imageName)
         restaurantView.apply(image: image, title: title, description: description, isOpen: isOpen)

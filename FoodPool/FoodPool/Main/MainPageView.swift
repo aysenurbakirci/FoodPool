@@ -12,6 +12,7 @@ import LayoutKit
 
 final class MainPageView: UIView {
     
+    //MARK: - Properties
     private lazy var tableView = UITableView()
     
     var source: (UITableViewDataSource & UITableViewDelegate)? = nil {
@@ -21,12 +22,14 @@ final class MainPageView: UIView {
         }
     }
     
+    //MARK: - Initalization
     override init(frame: CGRect) {
         super.init(frame: frame)
         configuration()
         registerCells()
     }
     
+    //MARK: - View Configuration
     private func configuration() {
         addSubview(tableView)
         tableView.fillSuperView()
@@ -45,7 +48,10 @@ final class MainPageView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Reload Page
     func reloadTableView() {
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }

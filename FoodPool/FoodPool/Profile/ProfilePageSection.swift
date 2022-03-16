@@ -8,6 +8,7 @@
 import Foundation
 import FoodPoolAPI
 
+//MARK: - Sections
 enum ProfilePageSection {
     case profile(User)
     case wallet(Double)
@@ -15,6 +16,7 @@ enum ProfilePageSection {
     case button
 }
 
+//MARK: - Section Helper Properties
 extension ProfilePageSection {
     
     var numberRowsInSection: Int {

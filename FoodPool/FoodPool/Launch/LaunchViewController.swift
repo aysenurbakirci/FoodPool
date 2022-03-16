@@ -45,6 +45,10 @@ class LaunchViewController: UIViewController {
         super.viewDidLayoutSubviews()
         imageView.center = view.center
     }
+}
+
+extension LaunchViewController {
+    
     private func loadData() {
         let onBoarding = FoodPoolService.getOnBoarding()
         onBoarding
@@ -54,13 +58,16 @@ class LaunchViewController: UIViewController {
             })
             .subscribe(onNext: { [weak self] data in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    self?.animate()
+                    self?.animate(loadedData: data)
                 }
             })
             .disposed(by: bag)
     }
-    
-    private func animate() {
+
+}
+
+extension LaunchViewController {
+    private func animate(loadedData: [OnBoarding]) {
         let size = self.view.frame.size.width * 1.5
         let diffX = (size - self.view.frame.size.width) / -2
         let diffY = (self.view.frame.size.height - size) / 2
@@ -74,12 +81,18 @@ class LaunchViewController: UIViewController {
         } completion: { isDone in
             if isDone {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                    let tabBar = TabBarController()
-                    tabBar.modalTransitionStyle = .crossDissolve
-                    tabBar.modalPresentationStyle = .fullScreen
-                    self.present(tabBar, animated: true, completion: nil)
+                    self.openApplication(data: loadedData)
                 }
             }
         }
+    }
+    
+    private func openApplication(data: [OnBoarding]) {
+        let onBoarding = OnBardingPageBuilder.build(data: data)
+        let tabBar = TabBarController()
+        tabBar.onBoardingPage = onBoarding
+        tabBar.modalTransitionStyle = .crossDissolve
+        tabBar.modalPresentationStyle = .fullScreen
+        self.present(tabBar, animated: true, completion: nil)
     }
 }

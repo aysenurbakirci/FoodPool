@@ -8,17 +8,15 @@
 import Foundation
 import FoodPoolAPI
 
+//MARK: - Protocol
 protocol OrderDetailPageViewModelProtocol {
     var orderState: OrderState { get }
 }
 
 final class OrderDetailPageViewModel: OrderDetailPageViewModelProtocol {
     
+    //MARK: - Properties
     private var order: Order?
-    
-    init(order: Order) {
-        self.order = order
-    }
     
     var orderState: OrderState {
         if order?.state == "waiting" {
@@ -34,4 +32,8 @@ final class OrderDetailPageViewModel: OrderDetailPageViewModelProtocol {
         }
     }
     
+    //MARK: - Initalization
+    init(order: Order) {
+        self.order = order
+    }
 }

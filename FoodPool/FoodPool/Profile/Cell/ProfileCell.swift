@@ -12,8 +12,10 @@ import AutoLayoutHelper
 
 class ProfileCell: UITableViewCell {
     
+    //MARK: - Properties
     lazy var profileView = ProfileView()
     
+    //MARK: - Initalization
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -28,6 +30,7 @@ class ProfileCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Apply Cell
     func apply(userName: String, email: String, phone: String) {
         profileView.apply(userName: userName, email: email, phone: phone)
     }
