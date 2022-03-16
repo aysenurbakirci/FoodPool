@@ -34,11 +34,18 @@ public extension LoadingDisplayer where Self: UIViewController {
     }
     
     private func showLoadingView() {
+        let activityIndicatorView = UIView(frame: self.view.bounds)
+        activityIndicatorView.layer.zPosition = .greatestFiniteMagnitude
+        activityIndicatorView.tag = 999
+        activityIndicatorView.backgroundColor = .background
+        
         let activityIndicator = UIActivityIndicatorView(style: .large)
-        activityIndicator.color = .gray
-        self.view.addSubview(activityIndicator)
+        activityIndicator.color = .mainColor
+        activityIndicator.startAnimating()
+        activityIndicatorView.addSubview(activityIndicator)
+        self.view.addSubview(activityIndicatorView)
+        activityIndicatorView.fillSuperView()
         activityIndicator.fillSuperView()
-        activityIndicator.tag = 999
     }
     
     private func hideLoadingView() {

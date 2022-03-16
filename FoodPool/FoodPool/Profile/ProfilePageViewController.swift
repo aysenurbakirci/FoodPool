@@ -13,9 +13,9 @@ import RxSwift
 
 final class ProfilePageViewController: UIViewController, ActivityDisplayer {
     
-    var bag: DisposeBag = DisposeBag()
     lazy var profileView = ProfilePageView()
     var viewModel = ProfilePageViewModel()
+    var bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,8 @@ final class ProfilePageViewController: UIViewController, ActivityDisplayer {
         profileView.source = self
         viewModel.delegate = self
         viewModel.loadData()
+        bindLoading()
+        bindErrorHandling()
     }
 }
 

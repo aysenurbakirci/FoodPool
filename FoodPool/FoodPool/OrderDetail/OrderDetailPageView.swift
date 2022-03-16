@@ -26,14 +26,6 @@ class OrderDetailPageView: UIView {
         isOpaque: true
     )
     
-    lazy var stateStack: UIStackView = .create(
-        subviews: [stateImage, orderState],
-        axis: .horizontal,
-        distribution: .equalSpacing,
-        alignment: .center,
-        spacing: 6.0
-    )
-    
     lazy var desc: UILabel = .create(
         lblText: "Status of your order:",
         font: .medium,
@@ -43,18 +35,19 @@ class OrderDetailPageView: UIView {
         sizeToFit: true
     )
     
-    lazy var stackView: UIStackView = .create(
-        subviews: [desc, stateStack],
+    lazy var stateStack: UIStackView = .create(
+        subviews: [stateImage, desc, orderState],
         axis: .vertical,
         distribution: .equalSpacing,
         alignment: .center,
-        spacing: 4.0
+        spacing: 6.0
     )
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(stackView)
-        stackView.centerToSuperView()
+        addSubview(stateStack)
+        stateImage.sizeAnchor(width: 50.0, height: 50.0)
+        stateStack.centerToSuperView()
     }
     
     required init?(coder: NSCoder) {

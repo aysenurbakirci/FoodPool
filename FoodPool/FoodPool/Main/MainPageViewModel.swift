@@ -8,6 +8,7 @@
 import Foundation
 import FoodPoolAPI
 import RxSwift
+import RxCocoa
 
 protocol MainPageViewModelDelegate {
     func reloadTableView()
@@ -23,24 +24,37 @@ protocol MainPageViewModelProtocol {
     var delegate: MainPageViewModelDelegate? { get set }
 }
 
-final class MainPageViewModel: MainPageViewModelProtocol {
+final class MainPageViewModel: MainPageViewModelProtocol, ActivityHandler {
+    
+    var isLoading = BehaviorRelay<Bool>(value: false)
+    var onError = BehaviorRelay<Error?>(value: nil)
     
     var delegate: MainPageViewModelDelegate?
     private var mainPage: [MainPageSection] = []
     private var bag = DisposeBag()
     
     func loadData() {
+        isLoading.accept(true)
+        
         let restaurants = FoodPoolService.getRestaurans()
         let categories = FoodPoolService.getCategories()
         
-        Observable.zip(restaurants, categories)
+        Observable
+            .zip(restaurants, categories)
+            .observe(on: MainScheduler.instance)
+            .do(onNext: { [weak self] _ in
+                self?.isLoading.accept(false)
+            })
             .subscribe(onNext: { [weak self] restaurants, categories in
                 guard let self = self else { return }
                 self.mainPage = [.category(categories),
                             .restaurant(restaurants)]
-                print(restaurants)
                 self.delegate?.reloadTableView()
-            }).disposed(by: bag)
+                
+            }, onError: { [weak self] error in
+                self?.onError.accept(error)
+            })
+            .disposed(by: bag)
     }
     
     func numberOfSections() -> Int {

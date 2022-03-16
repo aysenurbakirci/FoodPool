@@ -8,6 +8,7 @@
 import Foundation
 import FoodPoolAPI
 import RxSwift
+import RxCocoa
 
 protocol OrderPageViewModelDelegate {
     func reloadTableView()
@@ -22,24 +23,36 @@ protocol OrderPageViewModelProtocol {
     var delegate: OrderPageViewModelDelegate? { get set }
 }
 
-final class OrderPageViewModel: OrderPageViewModelProtocol {
+final class OrderPageViewModel: OrderPageViewModelProtocol, ActivityHandler {
+    
+    var isLoading = BehaviorRelay<Bool>(value: false)
+    var onError = BehaviorRelay<Error?>(value: nil)
     
     var delegate: OrderPageViewModelDelegate?
     private var orderList: [OrderPageSection] = []
     private var bag = DisposeBag()
     
     func loadData() {
+        isLoading.accept(true)
+        
         let currentOrder = FoodPoolService.getCurrentOrders(userID: 1)
         let deliveredOrder = FoodPoolService.getDeliveredOrders(userID: 1)
         
-        Observable.zip(currentOrder, deliveredOrder)
+        Observable
+            .zip(currentOrder, deliveredOrder)
+            .observe(on: MainScheduler.instance)
+            .do(onNext: { [weak self] _ in
+                self?.isLoading.accept(false)
+            })
             .subscribe(onNext: { [weak self] currentOrder, deliveredOrder in
                 guard let self = self else { return }
-                self.orderList = [.current(currentOrder), .previous(deliveredOrder)]
-                print(currentOrder)
-                print(deliveredOrder)
+                self.orderList = [.current(currentOrder),
+                                  .previous(deliveredOrder)]
                 self.delegate?.reloadTableView()
-            }).disposed(by: bag)
+            }, onError: { [weak self] error in
+                self?.onError.accept(error)
+            })
+            .disposed(by: bag)
     }
     
     func numberOfSections() -> Int {

@@ -8,11 +8,13 @@
 import Foundation
 import UIKit
 import FoodPoolKit
+import RxSwift
 
-final class OrderPageViewController: UIViewController {
+final class OrderPageViewController: UIViewController, ActivityDisplayer {
     
     private lazy var orderView = OrderPageView()
-    var viewModel: OrderPageViewModelProtocol!
+    var viewModel = OrderPageViewModel()
+    var bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,8 @@ final class OrderPageViewController: UIViewController {
         orderView.source = self
         viewModel.delegate = self
         viewModel.loadData()
+        bindLoading()
+        bindErrorHandling()
     }
 }
 

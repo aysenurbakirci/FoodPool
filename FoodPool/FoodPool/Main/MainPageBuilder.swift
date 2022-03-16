@@ -11,9 +11,7 @@ import FoodPoolAPI
 
 public class MainPageBuilder {
     public static func build() -> UIViewController {
-        let vm = MainPageViewModel()
         let vc = MainPageViewController()
-        vc.viewModel = vm
         return vc
     }
 }

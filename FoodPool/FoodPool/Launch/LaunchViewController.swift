@@ -48,10 +48,9 @@ class LaunchViewController: UIViewController {
     private func loadData() {
         let onBoarding = FoodPoolService.getOnBoarding()
         onBoarding
+            .observe(on: MainScheduler.instance)
             .do(onNext: { [weak self] _ in
-                DispatchQueue.main.async {
-                    self?.activityIndicator.stopAnimating()
-                }
+                self?.activityIndicator.stopAnimating()
             })
             .subscribe(onNext: { [weak self] data in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {

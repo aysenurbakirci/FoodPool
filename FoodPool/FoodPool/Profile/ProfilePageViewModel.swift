@@ -41,7 +41,6 @@ final class ProfilePageViewModel: ProfilePageViewModelProtocol, ActivityHandler 
 
         data
             .do(onNext: { _ in
-                sleep(5)
                 self.isLoading.accept(false)
             })
             .subscribe(onNext: { [weak self] model in
@@ -50,7 +49,6 @@ final class ProfilePageViewModel: ProfilePageViewModelProtocol, ActivityHandler 
                                 .wallet(model.first!.amount),
                                 .address(model.first!.addresses),
                                 .button]
-                print(self.profile)
                 self.delegate?.reloadTableView()
             }, onError: { [weak self] error in
                 self?.onError.accept(error)

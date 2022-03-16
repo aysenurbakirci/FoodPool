@@ -10,19 +10,23 @@ import UIKit
 import AutoLayoutHelper
 import LayoutKit
 import FoodPoolKit
+import RxSwift
 
-final class MainPageViewController: UIViewController {
+final class MainPageViewController: UIViewController, ActivityDisplayer {    
     
     private lazy var mainView = MainPageView()
-    var viewModel: MainPageViewModelProtocol!
+    var viewModel = MainPageViewModel()
+    var bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view = mainView
+        navigationItem.title = "FoodPool"
         mainView.source = self
         viewModel.delegate = self
         viewModel.loadData()
-        navigationItem.title = "FoodPool"
+        bindLoading()
+        bindErrorHandling()
     }
 }
 
