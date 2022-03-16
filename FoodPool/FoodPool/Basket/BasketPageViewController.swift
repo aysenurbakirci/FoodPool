@@ -66,6 +66,7 @@ extension BasketPageViewController: UITableViewDataSource {
             viewModel.deleteItem(at: indexPath)
             if viewModel.deleteSection {
                 tableView.deleteSections(IndexSet(integer: indexPath.section), with: .fade)
+                tableView.reloadData()
             } else {
                 tableView.deleteRows(at: [indexPath], with: .fade)
             }

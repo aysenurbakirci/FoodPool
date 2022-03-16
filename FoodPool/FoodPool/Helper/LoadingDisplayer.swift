@@ -38,13 +38,13 @@ public extension LoadingDisplayer where Self: UIViewController {
         activityIndicatorView.layer.zPosition = .greatestFiniteMagnitude
         activityIndicatorView.tag = 999
         activityIndicatorView.backgroundColor = .background
+        self.view.addSubview(activityIndicatorView)
+        activityIndicatorView.fillSuperView()
         
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.color = .mainColor
         activityIndicator.startAnimating()
         activityIndicatorView.addSubview(activityIndicator)
-        self.view.addSubview(activityIndicatorView)
-        activityIndicatorView.fillSuperView()
         activityIndicator.fillSuperView()
     }
     

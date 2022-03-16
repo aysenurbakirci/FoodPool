@@ -30,9 +30,4 @@ final class BasketCell: UITableViewCell {
     func apply(title: String, price: Double, count: Double) {
         basketView.apply(title: title, price: price, count: count)
     }
-    
-    //MARK: - Add Target To Cell
-    func addTarget(_ target: Any?) {
-        basketView.addTarget(target)
-    }
 }

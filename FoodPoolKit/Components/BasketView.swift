@@ -14,7 +14,7 @@ public final class BasketView: UIView {
     
     lazy var title: UILabel = .create(
         lblText: "Meal Name",
-        font: .boldLarge,
+        font: .large,
         textColor: .secondaryTitle,
         textAlignment: .left,
         sizeToFit: true
@@ -31,25 +31,19 @@ public final class BasketView: UIView {
     
     lazy var labelStack: UIStackView = .create(
         subviews: [title, price],
-        axis: .vertical,
+        axis: .horizontal,
         distribution: .equalSpacing,
-        alignment: .leading,
-        spacing: 2
+        alignment: .leading
     )
-    
-    lazy var stepper = StepperView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        addSubviews(labelStack, stepper)
+        addSubviews(labelStack)
         labelStack.anchor(top: topAnchor,
                           leading: leadingAnchor,
                           bottom: bottomAnchor,
-                          padding: .equalPadding(10.0))
-        stepper.anchor(trailing: trailingAnchor,
-                       padding: .padding(right: 10.0))
-        stepper.centerYToSuperView()
+                          trailing: trailingAnchor,
+                          padding: .padding(top: 10.0, left: 20.0, bottom: 10.0, right: 20.0))
     }
     
     required init?(coder: NSCoder) {
@@ -59,10 +53,5 @@ public final class BasketView: UIView {
     public func apply(title: String, price: Double, count: Double) {
         self.title.text = title
         self.price.text = "\(price) $"
-        stepper.stepperValue = Int(count)
-    }
-    
-    public func addTarget(_ target: Any?) {
-        stepper.stepperTarget = target
     }
 }

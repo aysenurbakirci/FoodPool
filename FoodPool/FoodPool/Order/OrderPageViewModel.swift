@@ -30,11 +30,11 @@ final class OrderPageViewModel: OrderPageViewModelProtocol, ActivityHandler {
     //MARK: - ActivityHandler Properties
     var isLoading = BehaviorRelay<Bool>(value: false)
     var onError = BehaviorRelay<Error?>(value: nil)
-    private var bag = DisposeBag()
     
     //MARK: - Properties
     var delegate: OrderPageViewModelDelegate?
     private var orderList: [OrderPageSection] = []
+    private var bag = DisposeBag()
     
     //MARK: - Load Method
     func loadData() {

@@ -26,4 +26,6 @@ public extension UIImage {
     static let readyOrder = UIImage(systemName: "bag.fill")!
     static let onTheWayOrder = UIImage(systemName: "paperplane.fill")!
     static let deliveredOrder = UIImage(systemName: "signpost.right.fill")!
+    static let unknown = UIImage(systemName: "camera.metering.unknown")!
+    static let empty = UIImage(systemName: "eyes.inverse")!
 }
