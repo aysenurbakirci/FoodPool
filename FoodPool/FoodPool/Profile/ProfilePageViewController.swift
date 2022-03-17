@@ -71,24 +71,6 @@ extension ProfilePageViewController: UITableViewDataSource {
             return cell
         }
     }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        let sectionModel = viewModel.modelForSection(at: indexPath)
-        
-        switch sectionModel {
-        case .profile(_):
-            break
-        case .wallet(_):
-            break
-        case .address(_):
-            if editingStyle == .delete {
-                addressList.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .fade)
-            }
-        case .button:
-            break
-        }
-    }
 }
 
 //MARK: - Button Methods
