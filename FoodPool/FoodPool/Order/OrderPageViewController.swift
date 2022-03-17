@@ -21,7 +21,7 @@ final class OrderPageViewController: UIViewController, ActivityDisplayer {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = orderView
-        navigationItem.title = "Orders"
+        navigationItem.title = "FoodPool"
         orderView.source = self
         viewModel.delegate = self
         viewModel.loadData()

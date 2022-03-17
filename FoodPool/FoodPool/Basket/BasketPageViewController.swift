@@ -19,8 +19,8 @@ final class BasketPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = basketView
+        navigationItem.title = "FoodPool"
         basketView.source = self
-        navigationItem.title = "Basket"
     }
 }
 

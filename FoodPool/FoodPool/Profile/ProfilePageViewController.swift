@@ -22,6 +22,7 @@ final class ProfilePageViewController: UIViewController, ActivityDisplayer {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = profileView
+        navigationItem.title = "FoodPool"
         profileView.source = self
         viewModel.delegate = self
         viewModel.loadData()

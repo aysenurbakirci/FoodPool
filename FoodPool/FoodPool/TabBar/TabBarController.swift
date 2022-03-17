@@ -44,11 +44,12 @@ private extension TabBarController {
         let mainNavigation = UINavigationController(rootViewController: mainPage)
         let basketNavigation = UINavigationController(rootViewController: basketPage)
         let orderNavigation = UINavigationController(rootViewController: orderPage)
+        let profileNavigation = UINavigationController(rootViewController: profilePage)
         
         setViewControllers([mainNavigation,
                             basketNavigation,
                             orderNavigation,
-                            profilePage], animated: true)
+                            profileNavigation], animated: true)
         
         mainNavigation.tabBarItem = UITabBarItem(title: "Home",
                                                  image: .home,
@@ -56,7 +57,7 @@ private extension TabBarController {
         basketNavigation.tabBarItem = UITabBarItem(title: "Basket",
                                                    image: .basket,
                                                    tag: 1)
-        profilePage.tabBarItem = UITabBarItem(title: "Profile",
+        profileNavigation.tabBarItem = UITabBarItem(title: "Profile",
                                                     image: .profile,
                                                     tag: 2)
         orderNavigation.tabBarItem = UITabBarItem(title: "Order",

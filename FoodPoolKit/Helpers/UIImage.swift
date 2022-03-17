@@ -28,4 +28,5 @@ public extension UIImage {
     static let deliveredOrder = UIImage(systemName: "signpost.right.fill")!
     static let unknown = UIImage(systemName: "camera.metering.unknown")!
     static let empty = UIImage(systemName: "eyes.inverse")!
+    static let logo = UIImage(systemName: "swift")!
 }

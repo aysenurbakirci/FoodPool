@@ -16,7 +16,7 @@ class LaunchViewController: UIViewController, ActivityDisplayer {
 
     //MARK: - UI Properties
     let imageView: UIImageView = .create(
-        image: .readyOrder,
+        image: .logo,
         tintColor: .mainColor,
         isOpaque: true
     )
