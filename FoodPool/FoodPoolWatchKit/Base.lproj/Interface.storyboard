@@ -17,7 +17,7 @@
                         </label>
                         <table alignment="left" id="AmO-2K-vrg">
                             <items>
-                                <tableRow identifier="OrderCell" id="kGO-Tg-3Rr" customClass="OrderCell" customModule="FoodPoolWatchKit" customModuleProvider="target">
+                                <tableRow identifier="OrderCellIdentifier" id="kGO-Tg-3Rr" customClass="OrderCell" customModule="FoodPoolWatchKit" customModuleProvider="target">
                                     <group key="rootItem" width="1" alignment="left" id="PIn-4z-lt1">
                                         <items>
                                             <group width="1" height="1" alignment="left" id="Uni-9n-bea">
@@ -32,9 +32,18 @@
                                             </group>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="restaurantTitle" destination="b29-Jr-C30" id="C8j-II-WOw"/>
+                                        <outlet property="statusIcon" destination="3Zd-sh-clf" id="Oeh-tB-bZ9"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
+                        <button width="1" alignment="left" title="Refresh" id="0Tw-F2-wDh">
+                            <connections>
+                                <action selector="didTapRefreshButton" destination="AgC-eL-Hgc" id="CJN-M3-ZkS"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
                         <outlet property="orderTable" destination="AmO-2K-vrg" id="kLz-fo-pfw"/>

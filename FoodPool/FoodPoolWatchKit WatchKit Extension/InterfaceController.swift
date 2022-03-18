@@ -7,22 +7,76 @@
 
 import WatchKit
 import Foundation
-
+import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
 
+    private var session = WCSession.default
+
     @IBOutlet weak var orderTable: WKInterfaceTable!
+
+    private var titles = ["Burger King", "Popeyes", "McDonalds", "KFC", "Arbys"] {
+        didSet {
+            DispatchQueue.main.async {
+                self.updateTable()
+            }
+        }
+    }
+    
+    private func updateTable() {
+        orderTable.setNumberOfRows(titles.count, withRowType: "OrderCellIdentifier")
+        
+        for (index, restaurant) in titles.enumerated() {
+            guard let row = orderTable.rowController(at: index) as? OrderCell else {
+                return
+            }
+            row.restaurantTitle?.setText(restaurant)
+            row.statusIcon?.setImage(UIImage(systemName: "trash.circle.fill"))
+        }
+    }
     
     override func awake(withContext context: Any?) {
-        orderTable.setNumberOfRows(5, withRowType: "OrderCellIdentifier")
+        super.awake(withContext: context)
+        titles.append("Add New Row")
     }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
+        
+        if isSupported() {
+            session.delegate = self
+            session.activate()
+        }
     }
     
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
+        super.didDeactivate()
     }
+    
+    private func isSupported() -> Bool {
+        return WCSession.isSupported()
+    }
+    
+    private func isReachable() -> Bool {
+        return session.isReachable
+    }
+    
+    @IBAction func didTapRefreshButton() {
+        if isReachable() {
+            session.sendMessage(["request" : "version"], replyHandler: { (response) in
+                self.titles.append("Reply: \(response)")
+            }, errorHandler: { (error) in
+                print("Error sending message: %@", error)
+            })
+        } else {
+            print("iPhone is not reachable!!")
+        }
+    }
+}
 
+extension InterfaceController: WCSessionDelegate {
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("activationDidCompleteWith activationState:\(activationState) error:\(String(describing: error))")
+    }
 }
