@@ -66,6 +66,16 @@
 		3753D86727E0E99400BA74A3 /* LoadingDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D86627E0E99400BA74A3 /* LoadingDisplayer.swift */; };
 		3753D86B27E0E9AB00BA74A3 /* ErrorDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D86A27E0E9AB00BA74A3 /* ErrorDisplayer.swift */; };
 		3753D88727E20AF000BA74A3 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D88627E20AF000BA74A3 /* LaunchViewModel.swift */; };
+		37787A3327E488F800AAFE3D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37787A3127E488F800AAFE3D /* Interface.storyboard */; };
+		37787A3527E488FA00AAFE3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37787A3427E488FA00AAFE3D /* Assets.xcassets */; };
+		37787A3B27E488FA00AAFE3D /* FoodPoolWatchKit WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 37787A3A27E488FA00AAFE3D /* FoodPoolWatchKit WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		37787A4027E488FA00AAFE3D /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37787A3F27E488FA00AAFE3D /* InterfaceController.swift */; };
+		37787A4227E488FA00AAFE3D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37787A4127E488FA00AAFE3D /* ExtensionDelegate.swift */; };
+		37787A4427E488FA00AAFE3D /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37787A4327E488FA00AAFE3D /* NotificationController.swift */; };
+		37787A4627E488FA00AAFE3D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37787A4527E488FA00AAFE3D /* ComplicationController.swift */; };
+		37787A4827E488FC00AAFE3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37787A4727E488FC00AAFE3D /* Assets.xcassets */; };
+		37787A4D27E488FC00AAFE3D /* FoodPoolWatchKit.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 37787A2F27E488F800AAFE3D /* FoodPoolWatchKit.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		37787A5827E48A6600AAFE3D /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37787A5727E48A6600AAFE3D /* OrderCell.swift */; };
 		37954B9827CCBDAE0042ECC4 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954B9727CCBDAE0042ECC4 /* ProfilePageViewController.swift */; };
 		37954B9B27CCBF390042ECC4 /* OnBoardingPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954B9A27CCBF390042ECC4 /* OnBoardingPageCell.swift */; };
 		37954BAA27CCC7920042ECC4 /* OnBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954BA927CCC7920042ECC4 /* OnBoardingPageViewController.swift */; };
@@ -74,6 +84,23 @@
 		37A1F5E327D8C392004EA3F5 /* OrderPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1F5E227D8C392004EA3F5 /* OrderPageView.swift */; };
 		37A1F5E827D8C67F004EA3F5 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1F5E727D8C67F004EA3F5 /* OrderCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37787A3C27E488FA00AAFE3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 371FA19827C8EC4E009BFAD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37787A3927E488FA00AAFE3D;
+			remoteInfo = "FoodPoolWatchKit WatchKit Extension";
+		};
+		37787A4B27E488FC00AAFE3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 371FA19827C8EC4E009BFAD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37787A2E27E488F800AAFE3D;
+			remoteInfo = FoodPoolWatchKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		371FA1FA27C8FC56009BFAD3 /* Embed Frameworks */ = {
@@ -86,6 +113,28 @@
 				246D56EF27CF6CA7003331EE /* FoodPoolAPI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37787A4E27E488FC00AAFE3D /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				37787A4D27E488FC00AAFE3D /* FoodPoolWatchKit.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37787A5127E488FC00AAFE3D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				37787A3B27E488FA00AAFE3D /* FoodPoolWatchKit WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -146,6 +195,18 @@
 		3753D86627E0E99400BA74A3 /* LoadingDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDisplayer.swift; sourceTree = "<group>"; };
 		3753D86A27E0E9AB00BA74A3 /* ErrorDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDisplayer.swift; sourceTree = "<group>"; };
 		3753D88627E20AF000BA74A3 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		37787A2F27E488F800AAFE3D /* FoodPoolWatchKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPoolWatchKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37787A3227E488F800AAFE3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		37787A3427E488FA00AAFE3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37787A3A27E488FA00AAFE3D /* FoodPoolWatchKit WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FoodPoolWatchKit WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37787A3F27E488FA00AAFE3D /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		37787A4127E488FA00AAFE3D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		37787A4327E488FA00AAFE3D /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		37787A4527E488FA00AAFE3D /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		37787A4727E488FC00AAFE3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37787A4927E488FC00AAFE3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37787A4A27E488FC00AAFE3D /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		37787A5727E48A6600AAFE3D /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		37954B9727CCBDAE0042ECC4 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		37954B9A27CCBF390042ECC4 /* OnBoardingPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageCell.swift; sourceTree = "<group>"; };
 		37954BA927CCC7920042ECC4 /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +227,13 @@
 				370E554127DB9C3F0041606B /* RxCocoa in Frameworks */,
 				371FA1F827C8FC56009BFAD3 /* FoodPoolKit.framework in Frameworks */,
 				2498C7B327D7E13B0014D9FD /* LayoutKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37787A3727E488FA00AAFE3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +359,8 @@
 			isa = PBXGroup;
 			children = (
 				371FA1A227C8EC4E009BFAD3 /* FoodPool */,
+				37787A3027E488F800AAFE3D /* FoodPoolWatchKit */,
+				37787A3E27E488FA00AAFE3D /* FoodPoolWatchKit WatchKit Extension */,
 				371FA1A127C8EC4E009BFAD3 /* Products */,
 				371FA1D027C8EDB4009BFAD3 /* Frameworks */,
 			);
@@ -300,6 +370,8 @@
 			isa = PBXGroup;
 			children = (
 				371FA1A027C8EC4E009BFAD3 /* FoodPool.app */,
+				37787A2F27E488F800AAFE3D /* FoodPoolWatchKit.app */,
+				37787A3A27E488FA00AAFE3D /* FoodPoolWatchKit WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -386,6 +458,38 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		37787A3027E488F800AAFE3D /* FoodPoolWatchKit */ = {
+			isa = PBXGroup;
+			children = (
+				37787A3127E488F800AAFE3D /* Interface.storyboard */,
+				37787A3427E488FA00AAFE3D /* Assets.xcassets */,
+			);
+			path = FoodPoolWatchKit;
+			sourceTree = "<group>";
+		};
+		37787A3E27E488FA00AAFE3D /* FoodPoolWatchKit WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				37787A5627E48A5600AAFE3D /* Cell */,
+				37787A3F27E488FA00AAFE3D /* InterfaceController.swift */,
+				37787A4127E488FA00AAFE3D /* ExtensionDelegate.swift */,
+				37787A4327E488FA00AAFE3D /* NotificationController.swift */,
+				37787A4527E488FA00AAFE3D /* ComplicationController.swift */,
+				37787A4727E488FC00AAFE3D /* Assets.xcassets */,
+				37787A4927E488FC00AAFE3D /* Info.plist */,
+				37787A4A27E488FC00AAFE3D /* PushNotificationPayload.apns */,
+			);
+			path = "FoodPoolWatchKit WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		37787A5627E48A5600AAFE3D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				37787A5727E48A6600AAFE3D /* OrderCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		37954B9927CCBF280042ECC4 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,10 +531,12 @@
 				371FA19D27C8EC4E009BFAD3 /* Frameworks */,
 				371FA19E27C8EC4E009BFAD3 /* Resources */,
 				371FA1FA27C8FC56009BFAD3 /* Embed Frameworks */,
+				37787A4E27E488FC00AAFE3D /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				37787A4C27E488FC00AAFE3D /* PBXTargetDependency */,
 			);
 			name = FoodPool;
 			packageProductDependencies = (
@@ -443,6 +549,40 @@
 			productReference = 371FA1A027C8EC4E009BFAD3 /* FoodPool.app */;
 			productType = "com.apple.product-type.application";
 		};
+		37787A2E27E488F800AAFE3D /* FoodPoolWatchKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37787A5527E488FC00AAFE3D /* Build configuration list for PBXNativeTarget "FoodPoolWatchKit" */;
+			buildPhases = (
+				37787A2D27E488F800AAFE3D /* Resources */,
+				37787A5127E488FC00AAFE3D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37787A3D27E488FA00AAFE3D /* PBXTargetDependency */,
+			);
+			name = FoodPoolWatchKit;
+			productName = FoodPoolWatchKit;
+			productReference = 37787A2F27E488F800AAFE3D /* FoodPoolWatchKit.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		37787A3927E488FA00AAFE3D /* FoodPoolWatchKit WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37787A5427E488FC00AAFE3D /* Build configuration list for PBXNativeTarget "FoodPoolWatchKit WatchKit Extension" */;
+			buildPhases = (
+				37787A3627E488FA00AAFE3D /* Sources */,
+				37787A3727E488FA00AAFE3D /* Frameworks */,
+				37787A3827E488FA00AAFE3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FoodPoolWatchKit WatchKit Extension";
+			productName = "FoodPoolWatchKit WatchKit Extension";
+			productReference = 37787A3A27E488FA00AAFE3D /* FoodPoolWatchKit WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -450,11 +590,17 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					371FA19F27C8EC4E009BFAD3 = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					37787A2E27E488F800AAFE3D = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					37787A3927E488FA00AAFE3D = {
+						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
@@ -477,6 +623,8 @@
 			projectRoot = "";
 			targets = (
 				371FA19F27C8EC4E009BFAD3 /* FoodPool */,
+				37787A2E27E488F800AAFE3D /* FoodPoolWatchKit */,
+				37787A3927E488FA00AAFE3D /* FoodPoolWatchKit WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -488,6 +636,23 @@
 			files = (
 				371FA1B027C8EC4F009BFAD3 /* LaunchScreen.storyboard in Resources */,
 				371FA1AD27C8EC4F009BFAD3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37787A2D27E488F800AAFE3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37787A3527E488FA00AAFE3D /* Assets.xcassets in Resources */,
+				37787A3327E488F800AAFE3D /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37787A3827E488FA00AAFE3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37787A4827E488FC00AAFE3D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +722,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		37787A3627E488FA00AAFE3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37787A4427E488FA00AAFE3D /* NotificationController.swift in Sources */,
+				37787A4627E488FA00AAFE3D /* ComplicationController.swift in Sources */,
+				37787A5827E48A6600AAFE3D /* OrderCell.swift in Sources */,
+				37787A4227E488FA00AAFE3D /* ExtensionDelegate.swift in Sources */,
+				37787A4027E488FA00AAFE3D /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37787A3D27E488FA00AAFE3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37787A3927E488FA00AAFE3D /* FoodPoolWatchKit WatchKit Extension */;
+			targetProxy = 37787A3C27E488FA00AAFE3D /* PBXContainerItemProxy */;
+		};
+		37787A4C27E488FC00AAFE3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37787A2E27E488F800AAFE3D /* FoodPoolWatchKit */;
+			targetProxy = 37787A4B27E488FC00AAFE3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		371FA1AE27C8EC4F009BFAD3 /* LaunchScreen.storyboard */ = {
@@ -566,6 +756,14 @@
 				371FA1AF27C8EC4F009BFAD3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		37787A3127E488F800AAFE3D /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37787A3227E488F800AAFE3D /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -741,6 +939,118 @@
 			};
 			name = Release;
 		};
+		37787A4F27E488FC00AAFE3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FLUF4SMKRR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = FoodPoolWatchKit_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = FoodPoolWatchKit;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.aysenurbakirci.FoodPool;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aysenurbakirci.FoodPool.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		37787A5027E488FC00AAFE3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FLUF4SMKRR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = FoodPoolWatchKit_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = FoodPoolWatchKit;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.aysenurbakirci.FoodPool;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aysenurbakirci.FoodPool.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		37787A5227E488FC00AAFE3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FLUF4SMKRR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FoodPoolWatchKit WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FoodPoolWatchKit WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aysenurbakirci.FoodPool.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		37787A5327E488FC00AAFE3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FLUF4SMKRR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FoodPoolWatchKit WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FoodPoolWatchKit WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aysenurbakirci.FoodPool.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -758,6 +1068,24 @@
 			buildConfigurations = (
 				371FA1B527C8EC4F009BFAD3 /* Debug */,
 				371FA1B627C8EC4F009BFAD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37787A5427E488FC00AAFE3D /* Build configuration list for PBXNativeTarget "FoodPoolWatchKit WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37787A5227E488FC00AAFE3D /* Debug */,
+				37787A5327E488FC00AAFE3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37787A5527E488FC00AAFE3D /* Build configuration list for PBXNativeTarget "FoodPoolWatchKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37787A4F27E488FC00AAFE3D /* Debug */,
+				37787A5027E488FC00AAFE3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
