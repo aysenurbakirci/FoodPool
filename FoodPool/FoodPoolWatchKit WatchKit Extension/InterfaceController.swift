@@ -10,11 +10,12 @@ import Foundation
 import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
-
-    private var session = WCSession.default
-
+    
     @IBOutlet weak var orderTable: WKInterfaceTable!
-
+    var session: WCSession?
+    var connectivityHandler = WatchSessionManager.shared
+    var counter = 0
+    
     private var titles = ["Burger King", "Popeyes", "McDonalds", "KFC", "Arbys"] {
         didSet {
             DispatchQueue.main.async {
@@ -23,6 +24,43 @@ class InterfaceController: WKInterfaceController {
         }
     }
     
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+        titles.append("Are You Readyy")
+    }
+    
+    override func willActivate() {
+        super.willActivate()
+        connectivityHandler.startSession()
+        connectivityHandler.watchOSDelegate = self
+    }
+    
+    override func didDeactivate() {
+        super.didDeactivate()
+    }
+    
+    @IBAction func didTapRefreshButton() {
+        //MARK: - Version
+        let data = ["request" : RequestType.version.rawValue as AnyObject]
+        connectivityHandler.sendMessage(message: data, replyHandler: { (response) in
+            self.titles.append("Reply: \(response)")
+        }) { (error) in
+            print("Error sending message: \(error)")
+        }
+        
+        //MARK: - Date
+        /*
+         let data = ["request" : RequestType.date.rawValue as AnyObject]
+         connectivityHandler.sendMessage(message: data, replyHandler: { (response) in
+             self.messages.append("Reply: \(response)")
+         }) { (error) in
+             print("Error sending message: \(error)")
+         }
+         */
+    }
+}
+
+extension InterfaceController {
     private func updateTable() {
         orderTable.setNumberOfRows(titles.count, withRowType: "OrderCellIdentifier")
         
@@ -34,49 +72,16 @@ class InterfaceController: WKInterfaceController {
             row.statusIcon?.setImage(UIImage(systemName: "trash.circle.fill"))
         }
     }
-    
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-        titles.append("Add New Row")
-    }
-    
-    override func willActivate() {
-        super.willActivate()
-        
-        if isSupported() {
-            session.delegate = self
-            session.activate()
-        }
-    }
-    
-    override func didDeactivate() {
-        super.didDeactivate()
-    }
-    
-    private func isSupported() -> Bool {
-        return WCSession.isSupported()
-    }
-    
-    private func isReachable() -> Bool {
-        return session.isReachable
-    }
-    
-    @IBAction func didTapRefreshButton() {
-        if isReachable() {
-            session.sendMessage(["request" : "version"], replyHandler: { (response) in
-                self.titles.append("Reply: \(response)")
-            }, errorHandler: { (error) in
-                print("Error sending message: %@", error)
-            })
-        } else {
-            print("iPhone is not reachable!!")
-        }
-    }
 }
 
-extension InterfaceController: WCSessionDelegate {
+extension InterfaceController: WatchOSDelegate {
     
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        print("activationDidCompleteWith activationState:\(activationState) error:\(String(describing: error))")
+    func messageReceived(tuple: MessageReceived) {
+        DispatchQueue.main.async() {
+            WKInterfaceDevice.current().play(.notification)
+            if let msg = tuple.message["msg"] {
+                self.titles.append("\(msg)")
+            }
+        }
     }
 }

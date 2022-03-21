@@ -66,6 +66,11 @@
 		3753D86727E0E99400BA74A3 /* LoadingDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D86627E0E99400BA74A3 /* LoadingDisplayer.swift */; };
 		3753D86B27E0E9AB00BA74A3 /* ErrorDisplayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D86A27E0E9AB00BA74A3 /* ErrorDisplayer.swift */; };
 		3753D88727E20AF000BA74A3 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D88627E20AF000BA74A3 /* LaunchViewModel.swift */; };
+		3756CDBD27E8968600CAF3CD /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3756CDBC27E8968600CAF3CD /* WatchSessionManager.swift */; };
+		3756CDBE27E8969E00CAF3CD /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3756CDBC27E8968600CAF3CD /* WatchSessionManager.swift */; };
+		3756CDC027E89E3000CAF3CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3756CDBF27E89E3000CAF3CD /* ViewController.swift */; };
+		3756CDC227E8B1B000CAF3CD /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3756CDC127E8B1B000CAF3CD /* RequestType.swift */; };
+		3756CDC327E8B28300CAF3CD /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3756CDC127E8B1B000CAF3CD /* RequestType.swift */; };
 		37787A3327E488F800AAFE3D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37787A3127E488F800AAFE3D /* Interface.storyboard */; };
 		37787A3527E488FA00AAFE3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37787A3427E488FA00AAFE3D /* Assets.xcassets */; };
 		37787A3B27E488FA00AAFE3D /* FoodPoolWatchKit WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 37787A3A27E488FA00AAFE3D /* FoodPoolWatchKit WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -76,7 +81,6 @@
 		37787A4827E488FC00AAFE3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37787A4727E488FC00AAFE3D /* Assets.xcassets */; };
 		37787A4D27E488FC00AAFE3D /* FoodPoolWatchKit.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 37787A2F27E488F800AAFE3D /* FoodPoolWatchKit.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		37787A5827E48A6600AAFE3D /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37787A5727E48A6600AAFE3D /* OrderCell.swift */; };
-		37787AA327E4FDE600AAFE3D /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37787AA227E4FDE600AAFE3D /* SessionHandler.swift */; };
 		37954B9827CCBDAE0042ECC4 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954B9727CCBDAE0042ECC4 /* ProfilePageViewController.swift */; };
 		37954B9B27CCBF390042ECC4 /* OnBoardingPageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954B9A27CCBF390042ECC4 /* OnBoardingPageCell.swift */; };
 		37954BAA27CCC7920042ECC4 /* OnBoardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37954BA927CCC7920042ECC4 /* OnBoardingPageViewController.swift */; };
@@ -196,6 +200,9 @@
 		3753D86627E0E99400BA74A3 /* LoadingDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDisplayer.swift; sourceTree = "<group>"; };
 		3753D86A27E0E9AB00BA74A3 /* ErrorDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDisplayer.swift; sourceTree = "<group>"; };
 		3753D88627E20AF000BA74A3 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		3756CDBC27E8968600CAF3CD /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
+		3756CDBF27E89E3000CAF3CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3756CDC127E8B1B000CAF3CD /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		37787A2F27E488F800AAFE3D /* FoodPoolWatchKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPoolWatchKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37787A3227E488F800AAFE3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		37787A3427E488FA00AAFE3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -208,7 +215,6 @@
 		37787A4927E488FC00AAFE3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37787A4A27E488FC00AAFE3D /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		37787A5727E48A6600AAFE3D /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
-		37787AA227E4FDE600AAFE3D /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
 		37954B9727CCBDAE0042ECC4 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		37954B9A27CCBF390042ECC4 /* OnBoardingPageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageCell.swift; sourceTree = "<group>"; };
 		37954BA927CCC7920042ECC4 /* OnBoardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageViewController.swift; sourceTree = "<group>"; };
@@ -287,7 +293,6 @@
 			children = (
 				371FA1A527C8EC4E009BFAD3 /* SceneDelegate.swift */,
 				371FA1A327C8EC4E009BFAD3 /* AppDelegate.swift */,
-				37787AA227E4FDE600AAFE3D /* SessionHandler.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -348,6 +353,7 @@
 		24B0546427D89ADE00F672B6 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				3756CDBF27E89E3000CAF3CD /* ViewController.swift */,
 				37A1F5E627D8C673004EA3F5 /* Cell */,
 				37A1F5E227D8C392004EA3F5 /* OrderPageView.swift */,
 				372DF1D427D91A140032741B /* OrderPageViewModel.swift */,
@@ -361,6 +367,7 @@
 		371FA19727C8EC4E009BFAD3 = {
 			isa = PBXGroup;
 			children = (
+				3756CDBB27E8967600CAF3CD /* Commons */,
 				371FA1A227C8EC4E009BFAD3 /* FoodPool */,
 				37787A3027E488F800AAFE3D /* FoodPoolWatchKit */,
 				37787A3E27E488FA00AAFE3D /* FoodPoolWatchKit WatchKit Extension */,
@@ -459,6 +466,15 @@
 				3753D86A27E0E9AB00BA74A3 /* ErrorDisplayer.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		3756CDBB27E8967600CAF3CD /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				3756CDBC27E8968600CAF3CD /* WatchSessionManager.swift */,
+				3756CDC127E8B1B000CAF3CD /* RequestType.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		37787A3027E488F800AAFE3D /* FoodPoolWatchKit */ = {
@@ -674,6 +690,7 @@
 				371FA20D27C8FE71009BFAD3 /* WalletCell.swift in Sources */,
 				372DF1D527D91A140032741B /* OrderPageViewModel.swift in Sources */,
 				2498C79F27D7743B0014D9FD /* DetailPageSection.swift in Sources */,
+				3756CDBD27E8968600CAF3CD /* WatchSessionManager.swift in Sources */,
 				24B0545F27D87BDA00F672B6 /* BasketPageBuilder.swift in Sources */,
 				3753D85E27E08C6F00BA74A3 /* OrderDetailPageViewModel.swift in Sources */,
 				246D56DC27CF603C003331EE /* OnBoardingPageView.swift in Sources */,
@@ -683,8 +700,10 @@
 				2498C7A327D775740014D9FD /* DetailPageBuilder.swift in Sources */,
 				2498C78827D63CFC0014D9FD /* DetailPageViewController.swift in Sources */,
 				3753D86527E0DAE700BA74A3 /* ViewDisplayer.swift in Sources */,
+				3756CDC227E8B1B000CAF3CD /* RequestType.swift in Sources */,
 				24A3AFC927D6304300F3AFDE /* CuisineViewCell.swift in Sources */,
 				24456A5427D24D1F006CC621 /* ProfilePageView.swift in Sources */,
+				3756CDC027E89E3000CAF3CD /* ViewController.swift in Sources */,
 				37954B9827CCBDAE0042ECC4 /* ProfilePageViewController.swift in Sources */,
 				24A3AFB227D604A600F3AFDE /* MainPageViewController.swift in Sources */,
 				24A3AFAA27D5F91F00F3AFDE /* ButtonCell.swift in Sources */,
@@ -706,7 +725,6 @@
 				246D56F427CF7486003331EE /* OnBoardingPageBuilder.swift in Sources */,
 				2498C78A27D63FF30014D9FD /* DetailPageView.swift in Sources */,
 				24456A5A27D26AE4006CC621 /* ProfilePageBuilder.swift in Sources */,
-				37787AA327E4FDE600AAFE3D /* SessionHandler.swift in Sources */,
 				37A1F5D727D8A678004EA3F5 /* BasketPageView.swift in Sources */,
 				2498C79127D74CCB0014D9FD /* MainPageViewModel.swift in Sources */,
 				3753D86227E0B54800BA74A3 /* LaunchViewController.swift in Sources */,
@@ -730,7 +748,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3756CDBE27E8969E00CAF3CD /* WatchSessionManager.swift in Sources */,
 				37787A4427E488FA00AAFE3D /* NotificationController.swift in Sources */,
+				3756CDC327E8B28300CAF3CD /* RequestType.swift in Sources */,
 				37787A4627E488FA00AAFE3D /* ComplicationController.swift in Sources */,
 				37787A5827E48A6600AAFE3D /* OrderCell.swift in Sources */,
 				37787A4227E488FA00AAFE3D /* ExtensionDelegate.swift in Sources */,
