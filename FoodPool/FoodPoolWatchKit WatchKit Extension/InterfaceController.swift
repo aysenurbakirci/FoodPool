@@ -12,7 +12,6 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController {
 
     private var session = WCSession.default
-
     @IBOutlet weak var orderTable: WKInterfaceTable!
 
     private var titles = ["Burger King", "Popeyes", "McDonalds", "KFC", "Arbys"] {
