@@ -36,8 +36,6 @@ class LaunchViewController: UIViewController, ActivityDisplayer {
         
         bindLoading()
         bindErrorHandling()
-        
-        sendDataToWatch()
     }
     
     //MARK: - ViewDidLayoutSubviews
@@ -81,34 +79,3 @@ extension LaunchViewController: LaunchViewModelDelegate {
         self.present(tabBar, animated: true, completion: nil)
     }
 }
-
-extension LaunchViewController: iOSDelegate {
-    
-    func sendDataToWatch() {
-        let id: Int = 1
-        
-        WatchSessionManager
-            .shared
-            .sendMessage(message: ["msg" : "Message \(id)" as AnyObject],
-                         errorHandler:  { (error) in
-            print("Error sending message: \(error)")
-        })
-    }
-    
-    func messageReceived(tuple: MessageReceived) {
-        guard let reply = tuple.replyHandler else {
-            return
-        }
-    
-        switch tuple.message["request"] as! RequestType.RawValue {
-        case RequestType.date.rawValue:
-            reply(["date" : "\(Date())"])
-        case RequestType.version.rawValue:
-            let version = ["version" : "\(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") ?? "No version")"]
-            reply(["version" : version])
-        default:
-            break
-        }
-    }
-}
-

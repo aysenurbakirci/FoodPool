@@ -24,22 +24,6 @@ public class FoodPoolService {
         let request = URLRequest(url: url)
         return URLSession.shared.rx.decodable(request: request, type: T.self)
     }
-    
-    private class func delete<T: Decodable>(api: FoodPoolAPI) -> Observable<T> {
-        var urlString: String = api.schema
-        urlString += api.host
-        urlString += api.path
-    
-        for (name, value) in api.queryItems {
-            urlString += "?\(name)="
-            urlString += value
-        }
-        
-        let url = URL(string: urlString)!
-        var request = URLRequest(url: url)
-        request.httpMethod = "DELETE"
-        return URLSession.shared.rx.decodable(request: request, type: T.self)
-    }
 }
 
 public extension FoodPoolService {

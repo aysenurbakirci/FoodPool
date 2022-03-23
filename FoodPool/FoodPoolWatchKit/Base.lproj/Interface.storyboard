@@ -39,11 +39,6 @@
                                 </tableRow>
                             </items>
                         </table>
-                        <button width="1" alignment="left" title="Refresh" id="0Tw-F2-wDh">
-                            <connections>
-                                <action selector="didTapRefreshButton" destination="AgC-eL-Hgc" id="CJN-M3-ZkS"/>
-                            </connections>
-                        </button>
                     </items>
                     <connections>
                         <outlet property="orderTable" destination="AmO-2K-vrg" id="kLz-fo-pfw"/>

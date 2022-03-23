@@ -79,12 +79,12 @@
 		371FA1C627C8ED20009BFAD3 /* FoodPoolAPI */ = {
 			isa = PBXGroup;
 			children = (
+				246D56E627CF6B89003331EE /* DTO */,
+				372DF1F927DB81150032741B /* URLSessionExtension.swift */,
 				372DF1EA27DB66840032741B /* FoodPoolAPI.swift */,
 				372DF1EC27DB6C060032741B /* FoodPoolService.swift */,
-				246D56E627CF6B89003331EE /* DTO */,
 				371FA1C727C8ED20009BFAD3 /* FoodPoolAPI.h */,
 				371FA1C827C8ED20009BFAD3 /* FoodPoolAPI.docc */,
-				372DF1F927DB81150032741B /* URLSessionExtension.swift */,
 			);
 			path = FoodPoolAPI;
 			sourceTree = "<group>";

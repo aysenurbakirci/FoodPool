@@ -9,13 +9,19 @@ import WatchKit
 import Foundation
 import WatchConnectivity
 
+
+public struct Order: Decodable {
+    public var id: Int
+    public var userID: String
+    public var state: String
+    public var restaurantName: String
+}
+
+
 class InterfaceController: WKInterfaceController {
     @IBOutlet weak var orderTable: WKInterfaceTable!
-    var session: WCSession?
-    var connectivityHandler = WatchSessionManager.shared
-    var counter = 0
     
-    private var titles = ["Burger King", "Popeyes", "McDonalds", "KFC", "Arbys"] {
+    private var orderList: [Order] = [] {
         didSet {
             DispatchQueue.main.async {
                 self.updateTable()
@@ -25,62 +31,54 @@ class InterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        titles.append("Are You Readyy")
+        getData()
     }
     
     override func willActivate() {
         super.willActivate()
-        connectivityHandler.startSession()
-        connectivityHandler.watchOSDelegate = self
     }
     
     override func didDeactivate() {
         super.didDeactivate()
     }
-    
-    @IBAction func didTapRefreshButton() {
-        //MARK: - Version
-        let data = ["request" : RequestType.version.rawValue as AnyObject]
-        connectivityHandler.sendMessage(message: data, replyHandler: { (response) in
-            self.titles.append("Reply: \(response)")
-        }) { (error) in
-            print("Error sending message: \(error)")
-        }
-        
-        //MARK: - Date
-        /*
-         let data = ["request" : RequestType.date.rawValue as AnyObject]
-         connectivityHandler.sendMessage(message: data, replyHandler: { (response) in
-             self.messages.append("Reply: \(response)")
-         }) { (error) in
-             print("Error sending message: \(error)")
-         }
-         */
-    }
 }
 
 extension InterfaceController {
+    
     private func updateTable() {
-        orderTable.setNumberOfRows(titles.count, withRowType: "OrderCellIdentifier")
+        orderTable.setNumberOfRows(orderList.count, withRowType: "OrderCellIdentifier")
         
-        for (index, restaurant) in titles.enumerated() {
+        for (index, order) in orderList.enumerated() {
             guard let row = orderTable.rowController(at: index) as? OrderCell else {
                 return
             }
-            row.restaurantTitle?.setText(restaurant)
-            row.statusIcon?.setImage(UIImage(systemName: "trash.circle.fill"))
-        }
-    }
-}
-
-extension InterfaceController: WatchOSDelegate {
-    
-    func messageReceived(tuple: MessageReceived) {
-        DispatchQueue.main.async() {
-            WKInterfaceDevice.current().play(.notification)
-            if let msg = tuple.message["msg"] {
-                self.titles.append("\(msg)")
+            row.restaurantTitle?.setText(order.restaurantName)
+            if order.state == "preparing" {
+                row.statusIcon?.setImage(UIImage(systemName: "lanyardcard.fill"))
+            } else if order.state == "ready" {
+                row.statusIcon?.setImage(UIImage(systemName: "bag.fill"))
+            } else if order.state == "onTheWay" {
+                row.statusIcon?.setImage(UIImage(systemName: "paperplane.fill"))
+            } else {
+                row.statusIcon?.setImage(UIImage(systemName: "clock.fill"))
             }
         }
+    }
+    
+    private func getData() {
+        let urlString = "http://localhost:3000/currentOrders"
+        let url = URL(string: urlString)!
+        let request = URLRequest(url: url)
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data {
+                do {
+                   let decodedData = try JSONDecoder().decode([Order].self, from: data)
+                   print(decodedData)
+                    self.orderList.append(contentsOf: decodedData)
+                } catch let error {
+                   print(error)
+                }
+             }
+        }.resume()
     }
 }
