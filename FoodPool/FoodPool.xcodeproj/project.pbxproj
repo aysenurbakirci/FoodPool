@@ -68,7 +68,6 @@
 		3753D88727E20AF000BA74A3 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3753D88627E20AF000BA74A3 /* LaunchViewModel.swift */; };
 		3756CDBD27E8968600CAF3CD /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3756CDBC27E8968600CAF3CD /* WatchSessionManager.swift */; };
 		3756CDBE27E8969E00CAF3CD /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3756CDBC27E8968600CAF3CD /* WatchSessionManager.swift */; };
-		3756CDC027E89E3000CAF3CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3756CDBF27E89E3000CAF3CD /* ViewController.swift */; };
 		3756CDC227E8B1B000CAF3CD /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3756CDC127E8B1B000CAF3CD /* RequestType.swift */; };
 		3756CDC327E8B28300CAF3CD /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3756CDC127E8B1B000CAF3CD /* RequestType.swift */; };
 		37787A3327E488F800AAFE3D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37787A3127E488F800AAFE3D /* Interface.storyboard */; };
@@ -201,7 +200,6 @@
 		3753D86A27E0E9AB00BA74A3 /* ErrorDisplayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDisplayer.swift; sourceTree = "<group>"; };
 		3753D88627E20AF000BA74A3 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		3756CDBC27E8968600CAF3CD /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
-		3756CDBF27E89E3000CAF3CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3756CDC127E8B1B000CAF3CD /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		37787A2F27E488F800AAFE3D /* FoodPoolWatchKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPoolWatchKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37787A3227E488F800AAFE3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -353,7 +351,6 @@
 		24B0546427D89ADE00F672B6 /* Order */ = {
 			isa = PBXGroup;
 			children = (
-				3756CDBF27E89E3000CAF3CD /* ViewController.swift */,
 				37A1F5E627D8C673004EA3F5 /* Cell */,
 				37A1F5E227D8C392004EA3F5 /* OrderPageView.swift */,
 				372DF1D427D91A140032741B /* OrderPageViewModel.swift */,
@@ -703,7 +700,6 @@
 				3756CDC227E8B1B000CAF3CD /* RequestType.swift in Sources */,
 				24A3AFC927D6304300F3AFDE /* CuisineViewCell.swift in Sources */,
 				24456A5427D24D1F006CC621 /* ProfilePageView.swift in Sources */,
-				3756CDC027E89E3000CAF3CD /* ViewController.swift in Sources */,
 				37954B9827CCBDAE0042ECC4 /* ProfilePageViewController.swift in Sources */,
 				24A3AFB227D604A600F3AFDE /* MainPageViewController.swift in Sources */,
 				24A3AFAA27D5F91F00F3AFDE /* ButtonCell.swift in Sources */,

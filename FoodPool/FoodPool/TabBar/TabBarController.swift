@@ -49,8 +49,8 @@ private extension TabBarController {
         setViewControllers([mainNavigation,
                             basketNavigation,
                             orderNavigation,
-                            profileNavigation,
-                            ViewController()], animated: true)
+                            profileNavigation],
+                           animated: true)
         
         mainNavigation.tabBarItem = UITabBarItem(title: "Home",
                                                  image: .home,
