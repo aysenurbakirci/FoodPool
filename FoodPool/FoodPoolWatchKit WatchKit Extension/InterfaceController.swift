@@ -10,12 +10,6 @@ import Foundation
 import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
-<<<<<<< HEAD
-
-    private var session = WCSession.default
-=======
-    
->>>>>>> c725e99ecb47bbb4f5fb0ea1dc20a42f233866a1
     @IBOutlet weak var orderTable: WKInterfaceTable!
     var session: WCSession?
     var connectivityHandler = WatchSessionManager.shared
