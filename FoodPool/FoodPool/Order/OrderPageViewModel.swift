@@ -40,8 +40,8 @@ final class OrderPageViewModel: OrderPageViewModelProtocol, ActivityHandler {
     func loadData() {
         isLoading.accept(true)
         
-        let currentOrder = FoodPoolService.getCurrentOrders(userID: 1)
-        let deliveredOrder = FoodPoolService.getDeliveredOrders(userID: 1)
+        let currentOrder = FoodPoolService.getCurrentOrders(userID: UserInfo.userID)
+        let deliveredOrder = FoodPoolService.getDeliveredOrders(userID: UserInfo.userID)
         
         Observable
             .zip(currentOrder, deliveredOrder)

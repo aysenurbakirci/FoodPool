@@ -84,6 +84,8 @@
 		37A1F5E327D8C392004EA3F5 /* OrderPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1F5E227D8C392004EA3F5 /* OrderPageView.swift */; };
 		37A1F5E827D8C67F004EA3F5 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1F5E727D8C67F004EA3F5 /* OrderCell.swift */; };
 		37E9B48627EC5EDF000B40BF /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E9B48527EC5EDF000B40BF /* Notification.swift */; };
+		37E9B48827EC8DDE000B40BF /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E9B48727EC8DDE000B40BF /* UserInfo.swift */; };
+		37E9B48927ECB592000B40BF /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E9B48727EC8DDE000B40BF /* UserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -216,6 +218,7 @@
 		37A1F5E227D8C392004EA3F5 /* OrderPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPageView.swift; sourceTree = "<group>"; };
 		37A1F5E727D8C67F004EA3F5 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		37E9B48527EC5EDF000B40BF /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		37E9B48727EC8DDE000B40BF /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,9 +384,10 @@
 		371FA1A227C8EC4E009BFAD3 /* FoodPool */ = {
 			isa = PBXGroup;
 			children = (
+				37E9B48727EC8DDE000B40BF /* UserInfo.swift */,
 				37E9B48527EC5EDF000B40BF /* Notification.swift */,
 				2498C7AA27D7DBC10014D9FD /* App */,
-				3753D86327E0DADB00BA74A3 /* Helper */,
+				3753D86327E0DADB00BA74A3 /* ViewHelper */,
 				372DF1DA27D929B70032741B /* Launch */,
 				37954B9927CCBF280042ECC4 /* OnBoarding */,
 				2498C7AB27D7DC350014D9FD /* TabBar */,
@@ -451,14 +455,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		3753D86327E0DADB00BA74A3 /* Helper */ = {
+		3753D86327E0DADB00BA74A3 /* ViewHelper */ = {
 			isa = PBXGroup;
 			children = (
 				3753D86427E0DAE700BA74A3 /* ViewDisplayer.swift */,
 				3753D86627E0E99400BA74A3 /* LoadingDisplayer.swift */,
 				3753D86A27E0E9AB00BA74A3 /* ErrorDisplayer.swift */,
 			);
-			path = Helper;
+			path = ViewHelper;
 			sourceTree = "<group>";
 		};
 		37787A3027E488F800AAFE3D /* FoodPoolWatchKit */ = {
@@ -674,6 +678,7 @@
 				371FA20D27C8FE71009BFAD3 /* WalletCell.swift in Sources */,
 				372DF1D527D91A140032741B /* OrderPageViewModel.swift in Sources */,
 				2498C79F27D7743B0014D9FD /* DetailPageSection.swift in Sources */,
+				37E9B48827EC8DDE000B40BF /* UserInfo.swift in Sources */,
 				24B0545F27D87BDA00F672B6 /* BasketPageBuilder.swift in Sources */,
 				3753D85E27E08C6F00BA74A3 /* OrderDetailPageViewModel.swift in Sources */,
 				246D56DC27CF603C003331EE /* OnBoardingPageView.swift in Sources */,
@@ -734,6 +739,7 @@
 				37787A4627E488FA00AAFE3D /* ComplicationController.swift in Sources */,
 				37787A5827E48A6600AAFE3D /* OrderCell.swift in Sources */,
 				37787A4227E488FA00AAFE3D /* ExtensionDelegate.swift in Sources */,
+				37E9B48927ECB592000B40BF /* UserInfo.swift in Sources */,
 				37787A4027E488FA00AAFE3D /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

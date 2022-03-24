@@ -80,6 +80,6 @@ extension BasketPageViewController {
     @objc func handleTap() {
         print("Sipariş Oluşturuldu")
         
-        Notification.createNotification(title: "FoodPool", body: "Siparişinizin son durumu ne acaba? Kontrol etmek isterseniz her an sipariş durumunuzu görüntüleyebilirsiniz.")
+        Notification.shared.createNotification(title: "FoodPool", body: "Siparişinizin son durumu ne acaba? Kontrol etmek isterseniz her an sipariş durumunuzu görüntüleyebilirsiniz.")
     }
 }

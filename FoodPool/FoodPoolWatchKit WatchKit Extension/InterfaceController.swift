@@ -66,7 +66,7 @@ extension InterfaceController {
     }
     
     private func getData() {
-        let urlString = "http://localhost:3000/currentOrders"
+        let urlString = "http://localhost:3000/currentOrders?userID=\(UserInfo.userID)"
         let url = URL(string: urlString)!
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { data, response, error in

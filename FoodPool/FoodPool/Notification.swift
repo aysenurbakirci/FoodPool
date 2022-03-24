@@ -8,9 +8,12 @@
 import Foundation
 import UserNotifications
 
-class Notification {
+final class Notification {
+    static let shared = Notification()
+    
+    let notifyCenter = UNUserNotificationCenter.current()
 
-    static func createNotification(title: String, body: String) {
+    func createNotification(title: String, body: String) {
         let uuidString = UUID().uuidString
         
         let content = UNMutableNotificationContent()
@@ -22,8 +25,18 @@ class Notification {
         
         let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
 
-        UNUserNotificationCenter.current().add(request) { error in
+        notifyCenter.add(request) { error in
             print(String(describing: error?.localizedDescription))
+        }
+    }
+    
+    func requestAuth() {
+        notifyCenter.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if granted {
+                print("Permission Granted!")
+            }else {
+                print("Permission Denied!")
+            }
         }
     }
 }

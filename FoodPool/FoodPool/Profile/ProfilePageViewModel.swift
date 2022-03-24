@@ -40,7 +40,7 @@ final class ProfilePageViewModel: ProfilePageViewModelProtocol, ActivityHandler 
     func loadData() {
         isLoading.accept(true)
         
-        let data = FoodPoolService.getUser(id: 1)
+        let data = FoodPoolService.getUser(id: UserInfo.userID)
 
         data
             .do(onNext: { _ in

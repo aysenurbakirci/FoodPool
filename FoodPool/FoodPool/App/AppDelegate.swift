@@ -12,15 +12,7 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        let notifyCenter = UNUserNotificationCenter.current()
-        notifyCenter.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
-            if granted {
-                print("Permission Granted!")
-            }else {
-                print("Permission Denied!")
-            }
-        }
+        Notification.shared.requestAuth()
         
         return true
     }
