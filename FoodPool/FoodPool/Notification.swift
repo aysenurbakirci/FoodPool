@@ -18,7 +18,7 @@ class Notification {
         content.body = body
         content.sound = UNNotificationSound.default
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10.0, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 600.00, repeats: false)
         
         let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
 
