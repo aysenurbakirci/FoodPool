@@ -83,6 +83,7 @@
 		37A1F5DA27D8A6B8004EA3F5 /* BasketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1F5D927D8A6B8004EA3F5 /* BasketCell.swift */; };
 		37A1F5E327D8C392004EA3F5 /* OrderPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1F5E227D8C392004EA3F5 /* OrderPageView.swift */; };
 		37A1F5E827D8C67F004EA3F5 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1F5E727D8C67F004EA3F5 /* OrderCell.swift */; };
+		37E9B48627EC5EDF000B40BF /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E9B48527EC5EDF000B40BF /* Notification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +215,7 @@
 		37A1F5D927D8A6B8004EA3F5 /* BasketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketCell.swift; sourceTree = "<group>"; };
 		37A1F5E227D8C392004EA3F5 /* OrderPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPageView.swift; sourceTree = "<group>"; };
 		37A1F5E727D8C67F004EA3F5 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		37E9B48527EC5EDF000B40BF /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +381,7 @@
 		371FA1A227C8EC4E009BFAD3 /* FoodPool */ = {
 			isa = PBXGroup;
 			children = (
+				37E9B48527EC5EDF000B40BF /* Notification.swift */,
 				2498C7AA27D7DBC10014D9FD /* App */,
 				3753D86327E0DADB00BA74A3 /* Helper */,
 				372DF1DA27D929B70032741B /* Launch */,
@@ -713,6 +716,7 @@
 				371FA1A627C8EC4E009BFAD3 /* SceneDelegate.swift in Sources */,
 				24B0545D27D87BCE00F672B6 /* BasketPageViewController.swift in Sources */,
 				3753D86027E0932300BA74A3 /* OrderStates.swift in Sources */,
+				37E9B48627EC5EDF000B40BF /* Notification.swift in Sources */,
 				24A3AFC527D6289500F3AFDE /* MainPageView.swift in Sources */,
 				37A1F5E327D8C392004EA3F5 /* OrderPageView.swift in Sources */,
 				24B0546627D89AEA00F672B6 /* OrderPageViewController.swift in Sources */,
