@@ -11,41 +11,55 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="FoodPoolWatchKit" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Current Orders" id="DSG-Dq-pRd">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
-                        </label>
-                        <table alignment="left" id="AmO-2K-vrg">
+                        <group width="1" alignment="center" verticalAlignment="center" hidden="YES" layout="vertical" id="2iL-Ef-jdd">
                             <items>
-                                <tableRow identifier="OrderCellIdentifier" id="kGO-Tg-3Rr" customClass="OrderCell" customModule="FoodPoolWatchKit" customModuleProvider="target">
-                                    <group key="rootItem" width="1" alignment="left" id="PIn-4z-lt1">
-                                        <items>
-                                            <group width="1" height="1" alignment="left" id="Uni-9n-bea">
+                                <imageView width="50" height="40" alignment="center" image="eyes" catalog="system" id="c0G-6s-CEC">
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <label alignment="left" text="This page can't be reached. Please try sign in or check your internet connection." textAlignment="center" numberOfLines="0" id="nk5-VR-i5e"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="B3Q-Mw-7NM">
+                            <items>
+                                <label alignment="left" text="Current Orders" id="DSG-Dq-pRd">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                                </label>
+                                <table alignment="left" id="AmO-2K-vrg">
+                                    <items>
+                                        <tableRow identifier="OrderCellIdentifier" id="kGO-Tg-3Rr" customClass="OrderCell" customModule="FoodPoolWatchKit" customModuleProvider="target">
+                                            <group key="rootItem" width="1" alignment="left" id="PIn-4z-lt1">
                                                 <items>
-                                                    <label height="1" alignment="left" verticalAlignment="center" text="Restaurant Name" id="b29-Jr-C30">
-                                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
-                                                    </label>
-                                                    <imageView alignment="right" verticalAlignment="center" image="trash.circle.fill" catalog="system" contentMode="scaleAspectFit" id="3Zd-sh-clf">
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </imageView>
+                                                    <group width="1" height="1" alignment="left" id="Uni-9n-bea">
+                                                        <items>
+                                                            <label height="1" alignment="left" verticalAlignment="center" text="Restaurant Name" id="b29-Jr-C30">
+                                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                            </label>
+                                                            <imageView alignment="right" verticalAlignment="center" image="trash.circle.fill" catalog="system" contentMode="scaleAspectFit" id="3Zd-sh-clf">
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </imageView>
+                                                        </items>
+                                                    </group>
                                                 </items>
                                             </group>
-                                        </items>
-                                    </group>
-                                    <connections>
-                                        <outlet property="restaurantTitle" destination="b29-Jr-C30" id="C8j-II-WOw"/>
-                                        <outlet property="statusIcon" destination="3Zd-sh-clf" id="Oeh-tB-bZ9"/>
-                                    </connections>
-                                </tableRow>
+                                            <connections>
+                                                <outlet property="restaurantTitle" destination="b29-Jr-C30" id="C8j-II-WOw"/>
+                                                <outlet property="statusIcon" destination="3Zd-sh-clf" id="Oeh-tB-bZ9"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
                             </items>
-                        </table>
+                        </group>
                     </items>
                     <connections>
+                        <outlet property="errorView" destination="2iL-Ef-jdd" id="Sr2-hn-vfD"/>
                         <outlet property="orderTable" destination="AmO-2K-vrg" id="kLz-fo-pfw"/>
+                        <outlet property="tableView" destination="B3Q-Mw-7NM" id="Zn2-ZP-zbD"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="219.52173913043478" y="344.55357142857144"/>
+            <point key="canvasLocation" x="468" y="54"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -80,6 +94,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="eyes" catalog="system" width="128" height="98"/>
         <image name="trash.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
 </document>

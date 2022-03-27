@@ -17,8 +17,10 @@ public struct Order: Decodable {
     public var restaurantName: String
 }
 
-
 class InterfaceController: WKInterfaceController {
+    
+    @IBOutlet weak var errorView: WKInterfaceGroup!
+    @IBOutlet weak var tableView: WKInterfaceGroup!
     @IBOutlet weak var orderTable: WKInterfaceTable!
     
     private var orderList: [Order] = [] {
@@ -70,13 +72,17 @@ extension InterfaceController {
         let url = URL(string: urlString)!
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data {
+            if let error = error {
+                self.tableView.setHidden(true)
+                self.errorView.setHidden(false)
+                print("ERROR: \(error.localizedDescription)")
+            } else if let data = data {
                 do {
                    let decodedData = try JSONDecoder().decode([Order].self, from: data)
                    print(decodedData)
                     self.orderList.append(contentsOf: decodedData)
                 } catch let error {
-                   print(error)
+                    print("ERROR: \(error.localizedDescription)")
                 }
              }
         }.resume()
