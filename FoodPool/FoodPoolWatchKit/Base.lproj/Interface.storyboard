@@ -16,7 +16,7 @@
                                 <imageView width="50" height="40" alignment="center" image="eyes" catalog="system" id="c0G-6s-CEC">
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </imageView>
-                                <label alignment="left" text="This page can't be reached. Please try sign in or check your internet connection." textAlignment="center" numberOfLines="0" id="nk5-VR-i5e"/>
+                                <label alignment="center" text="This page can't be reached. Please try sign in or check your internet connection." textAlignment="center" numberOfLines="0" id="nk5-VR-i5e"/>
                             </items>
                         </group>
                         <group width="1" alignment="left" layout="vertical" id="B3Q-Mw-7NM">
@@ -53,6 +53,7 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="errorLabel" destination="nk5-VR-i5e" id="hQ5-W2-urd"/>
                         <outlet property="errorView" destination="2iL-Ef-jdd" id="Sr2-hn-vfD"/>
                         <outlet property="orderTable" destination="AmO-2K-vrg" id="kLz-fo-pfw"/>
                         <outlet property="tableView" destination="B3Q-Mw-7NM" id="Zn2-ZP-zbD"/>
