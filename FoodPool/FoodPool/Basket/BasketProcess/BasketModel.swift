@@ -2,7 +2,7 @@
 //  BasketModel.swift
 //  FoodPool
 //
-//  Created by Ayşenur Bakırcı on 10.03.2022.
+//  Created by Ayşe Nur Bakırcı on 29.03.2022.
 //
 
 import Foundation
@@ -14,6 +14,7 @@ struct BasketMealModel {
 }
 
 struct RestaurantModel {
+    var restaurantId: Int
     var restaurantName: String
     var restaurantImage: String
 }

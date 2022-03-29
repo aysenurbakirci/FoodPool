@@ -13,14 +13,25 @@ final class BasketPageViewController: UIViewController {
     
     //MARK: - Properties
     lazy var basketView = BasketPageView()
+    lazy var emptyBasketView = EmptyBasketView()
     var viewModel: BasketPageViewModelProtocol!
     
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = basketView
+        view = emptyBasketView
         navigationItem.title = "FoodPool"
         basketView.source = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        basketView.reloadTable()
+        if viewModel.basketIsEmpty {
+            view = emptyBasketView
+        } else {
+            view = basketView
+        }
     }
 }
 
@@ -51,7 +62,7 @@ extension BasketPageViewController: UITableViewDataSource {
         guard let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: FooterView.reuseIdentifier) as? FooterView else {
             return UIView()
         }
-        view.apply(amount: 28.5)
+        view.apply(amount: viewModel.calcTotal())
         view.addTarget(self, selector: #selector(handleTap))
         return view
     }
@@ -66,11 +77,15 @@ extension BasketPageViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             viewModel.deleteItem(at: indexPath)
-            if viewModel.deleteSection {
+            //MARK: DELETE SECTION
+            if false {
                 tableView.deleteSections(IndexSet(integer: indexPath.section), with: .fade)
                 tableView.reloadData()
             } else {
                 tableView.deleteRows(at: [indexPath], with: .fade)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    tableView.reloadData()
+                }
             }
         }
     }
@@ -79,7 +94,6 @@ extension BasketPageViewController: UITableViewDataSource {
 extension BasketPageViewController {
     @objc func handleTap() {
         print("Sipariş Oluşturuldu")
-        
         Notification.shared.createNotification(title: "FoodPool", body: "Siparişinizin son durumu ne acaba? Kontrol etmek isterseniz her an sipariş durumunuzu görüntüleyebilirsiniz.")
     }
 }

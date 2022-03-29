@@ -16,6 +16,7 @@
 		24A3AFBD27D6110800F3AFDE /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3AFBC27D6110800F3AFDE /* RestaurantView.swift */; };
 		24A3AFBF27D61E9E00F3AFDE /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A3AFBE27D61E9E00F3AFDE /* CategoryView.swift */; };
 		24B0546127D87F8400F672B6 /* TabBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0546027D87F8400F672B6 /* TabBarAppearance.swift */; };
+		24FC4D7027F39AEF00445674 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FC4D6F27F39AEF00445674 /* Toast.swift */; };
 		371FA1E427C8F504009BFAD3 /* FoodPoolKit.docc in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1E327C8F504009BFAD3 /* FoodPoolKit.docc */; };
 		371FA1E527C8F504009BFAD3 /* FoodPoolKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 371FA1E227C8F504009BFAD3 /* FoodPoolKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		371FA1F227C8F519009BFAD3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371FA1F127C8F519009BFAD3 /* ProfileView.swift */; };
@@ -38,6 +39,7 @@
 		24A3AFBC27D6110800F3AFDE /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
 		24A3AFBE27D61E9E00F3AFDE /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		24B0546027D87F8400F672B6 /* TabBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAppearance.swift; sourceTree = "<group>"; };
+		24FC4D6F27F39AEF00445674 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		371FA1DF27C8F504009BFAD3 /* FoodPoolKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoodPoolKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		371FA1E227C8F504009BFAD3 /* FoodPoolKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodPoolKit.h; sourceTree = "<group>"; };
 		371FA1E327C8F504009BFAD3 /* FoodPoolKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = FoodPoolKit.docc; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				37A1F5DB27D8A8B1004EA3F5 /* BasketView.swift */,
 				37A1F5E427D8C5C8004EA3F5 /* OrderView.swift */,
 				3753D88A27E26BA200BA74A3 /* TotalView.swift */,
+				24FC4D6F27F39AEF00445674 /* Toast.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				371FA20827C8FD05009BFAD3 /* UIImage.swift in Sources */,
 				371FA1F227C8F519009BFAD3 /* ProfileView.swift in Sources */,
 				24B0546127D87F8400F672B6 /* TabBarAppearance.swift in Sources */,
+				24FC4D7027F39AEF00445674 /* Toast.swift in Sources */,
 				24A3AFA827D5029C00F3AFDE /* ButtonType.swift in Sources */,
 				37A1F5DC27D8A8B1004EA3F5 /* BasketView.swift in Sources */,
 				371FA1F627C8F531009BFAD3 /* AddressView.swift in Sources */,

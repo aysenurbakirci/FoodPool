@@ -49,4 +49,8 @@ final class BasketPageView: UIView {
         tableView.register(FooterView.self,
                            forHeaderFooterViewReuseIdentifier: FooterView.reuseIdentifier)
     }
+    
+    func reloadTable() {
+        tableView.reloadData()
+    }
 }
