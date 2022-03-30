@@ -35,22 +35,19 @@ Unit test coded all ViewModels of the application.<br/>
 
 - Phone
 
-| --- | --- | --- | 
-| ![Preview](https://media.giphy.com/media/rpkQuhiqS5AM4vRgdx/giphy.gif) | ![Preview](https://media.giphy.com/media/wsrgneVmj0M1ZuFJA9/giphy.gif) | ![Preview](https://media.giphy.com/media/MK35SVLDLw7woWuBA8/giphy.gif) |
+![Preview](https://media.giphy.com/media/rpkQuhiqS5AM4vRgdx/giphy.gif) ![Preview](https://media.giphy.com/media/wsrgneVmj0M1ZuFJA9/giphy.gif)  ![Preview](https://media.giphy.com/media/MK35SVLDLw7woWuBA8/giphy.gif) 
 
-| --- | --- | --- | 
-| ![Preview](https://media.giphy.com/media/ySZUdG7QDvqVSB4X4Y/giphy.gif) | ![Preview](https://media.giphy.com/media/d4jp8zNEdzrA3GSbkU/giphy.gif) | ![Preview](https://media.giphy.com/media/7pNPpdYGYE6v8YTYMF/giphy.gif) |
+![Preview](https://media.giphy.com/media/ySZUdG7QDvqVSB4X4Y/giphy.gif)  ![Preview](https://media.giphy.com/media/d4jp8zNEdzrA3GSbkU/giphy.gif)  ![Preview](https://media.giphy.com/media/7pNPpdYGYE6v8YTYMF/giphy.gif) 
 
 <div align="center">
   <img src="ReadmeImages/iphoneError.png" alt="iphoneError" />
-  <img src="ReadmeImages/notification.png" alt="notification" />
-  <img src="ReadmeImages/notificationPermission.png" alt="notificationPermission" />
+    <img src="ReadmeImages/notification.png" alt="notification" />
+        <img src="ReadmeImages/notificationPermission.png" alt="notificationPermission" />
 </div>
 
 - Watch
 
-| --- |
-| ![Preview](https://media.giphy.com/media/v4M5Jh1cP3sPqxcDfw/giphy.gif) |
+![Preview](https://media.giphy.com/media/v4M5Jh1cP3sPqxcDfw/giphy.gif) 
 
 <div align="center">
   <img src="ReadmeImages/watchError.png" alt="watchError" />
