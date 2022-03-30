@@ -7,7 +7,7 @@
 </p>
 
 <div align="center">
-  <img src="./titleImage.png" alt="title" />
+  <img src="ReadmeImages/titleImage.png" alt="title" />
 </div>
 
 ## :calling: About
@@ -15,40 +15,46 @@ FoodPool is an application that allows users to order food easily.
 
 ## :gear: Technologies
 
-- [Firebase](https://github.com/firebase/firebase-ios-sdk)
-- [FontAwesome](https://github.com/thii/FontAwesome.swift)
-- [SDWebImage](https://github.com/SDWebImage/SDWebImage)
+- [LayoutKit](https://github.com/aysenurbakirci/LayoutKit)
+- [AutoLayoutHelper](https://github.com/aysenurbakirci/AutoLayoutHelper)
+- [RxSwift](https://github.com/ReactiveX/RxSwift)
 
-This application's database operations had designed with Firebase Firestore, Firebase Storage and Firebase Authentication.<br/>
-SDWebImage and FontAwesome was used as a 3rd Party library.<br/>
 The project is modeled in accordance with the MVVM structure.<br/>
 Unit test coded all ViewModels of the application.<br/>
 <br/>
-<b>Important Note: <b/> You may need to add the font files in the FontAwesome folder to the project for open the application.
 
 ## :sparkles: Main Features
 
 - Application has onboarding page for presentation.
-- Home page has listed offers, categories and restaurants.
-- When user chose category, user will see new restaurant list filtered by categories.
+- Home page has listed categories and restaurants.
 - Restaurant's meals and drinks are listed on the restaurant detail page.
-- Users can choose address, payment method and foods. Then, can order.
 - Users are able to see on order page, previous and current orders.
 - User are able to see user's data and addresses in profile page.
 
 ## :camera_flash: Screenshots
 
-| OnBoarding | Home | Restaurant Detail | 
-| --- | --- | --- | 
-| ![Preview](https://media.giphy.com/media/jZ48i8PHfAHXEn83U3/giphy.gif) | ![Preview](https://media.giphy.com/media/MNAeb7c79b8j3Mscg9/giphy.gif) | ![Preview](https://media.giphy.com/media/aRrMu7CUFnXCqmG7lC/giphy.gif) |
+- Phone
 
-| Basket Create Order | Basket Delete Items | User Orders | 
 | --- | --- | --- | 
-| ![Preview](https://media.giphy.com/media/R8ylbFshDu1vjpdW0Y/giphy.gif) | ![Preview](https://media.giphy.com/media/RyBX1ZFDAzlXdy4aAE/giphy.gif) | ![Preview](https://media.giphy.com/media/9LVjcisdYdvZ9bD4Ce/giphy.gif) |
+| ![Preview](https://media.giphy.com/media/rpkQuhiqS5AM4vRgdx/giphy.gif) | ![Preview](https://media.giphy.com/media/wsrgneVmj0M1ZuFJA9/giphy.gif) | ![Preview](https://media.giphy.com/media/MK35SVLDLw7woWuBA8/giphy.gif) |
 
-| Profile Page | Filtered Within Category | Filter Page | 
 | --- | --- | --- | 
-| ![Preview](https://media.giphy.com/media/SkEjAdTfhm0s7Bqaht/giphy.gif) | ![Preview](https://media.giphy.com/media/lWFf8fINVYGstu1UQs/giphy.gif) | ![Preview](https://media.giphy.com/media/btlAhcNW0UciSVRpy4/giphy.gif) |
+| ![Preview](https://media.giphy.com/media/ySZUdG7QDvqVSB4X4Y/giphy.gif) | ![Preview](https://media.giphy.com/media/d4jp8zNEdzrA3GSbkU/giphy.gif) | ![Preview](https://media.giphy.com/media/7pNPpdYGYE6v8YTYMF/giphy.gif) |
+
+<div align="center">
+  <img src="ReadmeImages/iphoneError.png" alt="iphoneError" />
+  <img src="ReadmeImages/notification.png" alt="notification" />
+  <img src="ReadmeImages/notificationPermission.png" alt="notificationPermission" />
+</div>
+
+- Watch
+
+| --- |
+| ![Preview](https://media.giphy.com/media/v4M5Jh1cP3sPqxcDfw/giphy.gif) |
+
+<div align="center">
+  <img src="ReadmeImages/watchError.png" alt="watchError" />
+</div>
 
 ## :memo: License 
 This project is under the terms of the MIT license.
