@@ -18,9 +18,11 @@ FoodPool is an application that allows users to order food easily.
 - [LayoutKit](https://github.com/aysenurbakirci/LayoutKit)
 - [AutoLayoutHelper](https://github.com/aysenurbakirci/AutoLayoutHelper)
 - [RxSwift](https://github.com/ReactiveX/RxSwift)
+- [Json Server](https://github.com/typicode/json-server)
 
 The project is modeled in accordance with the MVVM structure.<br/>
 Unit test coded all ViewModels of the application.<br/>
+Json Server has been used to create fake api for application. You can find the db.json file used with the json server in the FakeAPI folder.<br/>
 <br/>
 
 ## :sparkles: Main Features
