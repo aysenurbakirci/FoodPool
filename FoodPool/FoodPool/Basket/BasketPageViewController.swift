@@ -93,6 +93,6 @@ extension BasketPageViewController: UITableViewDataSource {
 extension BasketPageViewController {
     @objc func handleTap() {
         print("Sipariş Oluşturuldu")
-        Notification.shared.createNotification(title: "FoodPool", body: "Siparişinizin son durumu ne acaba? Kontrol etmek isterseniz her an sipariş durumunuzu görüntüleyebilirsiniz.")
+        Notification.shared.createNotification(title: "FoodPool", body: "What is the latest status of your order? If you want to check, you can view your order status at any time.")
     }
 }
