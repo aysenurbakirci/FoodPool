@@ -40,18 +40,17 @@ Unit test coded all ViewModels of the application.<br/>
 ![Preview](https://media.giphy.com/media/ySZUdG7QDvqVSB4X4Y/giphy.gif)  ![Preview](https://media.giphy.com/media/d4jp8zNEdzrA3GSbkU/giphy.gif)  ![Preview](https://media.giphy.com/media/7pNPpdYGYE6v8YTYMF/giphy.gif) 
 
 <p float="left">
-  <img src="ReadmeImages/iphoneError.png" width="100" />
-  <img src="ReadmeImages/notification.png" width="100" /> 
-  <img src="ReadmeImages/notificationPermission.png" width="100" />
+  <img src="ReadmeImages/iphoneError.png" width="220" />
+  <img src="ReadmeImages/notification.png" width="220" /> 
+  <img src="ReadmeImages/notificationPermission.png" width="220" />
 </p>
 
 - Watch
 
-![Preview](https://media.giphy.com/media/v4M5Jh1cP3sPqxcDfw/giphy.gif) 
-
-<div align="left">
-  <img src="ReadmeImages/watchError.png" alt="watchError" />
-</div>
+<p float="left">
+  <img src="https://media.giphy.com/media/v4M5Jh1cP3sPqxcDfw/giphy.gif" width="220" />
+  <img src="ReadmeImages/watchError.png" width="220" /> 
+</p>
 
 ## :memo: License 
 This project is under the terms of the MIT license.
