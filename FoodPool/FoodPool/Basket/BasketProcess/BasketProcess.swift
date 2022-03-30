@@ -17,19 +17,24 @@ final class BasketProcess {
     }
     
     func addNewItem(restaurant: RestaurantModel, meal: BasketMealModel) {
+        var restaurantIndex: Int? = nil
+        
         guard !basketList.isEmpty else {
             addNewRestaurant(restaurant: restaurant, meal: meal)
             return
         }
+        
         for (index, basketModel) in basketList.enumerated() {
             if basketModel.restaurant.restaurantId == restaurant.restaurantId {
-                addNewMeal(at: index, meal: meal)
-                break
-            } else {
-                addNewRestaurant(restaurant: restaurant, meal: meal)
-                break
+                restaurantIndex = index
             }
         }
+        
+        guard let restaurantIndex = restaurantIndex else {
+            addNewRestaurant(restaurant: restaurant, meal: meal)
+            return
+        }
+        addNewMeal(at: restaurantIndex, meal: meal)
     }
     
     func deleteItem(at indexPath: IndexPath) -> Bool {
