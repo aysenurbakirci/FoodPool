@@ -23,18 +23,22 @@ final class BasketProcess {
         }
         for (index, basketModel) in basketList.enumerated() {
             if basketModel.restaurant.restaurantId == restaurant.restaurantId {
-                addnewMeal(at: index, meal: meal)
+                addNewMeal(at: index, meal: meal)
+                break
             } else {
                 addNewRestaurant(restaurant: restaurant, meal: meal)
+                break
             }
         }
     }
     
-    func deleteItem(at indexPath: IndexPath) {
+    func deleteItem(at indexPath: IndexPath) -> Bool {
         if basketList[indexPath.section].mealList.count < 2 {
             basketList.remove(at: indexPath.section)
+            return true
         } else {
             basketList[indexPath.section].mealList.remove(at: indexPath.row)
+            return false
         }
     }
     
@@ -72,7 +76,7 @@ private extension BasketProcess {
         basketList.append(basketModel)
     }
     
-    func addnewMeal(at index: Int, meal: BasketMealModel) {
+    func addNewMeal(at index: Int, meal: BasketMealModel) {
         basketList[index].mealList.append(meal)
     }
 }

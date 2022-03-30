@@ -11,7 +11,7 @@ import FoodPoolAPI
 //MARK: - Protocol
 protocol BasketPageViewModelProtocol {
     var basketIsEmpty: Bool { get }
-    func deleteItem(at index: IndexPath)
+    func deleteItem(at index: IndexPath) -> Bool
     func numberOfSections() -> Int
     func numberOfRowsInSection(in section: Int) -> Int
     func headerModel(in section: Int) -> RestaurantModel
@@ -29,8 +29,8 @@ final class BasketPageViewModel: BasketPageViewModelProtocol {
     }
     
     //MARK: - Helper Methods
-    func deleteItem(at index: IndexPath) {
-        basketModel.deleteItem(at: index)
+    func deleteItem(at index: IndexPath) -> Bool {
+        return basketModel.deleteItem(at: index)
     }
     
     func numberOfSections() -> Int {

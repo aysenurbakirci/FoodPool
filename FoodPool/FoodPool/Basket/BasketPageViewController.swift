@@ -76,9 +76,8 @@ extension BasketPageViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            viewModel.deleteItem(at: indexPath)
-            //MARK: DELETE SECTION
-            if false {
+        
+            if viewModel.deleteItem(at: indexPath) {
                 tableView.deleteSections(IndexSet(integer: indexPath.section), with: .fade)
                 tableView.reloadData()
             } else {
