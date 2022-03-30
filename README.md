@@ -39,17 +39,13 @@ Unit test coded all ViewModels of the application.<br/>
 
 ![Preview](https://media.giphy.com/media/ySZUdG7QDvqVSB4X4Y/giphy.gif)  ![Preview](https://media.giphy.com/media/d4jp8zNEdzrA3GSbkU/giphy.gif)  ![Preview](https://media.giphy.com/media/7pNPpdYGYE6v8YTYMF/giphy.gif) 
 
-<div align="center">
-  <img src="ReadmeImages/iphoneError.png" alt="iphoneError" />
-    <img src="ReadmeImages/notification.png" alt="notification" />
-        <img src="ReadmeImages/notificationPermission.png" alt="notificationPermission" />
-</div>
+![Preview](ReadmeImages/iphoneError.png) ![Preview](ReadmeImages/notification.png) ![Preview](ReadmeImages/notificationPermission.png) 
 
 - Watch
 
 ![Preview](https://media.giphy.com/media/v4M5Jh1cP3sPqxcDfw/giphy.gif) 
 
-<div align="center">
+<div align="left">
   <img src="ReadmeImages/watchError.png" alt="watchError" />
 </div>
 
