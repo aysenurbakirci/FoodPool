@@ -1,0 +1,238 @@
+{
+    "onBoarding": [
+        {
+            "imageName": "globe.americas",
+            "title": "America",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        },
+        {
+            "imageName": "globe.europe.africa",
+            "title": "Europe",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        },
+        {
+            "imageName": "globe.asia.australia",
+            "title": "Asia",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        }
+    ],
+    
+    "user": [
+        {
+            "id": "1",
+            "name": "John",
+            "surname": "Doe",
+            "email": "example@example.com",
+            "phone": "5358875656",
+            "amount": 23.0,
+            "addresses": [
+                {
+                    "id":"1",
+                    "title": "Home1",
+                    "address": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                },
+                {
+                    "id":"2",
+                    "title": "Home2",
+                    "address": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                },
+                {
+                    "id":"3",
+                    "title": "Home3",
+                    "address": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                },
+                {
+                    "id":"4",
+                    "title": "Business1",
+                    "address": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                },
+                {
+                    "id":"5",
+                    "title": "Business2",
+                    "address": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                }
+            ]
+        }
+    ],
+    
+    "restaurant": [
+        {
+            "id": "1",
+            "name": "Roberta's Pizza",
+            "imageName": "robertas",
+            "address": "Brooklyn",
+            "cuisine": "Itallian",
+            "isOpen": true,
+            "mealList": [
+                {
+                    "imageName": "original",
+                    "name": "Original",
+                    "price": 13.0
+                },
+                {
+                    "imageName": "rosso",
+                    "name": "Rosso",
+                    "price": 12.0
+                },
+                {
+                    "imageName": "margherita",
+                    "name": "Margherita",
+                    "price": 10.0
+                }
+            ],
+            "drinkList": [
+                {
+                    "imageName": "cocacola",
+                    "name": "Coca Cola",
+                    "price": 5.0
+                },
+                {
+                    "imageName": "icetea",
+                    "name": "Ice Tea",
+                    "price": 4.0
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "name": "Mission Chinese",
+            "imageName": "missionChinese",
+            "address": "Manhattan",
+            "cuisine": "Asian",
+            "isOpen": false,
+            "mealList": [],
+            "drinkList": []
+        },
+        {
+            "id": "3",
+            "name": "Hometown BBQ",
+            "imageName": "hometownBBQ",
+            "address": "Brooklyn",
+            "cuisine": "American",
+            "isOpen": true,
+            "mealList": [
+                {
+                    "imageName": "original",
+                    "name": "Original",
+                    "price": 13.0
+                },
+                {
+                    "imageName": "rosso",
+                    "name": "Rosso",
+                    "price": 12.0
+                },
+                {
+                    "imageName": "margherita",
+                    "name": "Margherita",
+                    "price": 10.0
+                }
+            ],
+            "drinkList": [
+                {
+                    "imageName": "cocacola",
+                    "name": "Coca Cola",
+                    "price": 5.0
+                },
+                {
+                    "imageName": "icetea",
+                    "name": "Ice Tea",
+                    "price": 4.0
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "name": "Emily",
+            "imageName": "emily",
+            "address": "Brooklyn",
+            "cuisine": "Itallian",
+            "isOpen": false,
+            "mealList": [],
+            "drinkList": []
+        }
+    ],
+    
+    "cuisine": [
+        {
+            "cuisine": "Turkish",
+            "image": "turkish"
+        },
+        {
+            "cuisine": "Asian",
+            "image": "asian"
+        },
+        {
+            "cuisine": "Itallian",
+            "image": "itallian"
+        },
+        {
+            "cuisine": "Mexican",
+            "image": "mexican"
+        },
+        {
+            "cuisine": "American",
+            "image": "american"
+        }
+    ],
+    
+    "currentOrders" : [
+        {
+            "id": 1,
+            "userID": "1",
+            "state": "waiting",
+            "restaurantName": "Roberta's Pizza",
+            "price": 20.0,
+            "mealList": [
+                "Ice Tea",
+                "Original"
+            ]
+        },
+        {
+            "id": 2,
+            "userID": "1",
+            "state": "preparing",
+            "restaurantName": "Roberta's Pizza",
+            "price": 20.0,
+            "mealList": [
+                "Ice Tea",
+                "Original"
+            ]
+        },
+        {
+            "id": 3,
+            "userID": "1",
+            "state": "ready",
+            "restaurantName": "Roberta's Pizza",
+            "price": 20.0,
+            "mealList": [
+                "Ice Tea",
+                "Original"
+            ]
+        },
+        {
+            "id": 4,
+            "userID": "1",
+            "state": "onTheWay",
+            "restaurantName": "Roberta's Pizza",
+            "price": 20.0,
+            "mealList": [
+                "Ice Tea",
+                "Original"
+            ]
+        }
+    ],
+    
+    "deliveredOrders" : [
+        {
+            "id": 5,
+            "userID": "1",
+            "state": "delivered",
+            "restaurantName": "Roberta's Pizza",
+            "price": 20.0,
+            "mealList": [
+                "Ice Tea",
+                "Original"
+            ]
+        }
+    ]
+}

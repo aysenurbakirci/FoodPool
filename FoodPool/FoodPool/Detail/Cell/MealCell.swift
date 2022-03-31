@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import FoodPoolKit
+import FoodPoolAPI
 
 final class MealCell: UITableViewCell {
     
@@ -27,14 +28,13 @@ final class MealCell: UITableViewCell {
     }
     
     //MARK: - Apply Cell
-    func apply(imageName: String, title: String, price: String) {
-        let image = UIImage(named: imageName)
-        mealView.apply(image: image, title: title, price: price)
+    func apply(model: MenuModel) {
+        let image = UIImage(named: model.imageName)
+        mealView.apply(image: image, title: model.name, price: String(model.price))
     }
     
     //MARK: - Add Target To Cell
     func addTarget(_ target: Any?, selector: Selector) {
         mealView.addTarget(target: target, selector: selector)
     }
-    
 }

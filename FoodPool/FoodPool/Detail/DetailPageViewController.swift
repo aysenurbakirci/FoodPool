@@ -50,25 +50,18 @@ extension DetailPageViewController: UITableViewDataSource {
         case .mealList(let mealList):
             let cell: MealCell = tableView.dequeue(for: indexPath)
             let model = mealList[indexPath.row]
-            cell.apply(imageName: model.imageName,
-                       title: model.name,
-                       price: String(model.price))
-            cell.addTarget(self, selector: #selector(handleTap))
+            cell.apply(model: model)
             return cell
         case .drinkList(let drinkList):
             let cell: MealCell = tableView.dequeue(for: indexPath)
             let model = drinkList[indexPath.row]
-            cell.apply(imageName: model.imageName,
-                       title: model.name,
-                       price: String(model.price))
-            cell.addTarget(self, selector: #selector(handleTap))
+            cell.apply(model: model)
             return cell
         }
     }
-}
-
-extension DetailPageViewController {
-    @objc func handleTap() {
-        print("Clicked")
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.addBasket(at: indexPath)
+        showToast(message: "This meal at basket now!!")
     }
 }
