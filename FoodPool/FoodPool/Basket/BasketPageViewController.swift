@@ -86,13 +86,19 @@ extension BasketPageViewController: UITableViewDataSource {
                     tableView.reloadData()
                 }
             }
+            
+            if viewModel.numberOfSections() == 0 {
+                view = emptyBasketView
+            }
         }
     }
 }
 
 extension BasketPageViewController {
     @objc func handleTap() {
-        print("Sipariş Oluşturuldu")
+        viewModel.resetBasket()
+        view = emptyBasketView
+        showToast(message: "Your order is created 🥳")
         Notification.shared.createNotification(title: "FoodPool", body: "What is the latest status of your order? If you want to check, you can view your order status at any time.")
     }
 }

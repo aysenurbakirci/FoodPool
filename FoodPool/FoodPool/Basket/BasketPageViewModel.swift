@@ -17,6 +17,7 @@ protocol BasketPageViewModelProtocol {
     func headerModel(in section: Int) -> RestaurantModel
     func mealListInSection(at index: IndexPath) -> BasketMealModel
     func calcTotal() -> Double
+    func resetBasket()
 }
 
 final class BasketPageViewModel: BasketPageViewModelProtocol {
@@ -51,5 +52,9 @@ final class BasketPageViewModel: BasketPageViewModelProtocol {
     
     func calcTotal() -> Double {
         return basketModel.calcTotalAmount()
+    }
+    
+    func resetBasket() {
+        basketModel.resetBasket()
     }
 }

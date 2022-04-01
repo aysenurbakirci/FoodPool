@@ -72,6 +72,10 @@ final class BasketProcess {
         }
         return total
     }
+    
+    func resetBasket() {
+        basketList.removeAll()
+    }
 }
 
 private extension BasketProcess {
