@@ -66,6 +66,7 @@ extension OrderPageViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = viewModel.modelForSection(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
         
         switch model {
         case .current(let currentOrders):
